@@ -33,7 +33,7 @@
 
     <body>
 
-         <div class='sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures'>
+                  <div class='sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures'>
             <div class='nano'>
                 <div class='nano-content'>
                     <ul>
@@ -42,7 +42,7 @@
                         <li><a class='sidebar-sub-toggle'><i class='ti-home'></i>公开族谱<span class='sidebar-collapse-icon ti-angle-down'></span></a>
                             <ul>
                                 <ul>
-                                    <li><a href="{{ url_for('index') }}">族谱预览</a></li>
+                                    <li><a href='index'>族谱预览</a></li>
                                     <li><a href='#'>族谱可视化</a></li>
 
                                 </ul>
@@ -54,10 +54,10 @@
                         <li><a class='sidebar-sub-toggle'><i class='ti-bar-chart-alt'></i>我的族谱<span class='sidebar-collapse-icon ti-angle-down'></span></a>
                             <ul>
                                 <ul>
-                                    <li><a href="{{ url_for('luru_genealogy') }}">族谱查看</a></li>
+                                    <li><a href='/genealogy'>族谱查看</a></li>
 {#                                    <li><a href="{{ url_for('luru_person') }}">族谱修改</a></li>#}
-									<li><a href="{{ url_for('keshihua') }}">族谱可视化</a></li>
-                                    <li><a href="{{ url_for('delete_genealogy') }}">族谱删除</a></li>
+									<li><a href='keshihua'>族谱可视化</a></li>
+                                    <li><a href='delete_genealogy'>族谱删除</a></li>
                                     <li><a href='#'>其他</a></li>
                                 </ul>
 
@@ -66,27 +66,28 @@
                         <li><a class='sidebar-sub-toggle'><i class='ti-layout'></i>权限管理<span class='sidebar-collapse-icon ti-angle-down'></span></a>
                             <ul>
                                 <ul>
-                                    <li><a href='{{ url_for('user_limit1') }}'>权限申请</a></li>
-                                    <li><a href='{{ url_for('user_limit') }}'>权限编辑</a></li>
+                                    <li><a href='user_limit1'>权限申请</a></li>
+                                    <li><a href='user_limit'>权限编辑</a></li>
 
                                 </ul>
 
                             </ul>
                         </li>
-                        <li><a href="{{ url_for('profile') }}"><i class='ti-user'></i> 个人信息</a>
+                        <li><a href='profile'><i class='ti-user'></i> 个人信息</a>
 
                         </li>
 
                         <li class='label'>文档</li>
-                        <li><a href='{{ url_for('upload') }}'><i class='ti-view-list-alt'></i> 文档上传</a></li>
-						<li><a href='{{ url_for('download') }}'><i class='ti-view-list-alt'></i> 文档下载</a></li>
+                        <li><a href='upload'><i class='ti-view-list-alt'></i> 文档上传</a></li>
+						<li><a href='download'><i class='ti-view-list-alt'></i> 文档下载</a></li>
 						<li><a href='#'><i class='ti-view-list-alt'></i> 文档修改</a></li>
                         <li class='label'>其他</li>
-                        <li><a href="{{ url_for('login_out') }}"><i class='ti-close'></i>退出</a> </li>
+                        <li><a href='login_out'><i class='ti-close'></i>退出</a> </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <!-- /# sidebar -->
 
             <div class='header'>
@@ -128,26 +129,26 @@
                                     <div class=''>
                                         <ul>
                                             <li>
-                                                <a href="{{ url_for('profile') }}" style="color: #0f0f10">
+                                                <a href='profile' style="color: #0f0f10">
                                                     <i class='ti-user'></i>
                                                     个人信息
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="{{ url_for('luru_genealogy') }}" style="color: #0f0f10">
+                                                <a href='luru_genealogy' style="color: #0f0f10">
                                                     <i class='ti-email'></i>
                                                     家谱管理
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{ url_for('user_limit1') }}" style="color: #0f0f10">
+                                                <a href='user_limit1' style="color: #0f0f10">
                                                     <i class='ti-settings'></i>
                                                     申请
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{ url_for('login_out') }}" style="color: #0f0f10">
+                                                <a href='login_out' style="color: #0f0f10">
                                                     <i class='ti-power-off'></i>
                                                     退出
                                                 </a>
@@ -165,17 +166,11 @@
 
 
   <div class="content-wrap">
-                            <form action="/luru_person_luru" >
+                            <form action="/person/add/{{gid}}" >
                             <div class="modal-body" >
                                 <table id="xztb" class="table">
                                     <!--新修改弹窗的样式-->
                                     <tbody>
-                                    <tr>
-                                        <td class="tb_bg"><label for="">族谱ID</label></td>
-                                        <td><input name="gid" type="int" placeholder="族谱ID"></td>
-                                        <td class="tb_bg"><label for="">族谱名</label></td>
-                                        <td><input name="genealogy_name" type="text" placeholder="族谱名"></td>
-                                    </tr>
                                     <tr>
                                         <td class="tb_bg"><label for="">姓</label></td>
                                         <td><input name="surname" type="text" placeholder="姓"></td>
@@ -194,12 +189,6 @@
     								    <td class="tb_bg"><label for="">母亲ID</label></td>
     								    <td><input name="mother_id" type="int" placeholder="母亲ID  ({1,2,3})"></td>
     								</tr>
-                                    <tr>
-                                        <td class="tb_bg"><label for="">出生时间</label></td>
-                                        <td><input name="ad_birth" type="date" placeholder="出生时间(公元纪年)"></td>
-                                        <td class="tb_bg"><label for="">死亡时间</label></td>
-                                        <td><input name="ad_death" type="date" placeholder="死亡时间(公元纪年)"></td>
-                                    </tr>
                                     <tr>
     								    <td class="tb_bg"><label for="">字</label></td>
     								    <td><input name="prefix_name"type="text" placeholder="字"></td>
@@ -236,24 +225,12 @@
     								    <td class="tb_bg"><label for="">墓志铭</label></td>
     								    <td><input name="epitaph" type="text" placeholder="墓志铭"></td>
     								</tr>
-                                    <tr>
-    								    <td class="tb_bg"><label for="">创建者</label></td>
-    								    <td><input name="create_by"type="text" placeholder="创建者"></td>
-    								    <td class="tb_bg"><label for="">创建时间</label></td>
-    								    <td><input name="create_time" type="date" placeholder="创建时间"></td>
-    								</tr>
-                                    <tr>
-    								    <td class="tb_bg"><label for="">更新者</label></td>
-    								    <td><input name="update_by"type="text" placeholder="更新者"></td>
-    								    <td class="tb_bg"><label for="">更新时间</label></td>
-    								    <td><input name="update_time" type="date" placeholder="更新时间"></td>
-    								</tr>
                                     </tbody>
                                 </table>
                             </div>
 
                             <div class="modal-footer" style="margin-top: -20px">
-                                <button type="button" class="btn btn-secondary"><a href="{{ url_for('luru_genealogy') }}">取消</a></button>
+                                <button type="button" class="btn btn-secondary"><a href='luru_genealogy'>取消</a></button>
                                 <input type="submit" class="btn btn-secondary">
 {#                                <a href="{{ url_for('luru_genealogy') }}">确定</a></input>#}
 

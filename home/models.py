@@ -1,10 +1,9 @@
+from tabnanny import verbose
 from django.db import models
-
-from mana.models import AttachedUser
 
 # Create your models here.
 
-class Genealogy(AttachedUser):
+class Genealogy(models.Model):
     '''
     家谱：
 
@@ -42,16 +41,19 @@ class Genealogy(AttachedUser):
     #删除标记:字符，0表示未删除，1表示删除
     is_del = models.CharField(max_length=1, default='0', verbose_name='删除标记')
 
+    #创建时间
+    create_time = models.DateTimeField( verbose_name='创建时间')
+
 
     def __str__(self):
         return self.title
 
-class Individual(AttachedUser):
+class Individual(models.Model):
     '''
     人物：
     '''
     #所属族谱
-    gene = models.ForeignKey("Genealogy", related_name='indi_genealogy',  to_field='title',  null=True, blank=True, on_delete=models.SET_NULL)
+    gene = models.ForeignKey("Genealogy", related_name='indi_genealogy',  to_field='id',  null=True, blank=True, on_delete=models.SET_NULL)
 
     #姓
     surname = models.CharField(max_length=10, unique=False, verbose_name='姓')

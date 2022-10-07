@@ -9,7 +9,6 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('mana', '0002_initial'),
         ('home', '0001_initial'),
     ]
 
@@ -49,8 +48,6 @@ class Migration(migrations.Migration):
                 ('is_public', models.CharField(default='0', max_length=32, verbose_name='是否公开')),
                 ('access_pwd', models.CharField(blank=True, max_length=8, verbose_name='访问密码')),
                 ('is_del', models.CharField(default='0', max_length=1, verbose_name='删除标记')),
-                ('create_by', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='created_%(app_label)s_%(class)s_related', to='mana.userinfo', to_field='username')),
-                ('update_by', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='updated_%(app_label)s_%(class)s_related', to='mana.userinfo', to_field='username')),
             ],
             options={
                 'abstract': False,
@@ -86,12 +83,10 @@ class Migration(migrations.Migration):
                 ('idcard_type', models.CharField(default='居民身份证', max_length=32, verbose_name='身份证')),
                 ('is_del', models.CharField(default='0', max_length=1, verbose_name='删除标记')),
                 ('note', models.CharField(max_length=500, verbose_name='')),
-                ('create_by', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='created_%(app_label)s_%(class)s_related', to='mana.userinfo', to_field='username')),
                 ('farther', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='indi_farther', to='home.individual')),
-                ('gene', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='indi_genealogy', to='home.genealogy', to_field='title')),
+                ('gene', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='indi_genealogy', to='home.genealogy', to_field='id')),
                 ('mother', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='indi_mother', to='home.individual')),
                 ('spouse', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='indi_spouse', to='home.individual')),
-                ('update_by', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, related_name='updated_%(app_label)s_%(class)s_related', to='mana.userinfo', to_field='username')),
             ],
             options={
                 'abstract': False,
