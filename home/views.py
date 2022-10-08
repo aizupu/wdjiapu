@@ -74,3 +74,6 @@ def person_delete(request,gid,id):
 def keshihua(request):
     g = Genealogy.objects.all().values()
     return render(request,"keshihua.html",{"genealogy":g})
+
+def keshihua1(request,id):
+    return render(request,"keshihua1.html")

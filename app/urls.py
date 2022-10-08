@@ -40,6 +40,7 @@ urlpatterns = [
     path('person/delete/<gid>/<id>', views.person_delete, name='deleteperson'),
 
     path('keshihua', views.keshihua, name='keshihua'),
+    path('DataToJson1/<id>', views.keshihua1, name='keshihua1'),
 
     path('file', views.index, name='file'),
     path('file/upload', views.index, name='uploadfile'),
