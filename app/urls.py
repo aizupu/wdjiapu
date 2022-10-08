@@ -30,7 +30,7 @@ urlpatterns = [
     path('login1', views.login, name='login'),
 
     path('genealogy', views.genealogy, name='genealogy'),
-    path('genealogy/del', views.index, name='delgene'),
+    path('genealogy/del/<id>', views.genealogy_delete, name='delgene'),
     path('genealogy/apply', views.index, name='applygene'),
     path('genealogy/edit', views.genealogy_edit, name='editgene'),
 
@@ -38,6 +38,8 @@ urlpatterns = [
     path('individual/add/<id>', views.individual_add, name='addindividual'),
     path('person/add/<id>', views.person_add, name='addperson'),
     path('person/delete/<gid>/<id>', views.person_delete, name='deleteperson'),
+
+    path('keshihua', views.keshihua, name='keshihua'),
 
     path('file', views.index, name='file'),
     path('file/upload', views.index, name='uploadfile'),

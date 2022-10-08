@@ -27,6 +27,11 @@ def genealogy_edit(request):
     genealogy_item.save()
     return redirect('/genealogy')
 
+def genealogy_delete(request,id):
+    g = Genealogy.objects.get(id=id)
+    g.delete()
+    return redirect('/genealogy')
+
 def individual(request,id):
     p = Individual.objects.filter(gene_id = id).values
     return render(request,"luru_person.html",{"person":p,"gid":id})
@@ -65,3 +70,7 @@ def person_delete(request,gid,id):
     person = Individual.objects.get(id=id)
     person.delete()
     return redirect('/individual/'+gid)
+
+def keshihua(request):
+    g = Genealogy.objects.all().values()
+    return render(request,"keshihua.html",{"genealogy":g})
