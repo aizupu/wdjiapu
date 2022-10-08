@@ -28,7 +28,7 @@ def genealogy_edit(request):
     return redirect('/genealogy')
 
 def individual(request,id):
-    p = Individual.objects.filter(id = id).values
+    p = Individual.objects.filter(gene_id = id).values
     return render(request,"luru_person.html",{"person":p,"gid":id})
 
 def individual_add(request,id):
@@ -59,9 +59,9 @@ def person_add(request,id):
     line_name = line_name, generetion = generation, rank = rank, is_alive = alive_flag, ce_birth = ce_birth, ce_death = ce_death, birth_place = birth_place,\
     death_place = death_place, biography = biography, epitaph = epitaph)
     individual_item.save()
-    return redirect('/individual/id')
+    return redirect('/individual/'+id)
 
 def person_delete(request,gid,id):
     person = Individual.objects.get(id=id)
     person.delete()
-    return redirect('/individual/gid')
+    return redirect('/individual/'+gid)

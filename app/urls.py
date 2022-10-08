@@ -37,7 +37,7 @@ urlpatterns = [
     path('individual/<id>', views.individual, name='individual'),
     path('individual/add/<id>', views.individual_add, name='addindividual'),
     path('person/add/<id>', views.person_add, name='addperson'),
-    path('person/delete/<id>', views.person_delete, name='deleteperson'),
+    path('person/delete/<gid>/<id>', views.person_delete, name='deleteperson'),
 
     path('file', views.index, name='file'),
     path('file/upload', views.index, name='uploadfile'),
