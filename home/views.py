@@ -1,7 +1,11 @@
 from django.shortcuts import render,redirect
 from home.models import Genealogy
 from home.models import Individual
+from home.models import File
+from django.views.decorators.csrf import csrf_exempt
+from django.http import FileResponse
 import time
+import os
 # Create your views here.
 
 def index(request):
@@ -77,3 +81,38 @@ def keshihua(request):
 
 def keshihua1(request,id):
     return render(request,"keshihua1.html")
+
+def file_upload(request):
+    g = Genealogy.objects.all().values()
+    return render(request, "upload.html",{"genealogy":g})
+
+@csrf_exempt
+def file_uploader(request, id):
+    print('request.FILES', request.FILES)
+    file = request.FILES.get('file')
+    print(file.name)
+    if file:
+        basedir = os.path.abspath(os.path.join(os.path.dirname("__file__")))
+        file_path = os.path.join(basedir, 'static','files', file.name)
+        f=open(file_path,'wb+')
+        for chunk in file.chunks():
+            f.write(chunk)
+        f.close()
+        genealogy = Genealogy.objects.get(id = id)
+        file_item = File(filename=file.name, path=file_path, Genealogy=genealogy)
+        file_item.save()
+    return redirect('/file/upload')
+
+def file_download(request):
+    f = File.objects.all().values()
+    return render(request, "download.html",{"file":f})
+
+def file_downloader(request, filename):
+    basedir = os.path.abspath(os.path.join(os.path.dirname("__file__")))
+    file_path = os.path.join(basedir, 'static','files', filename)
+    with open(file_path, "r", encoding='utf-8', errors='ignore') as f:
+        file_cont = f.read()
+    response = FileResponse(file_cont)
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = 'attachment;filename='+filename
+    return response

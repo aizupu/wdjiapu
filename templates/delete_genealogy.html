@@ -42,7 +42,7 @@
                         <li><a class='sidebar-sub-toggle'><i class='ti-home'></i>公开族谱<span class='sidebar-collapse-icon ti-angle-down'></span></a>
                             <ul>
                                 <ul>
-                                    <li><a href="{{ url_for('index') }}">族谱预览</a></li>
+                                    <li><a href='/index'>族谱预览</a></li>
                                     <li><a href='#'>族谱可视化</a></li>
 
                                 </ul>
@@ -54,10 +54,9 @@
                         <li><a class='sidebar-sub-toggle'><i class='ti-bar-chart-alt'></i>我的族谱<span class='sidebar-collapse-icon ti-angle-down'></span></a>
                             <ul>
                                 <ul>
-                                    <li><a href="{{ url_for('luru_genealogy') }}">族谱查看</a></li>
+                                    <li><a href='/genealogy'>族谱查看</a></li>
 {#                                    <li><a href="{{ url_for('luru_person') }}">族谱修改</a></li>#}
-									<li><a href="{{ url_for('keshihua') }}">族谱可视化</a></li>
-                                    <li><a href="{{ url_for('delete_genealogy') }}">族谱删除</a></li>
+									<li><a href='/keshihua'>族谱可视化</a></li>
                                     <li><a href='#'>其他</a></li>
                                 </ul>
 
@@ -66,27 +65,28 @@
                         <li><a class='sidebar-sub-toggle'><i class='ti-layout'></i>权限管理<span class='sidebar-collapse-icon ti-angle-down'></span></a>
                             <ul>
                                 <ul>
-                                    <li><a href='{{ url_for('user_limit1') }}'>权限申请</a></li>
-                                    <li><a href='{{ url_for('user_limit') }}'>权限编辑</a></li>
+                                    <li><a href='user_limit1'>权限申请</a></li>
+                                    <li><a href='user_limit'>权限编辑</a></li>
 
                                 </ul>
 
                             </ul>
                         </li>
-                        <li><a href="{{ url_for('profile') }}"><i class='ti-user'></i> 个人信息</a>
+                        <li><a href='profile'><i class='ti-user'></i> 个人信息</a>
 
                         </li>
 
                         <li class='label'>文档</li>
-                        <li><a href='{{ url_for('upload') }}'><i class='ti-view-list-alt'></i> 文档上传</a></li>
-						<li><a href='{{ url_for('download') }}'><i class='ti-view-list-alt'></i> 文档下载</a></li>
+                        <li><a href='/file/upload'><i class='ti-view-list-alt'></i> 文档上传</a></li>
+						<li><a href='/file/download'><i class='ti-view-list-alt'></i> 文档下载</a></li>
 						<li><a href='#'><i class='ti-view-list-alt'></i> 文档修改</a></li>
                         <li class='label'>其他</li>
-                        <li><a href="{{ url_for('login_out') }}"><i class='ti-close'></i>退出</a> </li>
+                        <li><a href='login_out'><i class='ti-close'></i>退出</a> </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <!-- /# sidebar -->
 
             <div class='header'>
@@ -128,26 +128,26 @@
                                     <div class=''>
                                         <ul>
                                             <li>
-                                                <a href="{{ url_for('profile') }}" style="color: #0f0f10">
+                                                <a href='profile' style="color: #0f0f10">
                                                     <i class='ti-user'></i>
                                                     个人信息
                                                 </a>
                                             </li>
 
                                             <li>
-                                                <a href="{{ url_for('luru_genealogy') }}" style="color: #0f0f10">
+                                                <a href='luru_genealogy' style="color: #0f0f10">
                                                     <i class='ti-email'></i>
                                                     家谱管理
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{ url_for('user_limit1') }}" style="color: #0f0f10">
+                                                <a href='user_limit1' style="color: #0f0f10">
                                                     <i class='ti-settings'></i>
                                                     申请
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="{{ url_for('login_out') }}" style="color: #0f0f10">
+                                                <a href='login_out' style="color: #0f0f10">
                                                     <i class='ti-power-off'></i>
                                                     退出
                                                 </a>
@@ -191,8 +191,8 @@
                 <div class="person_search">
                     <div class="search_input">
                         <div class="input-group mb-3">
-                            <span>族谱ID：</span>
-                            <input id="Ktext" type="text" class="form-control" placeholder="请输入族谱ID">
+                            <span>族谱名：</span>
+                            <input id="Ktext" type="text" class="form-control" placeholder="请输入族谱名">
                         </div>
                     </div>
 

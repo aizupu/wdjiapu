@@ -43,8 +43,10 @@ urlpatterns = [
     path('DataToJson1/<id>', views.keshihua1, name='keshihua1'),
 
     path('file', views.index, name='file'),
-    path('file/upload', views.index, name='uploadfile'),
-    path('file/down', views.index, name='downfile'),
+    path('file/upload', views.file_upload, name='uploadfile'),
+    path('file/uploader/<id>', views.file_uploader, name='fileuploader'),
+    path('file/download', views.file_download, name='downloadfile'),
+    path('file/downloader/<filename>', views.file_downloader, name='downloaderfile'),
 
     path('vis', views.index, name='vis'),
 ]
