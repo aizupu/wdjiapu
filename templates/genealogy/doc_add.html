@@ -25,7 +25,8 @@
                 <h3 class="text-primary">上传文档</h3>
             </header>
             <div class="panel-body">
-                <form class="form-horizontal" role="form" action="/genealogy/doc/add/submit/{{gid}}">
+                <form class="form-horizontal" role="form">
+{#                    <form class="form-horizontal" role="form" action="/genealogy/doc/add/submit/{{gid}}">#}
                     <div class="row summary-list">
                         <div class="col-md-12">
                             <div class="form-group">
@@ -63,8 +64,7 @@
                                     文档内容
                                 </header>
                                 <div class="panel-body">
-                                    <input type="text" class="summernote" name="doc-content" id="doc-content">
-                                </div>
+                                    <div class="summernote"  id="doc-content">请输入文档内容</div>
                             </div>
                             <!-- <div class="row">
                                 <div class="col-md-12">
@@ -81,7 +81,7 @@
                         </div>
                     <div class="form-group">
                         <div class="col-lg-offset-5 col-lg-10">
-                            <button type="submit" class="btn btn-primary">提交</button>
+                            <button type="submit" id="submit" class="btn btn-primary">提交</button>
                         </div>
                     </div>
                 </form>
@@ -112,7 +112,31 @@
 {% endblock %}
 {% block scriptmore %}<script src="/static/assets/summernote/dist/summernote.min.js"></script>
 <script>
+    $(function () {
+        $("#submit").on("click",function (){
+            var content = $("#doc-content").summernote("code");
+            var gname = $("#gname").val();
+            var hall_title = $("#hall_title").val();
+            var dformat = $("#dformat").val();
+            var dtype = $("#dtype").val();
+            var drank = $("#drank").val();
+            $.ajax({
+                method:'get',
+                url:'genealogy/doc/add/submit/{{gid}}',
+                data:{
+                    "gname":gname,
+                    "hall_title":hall_title,
+                    "dformat":dformat,
+                    "dtype":dtype,
+                    "drank":drank,
+                    "doc-content":content
+                },success(){
 
+                }
+            })
+        })
+        
+    })
     jQuery(document).ready(function(){
 
         $('.summernote').summernote({
@@ -124,7 +148,6 @@
             focus: true                 // set focus to editable area after initializing summernote
         });
     });
-    var content = $('.summernote').summernote('code');
 
 </script>
 {% endblock %}
