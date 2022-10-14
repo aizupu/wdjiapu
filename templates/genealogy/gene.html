@@ -1,0 +1,174 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-管理首页 {% endblock %}
+
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+            <li class="active">家谱管理首页</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-2 col-sm-2">
+        <a href="/genealogy/add">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="chart">
+                        <div id="pie-chart">
+                            <img src="/static/img/pic/header_01.png" width="100" height="100" style="display: inline-block; width: 100px; height: 100px; vertical-align: top;">
+                        </div>
+                    </div>
+                </div>
+                <footer class="pie-foot">
+                    创建新家谱
+                </footer>
+            </section>
+        </a>
+    </div>
+    <div class="col-lg-2 col-sm-2">
+        <a href="/genealogy/list">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="chart">
+                        <div id="pie-chart">
+                            <img src="/static/img/pic/header_02.png" width="100" height="100" style="display: inline-block; width: 100px; height: 100px; vertical-align: top;">
+                        </div>
+                    </div>
+                </div>
+                <footer class="pie-foot">
+                    我的家谱
+                </footer>
+            </section>
+        </a>
+    </div>
+    <div class="col-lg-2 col-sm-2">
+        <a href="#">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="chart">
+                        <div id="pie-chart">
+                            <img src="/static/img/pic/header_03.png" width="100" height="100" style="display: inline-block; width: 100px; height: 100px; vertical-align: top;">
+                        </div>
+                    </div>
+                </div>
+                <footer class="pie-foot">
+                    共建家谱
+                </footer>
+            </section>
+        </a>
+    </div>
+    <div class="col-lg-2 col-sm-2">
+        <a href="#">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="chart">
+                        <div id="pie-chart">
+                            <img src="/static/img/pic/header_04.png" width="100" height="100" style="display: inline-block; width: 100px; height: 100px; vertical-align: top;">
+                        </div>
+                    </div>
+                </div>
+                <footer class="pie-foot">
+                    家谱案例
+                </footer>
+            </section>
+        </a>
+    </div>
+    <div class="col-lg-2 col-sm-2">
+        <a href="#">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="chart">
+                        <div id="pie-chart">
+                            <img src="/static/img/pic/header_05.png" width="100" height="100" style="display: inline-block; width: 100px; height: 100px; vertical-align: top;">
+                        </div>
+                    </div>
+                </div>
+                <footer class="pie-foot">
+                    家谱文档
+                </footer>
+            </section>
+        </a>
+    </div>
+    <div class="col-lg-2 col-sm-2">
+        <a href="#">
+            <section class="panel">
+                <div class="panel-body">
+                    <div class="chart">
+                        <div id="pie-chart">
+                            <img src="/static/img/pic/header_01.png" width="100" height="100" style="display: inline-block; width: 100px; height: 100px; vertical-align: top;">
+                        </div>
+                    </div>
+                </div>
+                <footer class="pie-foot">
+                    家谱pdf查看
+                </footer>
+            </section>
+        </a>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <section class="panel ">
+            <header class="panel-heading">
+                系统公告
+                <span class="tools pull-right">
+                  <a class="fa fa-chevron-down" href="javascript:;"></a>
+                  <a class="fa fa-times" href="javascript:;"></a>
+              </span>
+            </header>
+            <div class="panel-body">
+                <div class="timeline-messages">
+                    <!-- Comment -->
+                    <div class="msg-time-chat">
+                        <div class="message-body msg-in">
+                            <span class="arrow"></span>
+                            <div class="text">
+                                <p class="attribution">2022年10月12日</p>
+                                <p>欢迎您使用珞珈图腾家谱数字化平台！本系统目前处于试运行阶段，如您在使用中发现任何问题，请发送问题描述电子邮件至liuhonghao@whu.edu.cn！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /comment -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-6">
+        <section class="panel">
+            <header class="panel-heading">
+                系统操作手册
+                <span class="tools pull-right">
+                  <a class="fa fa-chevron-down" href="javascript:;"></a>
+                  <a class="fa fa-times" href="javascript:;"></a>
+              </span>
+            </header>
+            <div class="panel-body">
+                <div class="list-item">
+                    <a href="#" id="a1" class="fa fa-book"
+                        target="_blank"> 创建家谱使用说明</a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="list-item">
+                    <a href="#" id="a2" class="fa fa-book"
+                        target="_blank"> 添加人物使用说明</a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="list-item">
+                    <a href="#" id="a3" class="fa fa-book"
+                        target="_blank"> 上传文档使用说明</a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

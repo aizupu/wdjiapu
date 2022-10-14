@@ -1,0 +1,57 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-管理首页 {% endblock %}
+{% block headmore %}
+<link rel="stylesheet" type="text/css" href="/static/assets/fuelux/css/tree-style.css">
+{% endblock %}
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">族谱管理</a></li>
+            <li class="active">家谱世系图</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="panel">
+        <div class="panel-heading">
+            湖北武汉李氏家谱
+            <span class="tools pull-right">
+                <a href="javascript:;" class="fa fa-chevron-down"></a>
+                <a href="javascript:;" class="fa fa-times"></a>
+            </span>
+        </div>
+        <div class="panel-body">
+            <div id="FlatTree" class="tree tree-plus-minus">
+                <div class="tree-folder" style="display:none;">
+                    <div class="tree-folder-header">
+                        <i class="fa fa-folder"></i>
+                        <div class="tree-folder-name"></div>
+                    </div>
+                    <div class="tree-folder-content"></div>
+                    <div class="tree-loader" style="display: none;"></div>
+                </div>
+                <div class="tree-item" style="display:none;">
+                    <i class="tree-dot"></i>
+                    <div class="tree-item-name"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scriptmore %}
+<script src="/static/assets/fuelux/js/tree.min.js"></script>
+<script src="/static/js/tree.js"></script>
+<script>
+    jQuery(document).ready(function() {
+        TreeView.init();
+    });
+</script>
+{% endblock %}

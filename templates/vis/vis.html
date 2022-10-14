@@ -1,0 +1,298 @@
+{% extends 'comm/_base2.html' %}
+{% block title %} 武汉大学-智慧家谱可视化 {% endblock %}
+{% block headmore %}
+{% endblock %}
+
+{% block main %}
+<!-- /# 地图 -->
+<div class="container-fluid">
+	<div class="text-center">
+		<h1>可视化族谱统计</h1>
+	</div>
+	<div class="row">
+		<div class="col-lg-3">
+			<div id="bar" style="height: 800px;"></div>
+		</div>
+		<div class="col-lg-6">
+			<div id="map" style="height: 800px;"></div>
+		</div>
+		<div class="col-lg-3">
+			<div id="pie" style="height: 800px;"></div>
+		</div>
+	</div>
+</div>
+<div class="container">
+		<div class="input-group" style="right: 30%;left: 30%">
+			<input id="tableSearch1" type="text" onkeyup="tableSearch(1,'tableSearch1')" placeholder="输入族谱名称查询" />
+			<input id="tableSearch2" type="text" onkeyup="tableSearch(2,'tableSearch2')" placeholder="输入姓氏查询" />
+			<input id="tableSearch3" type="text" onkeyup="tableSearch(3,'tableSearch3')" placeholder="输入省/市查询" />
+		</div>
+		<table id="table" style="width:1400px" class="table text-center table-striped table-hover">
+			<thead>
+				<tr>
+					<th>
+						<h3>序号(↑↓)</h3>
+					</th>
+					<th class="nosort">
+						<h3>族谱名称</h3>
+					</th>
+					<th class="nosort">
+						<h3>姓氏</h3>
+					</th>
+					<th class="nosort">
+						<h3>省/市</h3>
+					</th>
+					<th>
+						<h3>人数(↑↓)</h3>
+					</th>
+					<th class="nosort">
+						<h3>创建者</h3>
+					</th>
+					<th>
+						<h3>创建时间(↑↓)</h3>
+					</th>
+					<th class="nosort">
+						<h3>更新者</h3>
+					</th>
+					<th>
+						<h3>更新时间(↑↓)</h3>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>郭氏族谱</td>
+					<td>郭</td>
+					<td>贵州</td>
+					<td>10000</td>
+					<td>郭子仪</td>
+					<td>750年</td>
+					<td>郭茂</td>
+					<td>2019-04-14</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>张氏族谱</td>
+					<td>张</td>
+					<td>湖北</td>
+					<td>1000</td>
+					<td>张子仪</td>
+					<td>750年</td>
+					<td>张茂</td>
+					<td>2010-04-14</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>张氏谱书</td>
+					<td>张</td>
+					<td>北京</td>
+					<td>8500</td>
+					<td>张子仪</td>
+					<td>760年</td>
+					<td>李四</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>王氏族谱</td>
+					<td>王</td>
+					<td>云南</td>
+					<td>89999</td>
+					<td>王子仪</td>
+					<td>750年</td>
+					<td>王小二</td>
+					<td>2021-12-14</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>赵氏族谱</td>
+					<td>赵</td>
+					<td>广东</td>
+					<td>25000</td>
+					<td>赵子仪</td>
+					<td>750年</td>
+					<td>赵大</td>
+					<td>2007-04-14</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>钱氏族谱</td>
+					<td>钱</td>
+					<td>上海</td>
+					<td>7600</td>
+					<td>钱子仪</td>
+					<td>1600年</td>
+					<td>钱二</td>
+					<td>2001-04-14</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>孙氏族谱</td>
+					<td>孙</td>
+					<td>安徽</td>
+					<td>9850</td>
+					<td>孙子仪</td>
+					<td>1875年</td>
+					<td>孙二</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>周氏族谱</td>
+					<td>周</td>
+					<td>四川</td>
+					<td>18955</td>
+					<td>周子仪</td>
+					<td>1750年</td>
+					<td>周二</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>吴氏族谱</td>
+					<td>吴</td>
+					<td>贵州</td>
+					<td>10854</td>
+					<td>吴子仪</td>
+					<td>2021年</td>
+					<td>郭茂</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>冯氏族谱</td>
+					<td>冯</td>
+					<td>贵州</td>
+					<td>1050</td>
+					<td>郭子仪</td>
+					<td>1986年</td>
+					<td>郭茂</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>程氏族谱</td>
+					<td>程</td>
+					<td>贵州</td>
+					<td>1500</td>
+					<td>郭子仪</td>
+					<td>750年</td>
+					<td>郭茂</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>楚氏族谱</td>
+					<td>楚</td>
+					<td>湖北</td>
+					<td>1600</td>
+					<td>张子仪</td>
+					<td>750年</td>
+					<td>张茂</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>蒋氏族谱</td>
+					<td>蒋</td>
+					<td>北京</td>
+					<td>850</td>
+					<td>张子仪</td>
+					<td>760年</td>
+					<td>李四</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>沈氏族谱</td>
+					<td>沈</td>
+					<td>云南</td>
+					<td>8994</td>
+					<td>王子仪</td>
+					<td>750年</td>
+					<td>王小二</td>
+					<td>2021-04-15</td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>韩氏族谱</td>
+					<td>韩</td>
+					<td>广东</td>
+					<td>25000</td>
+					<td>韩子仪</td>
+					<td>750年</td>
+					<td>赵大</td>
+					<td>2021-04-19</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>杨氏族谱</td>
+					<td>杨</td>
+					<td>上海</td>
+					<td>7600</td>
+					<td>杨子仪</td>
+					<td>1600年</td>
+					<td>钱二</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>朱氏族谱</td>
+					<td>朱</td>
+					<td>安徽</td>
+					<td>9850</td>
+					<td>朱子仪</td>
+					<td>1875年</td>
+					<td>孙二</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>18</td>
+					<td>夏氏族谱</td>
+					<td>夏</td>
+					<td>四川</td>
+					<td>10000</td>
+					<td>夏子仪</td>
+					<td>750年</td>
+					<td>周二</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>刘氏族谱</td>
+					<td>刘</td>
+					<td>贵州</td>
+					<td>10000</td>
+					<td>刘子仪</td>
+					<td>750年</td>
+					<td>郭茂</td>
+					<td>2021-04-14</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>谭氏族谱</td>
+					<td>谭</td>
+					<td>贵州</td>
+					<td>10000</td>
+					<td>谭子仪</td>
+					<td>750年</td>
+					<td>郭茂</td>
+					<td>2021-04-14</td>
+				</tr>
+			</tbody>
+		</table>
+	
+</div>
+{% endblock %}
+{% block scriptmore %}
+<script type="text/javascript" src="/static/js/echarts.js"></script>
+<script src="/static/js/bootbox.min.js"></script>
+<script type="text/javascript" src="/static/js/utils.js"></script>
+<script type="text/javascript" src="/static/js/map/china.js"></script>
+<script type="text/javascript" src="/static/js/jquery.count.min.js"></script>
+<script type="text/javascript" src="/static/js/monitor.js"></script>
+<script type="text/javascript" src="/static/js/tableSortPaging.js"></script>
+<script type="text/javascript" src="/static/js/myFunction.js"></script>
+<script type="text/javascript" src="/static/js/vismap.js"></script>
+{% endblock %}

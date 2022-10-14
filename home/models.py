@@ -1,9 +1,10 @@
-from tabnanny import verbose
 from django.db import models
+
+from mana.models import AttachedUser
 
 # Create your models here.
 
-class Genealogy(models.Model):
+class Genealogy(AttachedUser):
     '''
     家谱：
 
@@ -41,19 +42,16 @@ class Genealogy(models.Model):
     #删除标记:字符，0表示未删除，1表示删除
     is_del = models.CharField(max_length=1, default='0', verbose_name='删除标记')
 
-    #创建时间
-    create_time = models.DateTimeField( verbose_name='创建时间')
-
 
     def __str__(self):
         return self.title
 
-class Individual(models.Model):
+class Individual(AttachedUser):
     '''
     人物：
     '''
     #所属族谱
-    gene = models.ForeignKey("Genealogy", related_name='indi_genealogy',  to_field='id',  null=True, blank=True, on_delete=models.SET_NULL)
+    gene = models.ForeignKey("Genealogy", related_name='indi_genealogy',  to_field='title',  null=True, blank=True, on_delete=models.SET_NULL)
 
     #姓
     surname = models.CharField(max_length=10, unique=False, verbose_name='姓')
@@ -169,8 +167,8 @@ class Docformat(models.Model):
     #排序，不同格式之间的排序
     order = models.CharField(max_length=2, unique=False, verbose_name='')
 
-    def __str__(self):
-        return self.filename
+    # def __str__(self):
+    #     return self.filename
 
 class Doctype(models.Model):
     '''
@@ -185,8 +183,8 @@ class Doctype(models.Model):
     #排序，不同文档类型的排序
     order = models.CharField(max_length=2, unique=False, verbose_name='')
 
-    def __str__(self):
-        return self.filename
+    # def __str__(self):
+    #     return self.filename
 
 class Document(models.Model):
     '''

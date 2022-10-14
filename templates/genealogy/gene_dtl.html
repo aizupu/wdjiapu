@@ -1,0 +1,43 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-家谱管理 {% endblock %}
+
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">族谱管理</a></li>
+            <li class="active">查看：湖北武汉李氏家谱</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<ul class="panel">
+    <li class="panel-heading">湖北武汉李氏家谱-详细信息</li>
+    <li class="panel-body">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#indi" data-toggle="tab">人物</a></li>
+            <li><a href="#doc" data-toggle="tab">文档</a></li>
+            <li><a href="#pdf" data-toggle="tab">PDF文件</a></li>
+        </ul>
+        <div id="myContent" class="tab-content">
+            <div class="tab-pane fade in active" id="indi">
+                {% include 'include/_geneindi.html' %}
+            </div>
+            <div class="tab-pane fade" id="doc">
+                {% include 'include/_genedoc.html' %}
+            </div>
+            <div class="tab-pane fade" id="pdf">
+                {% include 'include/_genepdf.html' %}
+            </div>
+        </div>
+
+    </li>
+</ul>
+
+{% endblock %}

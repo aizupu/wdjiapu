@@ -1,0 +1,273 @@
+* {
+            margin: 0;
+            padding: 0;
+        }
+body {
+    background-color: #213d32;
+    position: relative;
+}
+
+h1{
+    font-size: 60px;
+    color: #0afff2;
+    text-align: center;
+    font-family: 隶书;
+}
+.big_title{
+    position :absolute;
+    top:0;
+    width: 100%;
+    height: 80px;
+    border: 1px solid #0afff2;
+}
+
+.Bar {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 30%;
+    height: 800px;
+    border: 1px solid #0afff2;
+}
+.Map{
+    width:100%;
+    height:800px;
+    border: 0px solid #0afff2;
+    position:absolute;
+    left:30%;top:80px;
+}
+.Pie {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    height: 800px;
+    border: 1px solid #0afff2;
+}
+
+.table_box {
+    position: absolute;
+    top: 880px;
+    width: 100%;
+    min-height: 340px;
+    display: inline-block;
+    text-align: center;
+    left: 0px;
+    border: 1px solid #0afff2;
+}
+
+
+.search_box{
+    float: left;
+    margin-top: 10px;
+    width:50%;
+    height: 90%;
+    /*border: 1px solid #ff3322;*/
+    margin-left: 35px;
+}
+
+#search_box span {
+    float:left;
+    margin:2px 0 0 5px;
+    width: 25%;
+    font-size:20px;
+    color:white ;
+    text-align: left;
+    border: 1px solid #ff3322;
+
+}
+
+#search_box select {
+    float:left;
+
+    width: 30%;
+    font-size:20px;
+    /*border: 1px solid #ff3322;*/
+}
+
+#tableSearch1{
+    padding: 10px;
+    border: 1px solid #0afff2;
+    background-color: transparent;
+    border-radius: .25em;
+    box-shadow: inset 0 1px 1px rgba(89, 89, 173, 0.15);
+    width: 30%;
+    float: left;
+    color: white;
+    /*position: absolute;*/
+    /*left: 35px;*/
+    /*top: 30px;*/
+    font-size: 16px;
+}
+
+#tableSearch2{
+    padding: 10px;
+    border: 1px solid #0afff2;
+    background-color: transparent;
+    border-radius: .25em;
+    box-shadow: inset 0 1px 1px rgba(89, 89, 173, 0.15);
+    width: 30%;
+    float: left;
+    color: white;
+    /*position: absolute;*/
+    /*left: 35px;*/
+    /*top: 30px;*/
+    font-size: 16px;
+}
+
+#tableSearch3{
+    padding: 10px;
+    border: 1px solid #0afff2;
+    background-color: transparent;
+    border-radius: .25em;
+    box-shadow: inset 0 1px 1px rgba(89, 89, 173, 0.15);
+    width: 30%;
+    float: left;
+    color: white;
+    /*position: absolute;*/
+    /*left: 35px;*/
+    /*top: 30px;*/
+    font-size: 16px;
+}
+
+
+.commonTable {
+    width: 95%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: #FFFFFF;
+    border-right: 1px solid #0e94ea;
+    margin-bottom: 30px;
+    margin-top: 75px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+/*.commonTable tbody tr td{*/
+/*    height: 30px;*/
+/*    line-height: 30px;*/
+/*    border-bottom: 1px solid #0e94ea;*/
+/*    border-top: 1px solid #0e94ea;*/
+/*    border-left: 1px solid #0e94ea;*/
+/*    text-align: center;*/
+/*    font-size: 18px;*/
+/*    padding: 2px;*/
+/*    color: #f2f2f2;*/
+/*}*/
+/*.commonTable thead tr td{*/
+/*    height: 35px;*/
+/*    line-height: 35px;*/
+/*    border-bottom: 1px solid #0e94ea;*/
+/*    border-top: 1px solid #0e94ea;*/
+/*    border-left: 1px solid #0e94ea;*/
+/*    text-align: center;*/
+/*    background-color: rgba(14, 148, 234, 0.4);*/
+/*    color: #00b3ac;*/
+/*    font-weight: bold;*/
+/*    font-size: 20px;*/
+/*}*/
+
+
+.commonTable tbody tr:hover{
+    color: #FFFFFF;
+    background-color: rgba(255, 180, 65, 0.4);
+    cursor: pointer;
+}
+
+.commonTable th {
+    text-align:center;
+    color:white;
+    font-size: 25px;
+    border:1px solid #0e94ea;
+    border-right:none;
+    font-weight: 700;
+    background-color: darkblue;
+
+}
+.commonTable th h3 {
+    font-size:25px;
+    padding:6px 8px 8px;
+    font-weight: 700;
+}
+.commonTable td {
+    padding:4px 6px 6px;
+    font-size: 20px;
+    border-bottom:1px solid #0e94ea;
+    border-right:1px solid #0e94ea;
+    border-left:1px solid #0e94ea;
+}
+.commonTable .head h3 {
+    cursor:pointer;
+    padding-left:18px;
+}
+
+.commonTable .desc, .commonTable .asc {
+    background-color: #ffb441
+}
+
+.commonTable .desc h3 {
+    cursor:pointer;
+    padding-left:18px;
+}
+.commonTable .asc h3 {
+    cursor:pointer;
+    padding-left:18px;
+}
+.commonTable .head:hover, .commonTable .desc:hover, .commonTable .asc:hover {
+    color: #FFFFFF;
+    background-color: rgba(14, 148, 234, 0.4);
+    cursor: pointer;
+}
+
+.commonTable .evenrow td {background: #5959ad}
+.commonTable .oddrow td {background: #2a3f4c}
+.commonTable td.evenselected {background: #5959ad}
+.commonTable td.oddselected {background:#2a3f4c}
+
+.controls {
+    width:95%;
+    margin:0 auto;
+    height:50px;
+    border: 1px solid #0afff2;
+    margin-left: 35px;
+}
+#perpage {
+    float:left;
+    width:20%;
+    height: 90%;
+}
+#perpage select {
+    float:left;
+    height: 70%;
+    width: 20%;
+    font-size:20px;
+}
+#perpage span {
+    float:left;
+    margin:2px 0 0 5px;
+    height: 60%;
+    width: 50%;
+    font-size:20px;
+    color:white ;
+    text-align: left;
+}
+#navigation {
+    float:left;
+    height: 90%;
+    width:50%;
+    text-align:center;
+}
+#navigation img {
+    height: 60%;
+    width: 40px;
+    cursor:pointer;
+}
+#text {
+    float:right;
+    width:20%;
+    height: 60%;
+    text-align:right;
+    margin-top:2px;
+    font-size: 20px;
+    color: white;
+}

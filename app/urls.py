@@ -18,35 +18,56 @@ from django.urls import path, re_path, include
 
 from home import views
 
-from django.views.static import serve
-# from app.settings import STATIC_ROOT
-
 urlpatterns = [
-    # re_path('media/(?P<path>.*)', serve, {'document_root': STATIC_ROOT}, name='media_url'),
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('home', views.index, name='home'),
     path('index', views.index, name='index'),
-    path('login1', views.login, name='login'),
+    path('test', views.test, name='test'),
+    path('about', views.about, name='about'),
+    path('login', views.login, name='login'),
+    path('logout', views.logout, name='logout'),
+    path('register', views.register, name='register'),
 
+    #=========================与家谱相关的页面=========================
     path('genealogy', views.genealogy, name='genealogy'),
-    path('genealogy/del/<id>', views.genealogy_delete, name='delgene'),
-    path('genealogy/apply', views.index, name='applygene'),
-    path('genealogy/edit', views.genealogy_edit, name='editgene'),
+    path('genealogy/info/<id>', views.genealogy_info, name='genealogy_info'),
+    path('genealogy/list', views.gene_list, name='gene_list'),
+    path('genealogy/add', views.gene_add, name='gene_add'),
+    path('genealogy/add_genealogy', views.genealogy_add, name='genealogy_add'),
+    path('genealogy/del/<id>', views.gene_del, name='gene_del'),
+    path('genealogy/upd', views.gene_upd, name='gene_upd'),
+    path('genealogy/dtl/<id>', views.gene_dtl, name='gene_dtl'),
+    path('genealogy/grt', views.gene_grt, name='gene_grt'),
 
-    path('individual/<id>', views.individual, name='individual'),
-    path('individual/add/<id>', views.individual_add, name='addindividual'),
-    path('person/add/<id>', views.person_add, name='addperson'),
-    path('person/delete/<gid>/<id>', views.person_delete, name='deleteperson'),
+    #=========================与人物相关的页面=========================
+    path('genealogy/indi', views.indi, name='indi'),
+    path('genealogy/indi/add/<id>', views.indi_add, name='indi_add'),
+    path('genealogy/indi/add_indi/<id>', views.add_indi, name='add_indi'),
+    path('genealogy/indi/del/<gid>/<id>', views.indi_del, name='indi_del'),
+    path('genealogy/indi/rel', views.indi_rel, name='indi_rel'),
+    path('genealogy/indi/dtl/<id>', views.indi_dtl, name='indi_dtl'),
+    path('genealogy/indi/tree', views.indi_tree, name='indi_tree'),
 
-    path('keshihua', views.keshihua, name='keshihua'),
-    path('DataToJson1/<id>', views.keshihua1, name='keshihua1'),
-
-    path('file', views.index, name='file'),
-    path('file/upload', views.file_upload, name='uploadfile'),
-    path('file/uploader/<id>', views.file_uploader, name='fileuploader'),
-    path('file/download', views.file_download, name='downloadfile'),
-    path('file/downloader/<filename>', views.file_downloader, name='downloaderfile'),
-
-    path('vis', views.index, name='vis'),
+    # =========================与文档相关的页面=========================
+    path('genealogy/doc', views.doc, name='doc'),
+    path('genealogy/doc/add/<id>', views.doc_add, name='doc_add'),
+    path('genealogy/doc/add/submit/<id>', views.doc_submit, name='doc_submit'),
+    path('genealogy/doc/del/<gid>/<id>', views.doc_del, name='doc_del'),
+    path('genealogy/doc/upd', views.doc_upd, name='doc_upd'),
+    path('genealogy/doc/dtl/<id>', views.doc_dtl, name='doc_dtl'),
+    
+    #=========================与PDF文件相关的页面=========================
+    path('genealogy/file', views.file, name='file'),
+    path('genealogy/file/add/<id>', views.file_add, name='file_add'),
+    path('genealogy/file/del/<gid>/<id>', views.file_del, name='file_del'),
+    path('genealogy/file/upd', views.file_upd, name='file_upd'),
+    path('genealogy/file/dtl', views.file_dtl, name='file_dtl'),
+    path('genealogy/file/download/<id>', views.file_dwn, name='file_dwn'),
+    
+    #=========================与可视化相关的页面=========================
+    path('vis', views.vis, name='vis'),
+    
+    #=========================管理后台=========================
+    re_path(r'^mana/', include('mana.urls'))
 ]

@@ -1,0 +1,144 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-创建家谱 {% endblock %}
+
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">族谱管理</a></li>
+            <li class="active">创建家谱</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-primary">创建家谱</h3>
+            </header>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" action="/genealogy/add_genealogy">
+                    <div class="row summary-list">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="gname" class="col-sm-3 control-label">家谱名称</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="gname" id="gname" placeholder="如：武汉李氏家谱">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hall_title" class="col-sm-3 control-label">堂号</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="hall_title" id="hall_title" placeholder="堂号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="col-sm-3 control-label">位置</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="location" id="location" placeholder="所属地方">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact_phone" class="col-sm-3 control-label">联系电话</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="contact_phone" id="contact_phone" placeholder="联系电话">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="sername" class="col-sm-3 control-label">家族姓氏</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="sername" id="sername" placeholder="家族姓氏">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="county_title" class="col-sm-3 control-label">郡望号</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="county_title" id="county_title" placeholder="郡望号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact" class="col-sm-3 control-label">联系人</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="contact" id="contact" placeholder="联系人">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="access_pwd" class="col-sm-3 control-label">访问密码</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="access_pwd" id="access_pwd" placeholder="访问密码">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="form-group">
+                        <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">家谱隐私</label>
+                        <div class="col-lg-10">
+                            <div class="radios">
+                                <label class="label_radio" for="radio-01">
+                                    <input name="sample-radio" id="radio-01" value="1" type="radio" checked />共建家谱
+                                </label>
+                                <label class="label_radio" for="radio-02">
+                                    <input name="sample-radio" id="radio-02" value="1" type="radio" />公开家谱
+                                </label>
+                                <label class="label_radio" for="radio-03">
+                                    <input name="sample-radio" id="radio-03" value="1" type="radio" />私有家谱
+                                </label>
+                                <p class="help-block">注意：选择之后可以修改</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="note" class="col-lg-2 col-sm-2 control-label">备注</label>
+                        <div class="col-lg-10">
+                            <textarea class="form-control" rows="5" name="note" id="note"
+                                placeholder="关于家谱的一些额外信息"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> 我同意隐私条款
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-4">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-danger">注意事项</h3>
+            </header>
+            <div class="panel-body">
+                <p>
+                    *本系统严格控制每位用户的修谱权限，权限级别默认如下。您可以点击“权限设置”修改每个用户级别所具有的权限。<br />
+                    家谱创建者<br />
+                    拥有本家谱的所有权限<br />
+                    核心修谱成员<br />
+                    默认拥有查看、修改和审核所有数据的权限；默认可指定用户的权限级别<br />
+                    家谱共建者<br />
+                    指的是上传数据且数据通过核心修谱成员审核的用户，具有查看和修改自己所上传数据的权限<br />
+                    普通家谱成员<br />
+                    默认只具有查看家谱的权限<br />
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,98 @@
+.get {
+  background: url(../img/bg3.jpg) no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-color: #4682b4;
+  color: rgb(31, 31, 51);
+  text-align: center;
+  padding: 100px 0;
+  /* border: 2px solid #f00; */
+}
+
+.get-title {
+  font-size: 200%;
+  /* border: 2px solid #fff; */
+  padding: 20px;
+  display: inline-block;
+}
+
+.get input {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.detail {
+  background: #fff;
+}
+
+.detail-h2 {
+  text-align: center;
+  font-size: 150%;
+  margin: 40px 0;
+}
+
+.detail-h3 {
+  color: #1f8dd6;
+}
+
+.detail-p {
+  color: #7f8c8d;
+}
+
+.detail-mb {
+  margin-bottom: 30px;
+}
+
+.hope {
+  background: #0bb59b;
+  padding: 50px 0;
+}
+
+.hope-img {
+  text-align: center;
+}
+
+.hope-hr {
+  border-color: #149C88;
+}
+
+.hope-title {
+  font-size: 140%;
+}
+
+.about {
+  background: #fff;
+  padding: 40px 0;
+  color: #7f8c8d;
+}
+
+.about-color {
+  color: #34495e;
+}
+
+.about-title {
+  font-size: 180%;
+  padding: 30px 0 50px 0;
+  text-align: center;
+}
+
+.footer {
+  background-color: rgb(188, 202, 211);
+  padding: 20px 0;
+}
+
+.intro {
+  padding: 20px 20px;
+  margin: 10px 4px;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+tbody tr td {
+  vertical-align: middle;
+}
+
+.mt-3{
+  margin-top: 10px;
+}

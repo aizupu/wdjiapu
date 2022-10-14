@@ -26,13 +26,14 @@ SECRET_KEY = 'django-insecure-m4wa_k1=aek%5gmxw4b3u%(&*lt)k$(2=6zo(el7ffwr@xoh&8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'home.apps.HomeConfig',
+    'mana.apps.ManaConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'mana.middleware.perm.PermMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
@@ -76,18 +78,14 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default":{
+        "ENGINE":"django.db.backends.mysql",
+        "NAME":"family",
+        "USER":"totem_user",
+        "PASSWORD":"totem123",
+        "HOST":"39.107.248.28",
+        "PORT":"9000"
     },
-    'pg': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': 'mydatabaseuser',
-        'PASSWORD': 'mypassword',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
 }
 
 
@@ -125,7 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
+# STATIC_ROOT = (
+#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(BASE_DIR, 'home/static'),
+#     os.path.join(BASE_DIR, 'mana/static'),
+# )
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -135,3 +138,27 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# 定义session 键：
+# 保存用户权限url列表
+# 保存 权限菜单 和所有 菜单
+SESSION_PERMISSION_URL_KEY = 'cool'
+
+SESSION_MENU_KEY = 'awesome'
+ALL_MENU_KEY = 'k1'
+PERMISSION_MENU_KEY = 'k2'
+
+LOGIN_URL = '/login/'
+
+REGEX_URL = r'^{url}$'  # url作严格匹配
+
+# 配置url权限白名单
+SAFE_URL = [
+    r'/login/',
+    r'/regist/',
+    '/admin/.*',
+    '/test/',
+    '/',
+    '^/mana/',
+    '/static/.*',
+]
