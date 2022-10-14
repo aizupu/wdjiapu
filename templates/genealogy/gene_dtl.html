@@ -8,7 +8,7 @@
         <ul class="breadcrumb">
             <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
             <li><a href="#">族谱管理</a></li>
-            <li class="active">查看：湖北武汉李氏家谱</li>
+            <li class="active">查看：{{g.title}}</li>
         </ul>
         <!--breadcrumbs end -->
     </div>
@@ -18,7 +18,7 @@
 {% block content %}
 
 <ul class="panel">
-    <li class="panel-heading">湖北武汉李氏家谱-详细信息</li>
+    <li class="panel-heading">{{g.title}}-详细信息</li>
     <li class="panel-body">
         <ul id="myTab" class="nav nav-tabs">
             <li class="active"><a href="#indi" data-toggle="tab">人物</a></li>

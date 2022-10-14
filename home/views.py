@@ -42,8 +42,8 @@ def genealogy(request):
 
 # 家谱详情
 def genealogy_info(request, id):
-    g = Genealogy.objects.get(id = id)
-    return render(request, 'genealogy/gene_info.html',{'g':g})
+    g = Genealogy.objects.get(id=id)
+    return render(request, 'genealogy/gene_info.html', {'g': g})
 
 
 # 我的家谱
@@ -52,7 +52,6 @@ def gene_list(request):
     cnt = Genealogy.objects.all().count()
     for i in g:
         i['indi_sum'] = Individual.objects.filter(gene=i['title']).count()
-        print(i['indi_sum'])
         i['file_sum'] = File.objects.filter(Genealogy=i['title']).count()
         i['doc_sum'] = Document.objects.filter(genealogy=i['title']).count()
     return render(request, 'genealogy/gene_list.html', {"genealogy": g, "count": cnt})
@@ -70,9 +69,8 @@ def genealogy_add(request):
     genealogy_location = request.GET.get('location')
     hall_name = request.GET.get('hall_title')
     county_title = request.GET.get('county_title')
-    is_public = request.GET.get('sample-radio')
     genealogy_item = Genealogy(title=genealogy_name, sername=genealogy_sername, hall_title=hall_name,
-                               county_title=county_title, location=genealogy_location, is_public=is_public)
+                               county_title=county_title, location=genealogy_location)
     genealogy_item.save()
     return redirect('/genealogy/list')
 
@@ -80,9 +78,6 @@ def genealogy_add(request):
 # 删除家谱：是一个请求，删除之后直接返回我的家谱页面
 def gene_del(request, id):
     g = Genealogy.objects.get(id=id)
-    Individual.objects.filter(gene=g.title).delete()
-    File.objects.filter(Genealogy=g.title).delete()
-    Document.objects.filter(genealogy=g.title).delete()
     g.delete()
     return redirect('/genealogy/list')
 
@@ -95,15 +90,13 @@ def gene_upd(request):
 # 查看详细的家谱：查看某个家谱的详细信息页面，
 def gene_dtl(request, id):
     g = Genealogy.objects.get(id=id)
-    print(g)
     p = Individual.objects.filter(gene=g.title)
-    for i in p:
-        print(i.ad_birth)
-        print(datetime.datetime.strftime(i.ad_birth, '%Y-%m-%d %H:%M:%S'))
-    print(p)
+    p_cnt = p.count()
     d = Document.objects.filter(genealogy=g.title)
+    d_cnt = d.count()
     f = File.objects.filter(Genealogy=g.title)
-    return render(request, 'genealogy/gene_dtl.html', {"gid": id, "person": p, "document": d, "file": f})
+    f_cnt = f.count()
+    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": p, "document": d, "file": f, "p_cnt":p_cnt, "d_cnt":d_cnt, "f_cnt":f_cnt})
 
 
 # 生成某个家族的电子谱书
@@ -151,10 +144,11 @@ def add_indi(request, id):
 
 
 # 删除人物：是一个请求，删除之后直接返回人物首页页面
-def indi_del(request,gid,id):
-    p = Individual.objects.get(id = id)
+def indi_del(request, gid, id):
+    p = Individual.objects.get(id=id)
     p.delete()
     return redirect('/genealogy/dtl/' + gid)
+
 
 # 添加人物关系
 def indi_rel(request):
@@ -162,9 +156,9 @@ def indi_rel(request):
 
 
 # 查看详细的人物：查看某个人物的详细信息页面，
-def indi_dtl(request,id):
-    p = Individual.objects.get(id = id)
-    return render(request, 'genealogy/indi_dtl.html',{'p':p})
+def indi_dtl(request, id):
+    p = Individual.objects.get(id=id)
+    return render(request, 'genealogy/indi_dtl.html', {'p': p})
 
 
 # 查看人物树
@@ -210,19 +204,21 @@ def doc_submit(request, id):
 
 
 # 删除文档：是一个请求，删除之后直接返回当前族谱的文档首页
-def doc_del(request,gid,id):
-    d = Document.objects.get(id = id)
+def doc_del(request, gid, id):
+    d = Document.objects.get(id=id)
     d.delete()
     return redirect('/genealogy/dtl/' + gid)
+
 
 # 更新文档：分为get和post，get定位到update的文档编号；post之后直接返回家谱文档首页
 def doc_upd(request):
     return render(request, 'genealogy/doc_upd.html')
 
+
 # 查看详细的文档：查看某个文档的详细信息页面，
-def doc_dtl(request,id):
+def doc_dtl(request, id):
     d = Document.objects.get(id=id)
-    return render(request, 'genealogy/doc_dtl.html',{'d':d})
+    return render(request, 'genealogy/doc_view.html', {"d": d})
 
 
 # =========================与PDF文件相关的页面=========================
@@ -237,20 +233,20 @@ def file_add(request, id):
     file = request.FILES.get('inputfile')
     if file:
         basedir = os.path.abspath(os.path.join(os.path.dirname("__file__")))
-        file_path = os.path.join(basedir, 'static','files', file.name)
-        f=open(file_path,'wb+')
+        file_path = os.path.join(basedir, 'static', 'files', file.name)
+        f = open(file_path, 'wb+')
         for chunk in file.chunks():
             f.write(chunk)
         f.close()
-        genealogy = Genealogy.objects.get(id = id)
+        genealogy = Genealogy.objects.get(id=id)
         file_item = File(filename=file.name, path=file_path, Genealogy=genealogy)
         file_item.save()
 
-    return redirect('/genealogy/dtl/'+id)
+    return redirect('/genealogy/dtl/' + id)
 
 
 # 删除文件：是一个请求，删除之后直接返回当前家谱的文件首页页面
-def file_del(request,gid,id):
+def file_del(request, gid, id):
     File.objects.filter(id=id).update(is_del='1')
     return redirect('/genealogy/dtl/' + gid)
 
@@ -266,13 +262,13 @@ def file_dtl(request):
 
 
 # 文件下载，需要检查权限
-def file_dwn(request,id):
-    f = File.objects.get(id = id)
+def file_dwn(request, id):
+    f = File.objects.get(id=id)
     basedir = os.path.abspath(os.path.join(os.path.dirname("__file__")))
-    file_path = os.path.join(basedir, 'static','files', f.filename)
+    file_path = os.path.join(basedir, 'static', 'files', f.filename)
     response = FileResponse(open(file_path, "rb"))
     response['Content-Type'] = 'application/octet-stream'
-    response['Content-Disposition'] = 'attachment;filename='+f.filename
+    response['Content-Disposition'] = 'attachment;filename=' + f.filename
     return response
 
 

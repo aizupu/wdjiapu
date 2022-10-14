@@ -26,7 +26,6 @@
             </header>
             <div class="panel-body">
                 <form class="form-horizontal" role="form">
-{#                    <form class="form-horizontal" role="form" action="/genealogy/doc/add/submit/{{gid}}">#}
                     <div class="row summary-list">
                         <div class="col-md-12">
                             <div class="form-group">
@@ -64,7 +63,7 @@
                                     文档内容
                                 </header>
                                 <div class="panel-body">
-                                    <div class="summernote"  id="doc-content">请输入文档内容</div>
+                                    <div id="summernote" class="summernote"></div>
                             </div>
                             <!-- <div class="row">
                                 <div class="col-md-12">
@@ -116,7 +115,7 @@
 <script>
     $(function () {
         $("#submit").on("click",function (){
-            var content = $("#doc-content").summernote("code").text();
+            const content = $("#summernote").code();
             alert(content)
             var gname = $("#gname").val();
             var hall_title = $("#hall_title").val();
@@ -133,9 +132,12 @@
                     "dformat":dformat,
                     "dtype":dtype,
                     "drank":drank,
-                    "doc-content":content
+                    "content":content
                 },success(){
-                    alert(gname)
+                    alert("添加成功");
+                    window.location.href='/genealogy/dtl/{{ gid }}';
+                },error(){
+                    alert('error')
                 }
             })
         })
@@ -143,13 +145,13 @@
     })
     jQuery(document).ready(function(){
 
-        $('.summernote').summernote({
+        $('#summernote').summernote({
             height: 200,                 // set editor height
 
             minHeight: null,             // set minimum height of editor
             maxHeight: null,             // set maximum height of editor
 
-            focus: true                 // set focus to editable area after initializing summernote
+            focus: true       // set focus to editable area after initializing summernote
         });
     });
 
