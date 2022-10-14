@@ -64,7 +64,6 @@
                         <th>人物数</th>
                         <th>文档数</th>
                         <th>PDF数</th>
-                        <th>创建时间</th>
                         <th>类型</th>
                         <th>权限</th>
                         <th>操作</th>
@@ -79,8 +78,13 @@
                         <td>{{ i.indi_sum }}</td>
                         <td>{{ i.doc_sum }}</td>
                         <td>{{ i.file_sum }}</td>
-                        <td>2022-10-8 20:07</td>
+                        {%if i.is_public == '1' %}
+                        <td>共建家谱</td>
+                        {%elif i.is_public == '2' %}
                         <td>公开家谱</td>
+                        {%else %}
+                        <td>私有家谱</td>
+                        {%endif %}
                         <td>读|写|删除</td>
                         <td>
                             <div class="btn-group btn-group-sm">

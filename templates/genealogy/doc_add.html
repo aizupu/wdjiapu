@@ -81,7 +81,9 @@
                         </div>
                     <div class="form-group">
                         <div class="col-lg-offset-5 col-lg-10">
-                            <button type="submit" id="submit" class="btn btn-primary">提交</button>
+                            <a type="button" id="submit" class="btn btn-primary">提交</a>
+                        </div>
+                    </div>
                         </div>
                     </div>
                 </form>
@@ -114,15 +116,17 @@
 <script>
     $(function () {
         $("#submit").on("click",function (){
-            var content = $("#doc-content").summernote("code");
+            var content = $("#doc-content").summernote("code").text();
+            alert(content)
             var gname = $("#gname").val();
             var hall_title = $("#hall_title").val();
             var dformat = $("#dformat").val();
             var dtype = $("#dtype").val();
             var drank = $("#drank").val();
+            alert(drank)
             $.ajax({
                 method:'get',
-                url:'genealogy/doc/add/submit/{{gid}}',
+                url:'/genealogy/doc/add/submit/{{gid}}',
                 data:{
                     "gname":gname,
                     "hall_title":hall_title,
@@ -131,7 +135,7 @@
                     "drank":drank,
                     "doc-content":content
                 },success(){
-
+                    alert(gname)
                 }
             })
         })

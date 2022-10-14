@@ -70,8 +70,9 @@ def genealogy_add(request):
     genealogy_location = request.GET.get('location')
     hall_name = request.GET.get('hall_title')
     county_title = request.GET.get('county_title')
+    is_public = request.GET.get('sample-radio')
     genealogy_item = Genealogy(title=genealogy_name, sername=genealogy_sername, hall_title=hall_name,
-                               county_title=county_title, location=genealogy_location)
+                               county_title=county_title, location=genealogy_location, is_public=is_public)
     genealogy_item.save()
     return redirect('/genealogy/list')
 
@@ -79,6 +80,9 @@ def genealogy_add(request):
 # 删除家谱：是一个请求，删除之后直接返回我的家谱页面
 def gene_del(request, id):
     g = Genealogy.objects.get(id=id)
+    Individual.objects.filter(gene=g.title).delete()
+    File.objects.filter(Genealogy=g.title).delete()
+    Document.objects.filter(genealogy=g.title).delete()
     g.delete()
     return redirect('/genealogy/list')
 
