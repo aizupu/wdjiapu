@@ -5198,3 +5198,1295 @@ Django version 3.2.16, using settings 'app.settings'
 Starting development server at http://0.0.0.0:8000/
 Quit the server with CONTROL-C.
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[14/Oct/2022 13:52:30] "GET /genealogy/doc/del/4/16 HTTP/1.1" 302 0
+[14/Oct/2022 13:52:31] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[14/Oct/2022 13:52:37] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[14/Oct/2022 13:52:37] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 13:52:37] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 13:52:37] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 13:52:37] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 13:52:37] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 13:52:37] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 13:52:38] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 13:52:38] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 13:52:38] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 13:52:38] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 13:52:38] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 13:52:38] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 13:52:39] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 13:52:39] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 13:52:40] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 13:52:40] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 13:52:40] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 13:52:41] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 13:52:47,281] - Broken pipe from ('59.172.176.205', 54094)
+
+[14/Oct/2022 14:30:49] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:30:49] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:30:49] "GET /static/css/bootstrap-reset.css HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:30:49] "GET /static/css/jp.css HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/css/style-responsive.css HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:30:49] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:30:49] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/js/hover-dropdown.js HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/js/respond.min.js HTTP/1.1" 304 0
+[14/Oct/2022 14:30:49] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:30:50] "GET /static/img/product1.jpg HTTP/1.1" 304 0
+[14/Oct/2022 14:30:50] "GET /static/img/product2.png HTTP/1.1" 304 0
+[14/Oct/2022 14:30:50] "GET /static/img/product3.png HTTP/1.1" 304 0
+[14/Oct/2022 14:30:50] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:30:50] "GET /static/img/avatar-mini.jpg HTTP/1.1" 304 0
+[14/Oct/2022 14:30:50] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 304 0
+[14/Oct/2022 14:30:50] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 304 0
+[14/Oct/2022 14:30:51] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:30:51] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[14/Oct/2022 14:30:51] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:30:53] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:30:55] "GET /genealogy HTTP/1.1" 200 12090
+[14/Oct/2022 14:30:55] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[14/Oct/2022 14:30:55] "GET /static/img/avatar1_small.jpg HTTP/1.1" 304 0
+[14/Oct/2022 14:30:56] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[14/Oct/2022 14:30:56] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[14/Oct/2022 14:30:56] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[14/Oct/2022 14:30:56] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[14/Oct/2022 14:30:57] "GET /index HTTP/1.1" 200 12481
+[14/Oct/2022 14:30:59] "GET /genealogy HTTP/1.1" 200 12090
+[14/Oct/2022 14:31:13] "GET /genealogy/list HTTP/1.1" 200 15527
+[14/Oct/2022 14:31:13] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[14/Oct/2022 14:31:13] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[14/Oct/2022 14:31:14] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[14/Oct/2022 14:31:19] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[14/Oct/2022 14:31:24] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[14/Oct/2022 14:32:49] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:32:55] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:32:56] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:32:56] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:32:56] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:32:56] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:32:56] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:32:56] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:32:56] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:32:56] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 14:32:56] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:32:57] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:32:57] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:32:57] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:32:57] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:32:57] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:32:57] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:32:57] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:32:57] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[14/Oct/2022 14:32:57] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:32:58] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:32:58] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[14/Oct/2022 14:32:58] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[14/Oct/2022 14:32:58] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[14/Oct/2022 14:32:58] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[14/Oct/2022 14:32:58] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[14/Oct/2022 14:32:59] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[14/Oct/2022 14:32:59] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:32:59] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:33:00] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:33:01] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:33:01] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:33:02] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:33:08] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:33:12] "GET /vis HTTP/1.1" 200 11677
+[14/Oct/2022 14:33:12] "GET /static/js/utils.js HTTP/1.1" 200 987
+[14/Oct/2022 14:33:12] "GET /static/js/bootbox.min.js HTTP/1.1" 200 9977
+[14/Oct/2022 14:33:12] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[14/Oct/2022 14:33:12] "GET /static/js/jquery.count.min.js HTTP/1.1" 200 2888
+[14/Oct/2022 14:33:12] "GET /static/js/monitor.js HTTP/1.1" 200 15343
+[14/Oct/2022 14:33:12] "GET /static/js/tableSortPaging.js HTTP/1.1" 200 2600
+[14/Oct/2022 14:33:12] "GET /static/js/myFunction.js HTTP/1.1" 200 15654
+[14/Oct/2022 14:33:12] "GET /static/js/vismap.js HTTP/1.1" 200 4156
+[14/Oct/2022 14:33:18] "GET /genealogy HTTP/1.1" 200 12090
+[14/Oct/2022 14:33:19] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:33:19] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[14/Oct/2022 14:33:19] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[14/Oct/2022 14:33:19] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[14/Oct/2022 14:33:19] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[14/Oct/2022 14:33:19] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[14/Oct/2022 14:33:19] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:33:19] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:33:22] "GET /genealogy/list HTTP/1.1" 200 15527
+[14/Oct/2022 14:33:23] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[14/Oct/2022 14:33:23] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[14/Oct/2022 14:33:23] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[14/Oct/2022 14:33:26] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[14/Oct/2022 14:33:29] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[14/Oct/2022 14:33:36] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[14/Oct/2022 14:33:36] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[14/Oct/2022 14:33:39] "GET /genealogy/indi/tree HTTP/1.1" 200 7324
+[14/Oct/2022 14:33:39] "GET /static/assets/fuelux/css/tree-style.css HTTP/1.1" 200 4522
+[14/Oct/2022 14:33:39] "GET /static/assets/fuelux/js/tree.min.js HTTP/1.1" 200 3195
+[14/Oct/2022 14:33:39] "GET /static/js/tree.js HTTP/1.1" 200 7352
+[14/Oct/2022 14:33:40] "GET /static/assets/fuelux/img/tree-icons.png HTTP/1.1" 200 299
+[14/Oct/2022 14:33:40] "GET /static/img/input-spinner.gif HTTP/1.1" 200 1849
+[14/Oct/2022 14:33:44] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[14/Oct/2022 14:33:44] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:33:44] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:33:44] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:33:44] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:33:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:33:44] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:33:44] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:33:45] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:33:45] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:33:45] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:33:45] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:33:45] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:33:45] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:33:45] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:33:45] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:33:45] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:33:46] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:33:47] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:33:55] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:34:00,180] - Broken pipe from ('171.82.133.84', 43825)
+
+[14/Oct/2022 14:34:00,182] - Broken pipe from ('171.82.133.84', 43829)
+
+[14/Oct/2022 14:34:00,188] - Broken pipe from ('171.82.133.84', 43916)
+
+[14/Oct/2022 14:34:00,188] - Broken pipe from ('171.82.133.84', 43793)
+
+[14/Oct/2022 14:34:00,188] - Broken pipe from ('171.82.133.84', 43920)
+
+[14/Oct/2022 14:34:00,188] - Broken pipe from ('171.82.133.84', 43702)
+
+[14/Oct/2022 14:34:24] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[14/Oct/2022 14:34:24] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:34:24] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:34:24] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:34:24] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:34:24] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:34:24] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[14/Oct/2022 14:34:24] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:34:24] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[14/Oct/2022 14:34:24] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[14/Oct/2022 14:34:24] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[14/Oct/2022 14:34:24] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:34:25] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:34:25] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:34:26] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:34:26] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:34:26] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[14/Oct/2022 14:34:26] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:34:26] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:34:27] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:34:27] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:34:27] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[14/Oct/2022 14:34:27] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[14/Oct/2022 14:34:28] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[14/Oct/2022 14:34:28] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[14/Oct/2022 14:34:28] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[14/Oct/2022 14:34:29] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:34:29] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:34:31] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:34:31] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 141, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[14/Oct/2022 14:34:33] "GET /genealogy/indi/add_indi/4?gname=&zi=&birth_place=&death_place=&ce_birth=&line_name=&rank=&phone=&name=&hao=&ad_birth=&ad_death=&ce_death=&generetion=&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 157072
+[14/Oct/2022 14:34:39] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[14/Oct/2022 14:34:39] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:34:39] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:34:39] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:34:39] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:34:39] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:34:39] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:34:39] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[14/Oct/2022 14:34:39] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[14/Oct/2022 14:34:39] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[14/Oct/2022 14:34:39] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[14/Oct/2022 14:34:39] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:34:41] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:34:41] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:34:41] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[14/Oct/2022 14:34:41] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:34:41] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:34:41] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[14/Oct/2022 14:34:41] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[14/Oct/2022 14:34:41] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:34:41] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:34:42] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:34:42] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[14/Oct/2022 14:34:42] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[14/Oct/2022 14:34:43] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[14/Oct/2022 14:34:44] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:34:44] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:34:45] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:34:45] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 141, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[14/Oct/2022 14:34:47] "GET /genealogy/indi/add_indi/4?gname=&zi=&birth_place=&death_place=&ce_birth=&line_name=&rank=&phone=&name=&hao=&ad_birth=&ad_death=&ce_death=&generetion=&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 157072
+[14/Oct/2022 14:34:49] "GET /genealogy/list HTTP/1.1" 200 15527
+[14/Oct/2022 14:34:49] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:34:49] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:34:49] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:34:49] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:34:49] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:34:49] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[14/Oct/2022 14:34:49] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[14/Oct/2022 14:34:49] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[14/Oct/2022 14:34:50] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:34:51] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:34:51] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:34:51] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:34:51] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:34:51] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:34:51] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:34:51] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:34:51] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:34:52] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:34:52] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:34:53] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:34:53] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:35:02] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:35:20] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:35:27] "GET /vis HTTP/1.1" 200 11677
+[14/Oct/2022 14:35:27] "GET /static/js/bootbox.min.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:27] "GET /static/js/utils.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:27] "GET /static/js/monitor.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:27] "GET /static/js/jquery.count.min.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:27] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[14/Oct/2022 14:35:27] "GET /static/js/tableSortPaging.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:27] "GET /static/js/myFunction.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:27] "GET /static/js/vismap.js HTTP/1.1" 304 0
+[14/Oct/2022 14:35:32] "GET /genealogy/indi/tree HTTP/1.1" 200 7324
+[14/Oct/2022 14:35:32] "GET /genealogy/indi/tree HTTP/1.1" 200 7324
+[14/Oct/2022 14:35:32] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:35:32] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:35:32] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:35:32] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:35:32] "GET /static/assets/fuelux/css/tree-style.css HTTP/1.1" 200 4522
+[14/Oct/2022 14:35:33] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:35:33] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:35:33] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:35:34] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:35:34] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:35:34] "GET /static/assets/fuelux/js/tree.min.js HTTP/1.1" 200 3195
+[14/Oct/2022 14:35:34] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:35:34] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:35:34] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:35:35] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:35:35] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:35:35] "GET /static/js/tree.js HTTP/1.1" 200 7352
+[14/Oct/2022 14:35:35] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:35:35] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:35:36] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:35:36] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:35:37] "GET /static/assets/fuelux/img/tree-icons.png HTTP/1.1" 200 299
+[14/Oct/2022 14:35:37] "GET /static/img/input-spinner.gif HTTP/1.1" 200 1849
+[14/Oct/2022 14:35:39] "GET /vis HTTP/1.1" 200 11677
+[14/Oct/2022 14:35:39] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:35:39] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:35:39] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:35:39] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:35:40] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:35:40] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:35:40] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 14:35:40] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:35:40] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:35:40] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:35:41] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:35:41] "GET /static/js/bootbox.min.js HTTP/1.1" 200 9977
+[14/Oct/2022 14:35:41] "GET /static/js/utils.js HTTP/1.1" 200 987
+[14/Oct/2022 14:35:42] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[14/Oct/2022 14:35:42] "GET /static/js/jquery.count.min.js HTTP/1.1" 200 2888
+[14/Oct/2022 14:35:42] "GET /static/js/monitor.js HTTP/1.1" 200 15343
+[14/Oct/2022 14:35:42] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:35:43] "GET /static/js/tableSortPaging.js HTTP/1.1" 200 2600
+[14/Oct/2022 14:35:43] "GET /static/js/myFunction.js HTTP/1.1" 200 15654
+[14/Oct/2022 14:35:44] "GET /static/js/vismap.js HTTP/1.1" 200 4156
+[14/Oct/2022 14:35:44] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:35:44] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:35:45] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:35:46] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:35:52] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:21] "GET /genealogy HTTP/1.1" 200 12090
+[14/Oct/2022 14:36:21] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:36:21] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:36:21] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:36:21] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:36:21] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:36:21] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:36:22] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:36:23] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:36:23] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:36:23] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:36:23] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:36:23] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:36:23] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:36:23] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:36:23] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:36:23] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[14/Oct/2022 14:36:23] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[14/Oct/2022 14:36:24] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[14/Oct/2022 14:36:24] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[14/Oct/2022 14:36:24] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[14/Oct/2022 14:36:24] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:36:25] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:36:25] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:29] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:36:29] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:36:29] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:36:29] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:36:29] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:36:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:36:29] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:36:30] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:36:30] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:36:30] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 14:36:30] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:36:30] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:36:30] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:36:30] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:36:30] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:36:31] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[14/Oct/2022 14:36:31] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[14/Oct/2022 14:36:32] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[14/Oct/2022 14:36:32] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[14/Oct/2022 14:36:32] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[14/Oct/2022 14:36:32] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:36:32] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[14/Oct/2022 14:36:32] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[14/Oct/2022 14:36:33] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:34] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:42] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:47] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[14/Oct/2022 14:36:47] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[14/Oct/2022 14:36:47] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:36:47] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:36:47] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:36:47] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:36:47] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:36:48] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:36:48] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:36:48] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:36:48] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:36:48] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:36:48] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:36:48] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:36:48] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:36:49] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:36:49] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:36:49] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:36:50] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:36:50] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:53] "GET /genealogy/upd?sername=%E6%9D%8E&hall_title=1&county_title=1&location=1&contact=&contact_phone=&note= HTTP/1.1" 200 13204
+[14/Oct/2022 14:36:53] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:36:53] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:36:53] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:36:53] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:36:53] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:36:53] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:36:53] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:53] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:36:53] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:36:54] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:36:55] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:36:55] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:36:55] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:36:55] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:36:55] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:36:55] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:36:55] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:36:56] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:36:56] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:59] "GET /genealogy/upd?sample-radio=1 HTTP/1.1" 200 13204
+[14/Oct/2022 14:36:59] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:36:59] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:36:59] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:36:59] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:36:59] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:36:59] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:36:59] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:36:59] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:36:59] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:37:01] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:37:01] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:37:01] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:37:01] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:37:01] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:37:01] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:37:01] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:37:01] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:37:03] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:37:03] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:37:05] "GET /genealogy/upd?sample-radio=1 HTTP/1.1" 200 13204
+[14/Oct/2022 14:37:05] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:37:05] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:37:05] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:37:05] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:37:05] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:37:05] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:37:05] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:37:05] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[14/Oct/2022 14:37:05] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:37:07] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:37:07] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:37:07] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:37:07] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:37:07] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:37:07] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:37:08] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[14/Oct/2022 14:37:08] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:37:08] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[14/Oct/2022 14:37:09] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:37:15] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:45:50] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:46:05] "GET /genealogy HTTP/1.1" 200 12090
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/home/hjiang/downloads/py378/lib/python3.7/wsgiref/handlers.py", line 184, in finish_response
+    self.write(data)
+  File "/home/hjiang/downloads/py378/lib/python3.7/wsgiref/handlers.py", line 292, in write
+    self._write(data)
+  File "/home/hjiang/downloads/py378/lib/python3.7/wsgiref/handlers.py", line 466, in _write
+    result = self.stdout.write(data)
+  File "/home/hjiang/downloads/py378/lib/python3.7/socketserver.py", line 799, in write
+    self._sock.sendall(b)
+TimeoutError: [Errno 110] Connection timed out
+[14/Oct/2022 14:57:22] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:57:22] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:57:22] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:57:22] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:57:22] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:57:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:57:23] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:57:24] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:57:24] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:57:24] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:57:24] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 14:57:24] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:57:25] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:57:25] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:57:25] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:57:25] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[14/Oct/2022 14:57:25] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[14/Oct/2022 14:57:25] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[14/Oct/2022 14:57:25] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[14/Oct/2022 14:57:25] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[14/Oct/2022 14:57:25] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[14/Oct/2022 14:57:25] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[14/Oct/2022 14:57:26] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:57:27] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 14:57:40] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 14:57:40] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 14:57:40] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 14:57:40] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 14:57:40] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 14:57:40] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 14:57:40] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 14:57:40] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 14:57:40] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 14:57:40] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 14:57:41] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 14:57:42] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 14:57:42] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 14:57:42] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[14/Oct/2022 14:57:42] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[14/Oct/2022 14:57:42] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 14:57:42] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[14/Oct/2022 14:57:42] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 14:57:43] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[14/Oct/2022 14:57:43] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[14/Oct/2022 14:57:43] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[14/Oct/2022 14:57:43] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[14/Oct/2022 14:57:44] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 14:57:44] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 15:37:20] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 15:37:21] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 15:43:20] "GET /genealogy HTTP/1.1" 200 12090
+[14/Oct/2022 15:43:21] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 15:43:26] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 15:43:31] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 15:43:32] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 15:43:33] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 15:43:35] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 15:43:36] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 15:45:02] "GET /genealogy/list HTTP/1.1" 200 15527
+[14/Oct/2022 15:45:04] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 15:45:09] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 15:45:12] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 15:45:17] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 15:45:22] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 15:45:24] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 15:45:24] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 15:45:28] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[14/Oct/2022 15:45:30] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 15:45:34] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 15:45:35] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[14/Oct/2022 15:45:37] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 15:45:38] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 15:45:38] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 15:45:40] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 15:45:41] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 15:45:45] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 15:45:45] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 15:45:46] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 15:45:48] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 15:45:49] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 15:45:59] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 15:46:00] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 15:51:33] "GET /vis HTTP/1.1" 200 11677
+[14/Oct/2022 15:51:36] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 15:51:41] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 15:51:44] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 15:51:47] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 15:51:48] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 15:51:50] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 15:51:55] "GET /static/js/bootbox.min.js HTTP/1.1" 200 9977
+[14/Oct/2022 15:51:56] "GET /static/js/utils.js HTTP/1.1" 200 987
+[14/Oct/2022 15:51:58] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[14/Oct/2022 15:52:00] "GET /static/js/jquery.count.min.js HTTP/1.1" 200 2888
+[14/Oct/2022 15:52:01] "GET /static/js/monitor.js HTTP/1.1" 200 15343
+[14/Oct/2022 15:52:02] "GET /static/js/tableSortPaging.js HTTP/1.1" 200 2600
+[14/Oct/2022 15:52:02] "GET /static/js/myFunction.js HTTP/1.1" 200 15654
+[14/Oct/2022 15:52:03] "GET /static/js/vismap.js HTTP/1.1" 200 4156
+[14/Oct/2022 15:52:03] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 15:52:04] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 16:12:47] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 16:12:48] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 16:12:49] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 16:12:52] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 16:12:53] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 16:12:54] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 16:12:55] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 16:12:57] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 16:12:58] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 16:48:55] "GET /vis HTTP/1.1" 200 11677
+[14/Oct/2022 16:48:55] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[14/Oct/2022 16:48:55] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[14/Oct/2022 16:48:55] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[14/Oct/2022 16:48:55] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[14/Oct/2022 16:48:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[14/Oct/2022 16:48:55] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[14/Oct/2022 16:48:55] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[14/Oct/2022 16:48:56] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[14/Oct/2022 16:48:56] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[14/Oct/2022 16:48:56] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[14/Oct/2022 16:48:56] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[14/Oct/2022 16:48:57] "GET /static/js/bootbox.min.js HTTP/1.1" 200 9977
+[14/Oct/2022 16:48:57] "GET /static/js/utils.js HTTP/1.1" 200 987
+[14/Oct/2022 16:48:58] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[14/Oct/2022 16:48:58] "GET /static/js/jquery.count.min.js HTTP/1.1" 200 2888
+[14/Oct/2022 16:48:58] "GET /static/js/monitor.js HTTP/1.1" 200 15343
+[14/Oct/2022 16:48:58] "GET /static/js/tableSortPaging.js HTTP/1.1" 200 2600
+[14/Oct/2022 16:48:58] "GET /static/js/myFunction.js HTTP/1.1" 200 15654
+[14/Oct/2022 16:48:58] "GET /static/js/vismap.js HTTP/1.1" 200 4156
+[14/Oct/2022 16:48:58] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[14/Oct/2022 16:48:58] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[14/Oct/2022 16:49:00] "GET /static/css/style.css HTTP/1.1" 200 110628
+[14/Oct/2022 16:49:00] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[14/Oct/2022 16:49:21] "GET /static/js/echarts.js HTTP/1.1" 200 3146808
+[14/Oct/2022 16:49:22] "GET /static/json/data.json HTTP/1.1" 200 4761
+[14/Oct/2022 16:49:22] "GET /static/json/china.json HTTP/1.1" 200 61008
+[14/Oct/2022 16:49:34] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[14/Oct/2022 17:31:38] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[14/Oct/2022 17:31:38] "  /*à     Cookie: mstshash=Administr" 400 -
+[14/Oct/2022 19:07:57] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x19Ùe\x9eìï\x88äë')
+[14/Oct/2022 19:07:57] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 19:07:58] code 400, message Bad request version ('À\x14À')
+[14/Oct/2022 19:07:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 19:07:58] code 400, message Bad request version ('À\x14À')
+[14/Oct/2022 19:07:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 19:42:53] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[14/Oct/2022 19:42:53] "  /*à     Cookie: mstshash=Administr" 400 -
+[14/Oct/2022 20:01:11] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 20:24:52] code 400, message Bad request version ('À\x13À')
+[14/Oct/2022 20:24:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 20:24:52] code 400, message Bad request version ("Z\x046lp'<")
+[14/Oct/2022 20:24:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[14/Oct/2022 21:12:04] code 400, message Bad request version ('À\x13À')
+[14/Oct/2022 21:12:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Not Found: /.git/config
+[14/Oct/2022 21:12:05] "GET /.git/config HTTP/1.1" 404 7215
+[14/Oct/2022 21:15:33] "GET / HTTP/1.1" 200 12481
+[14/Oct/2022 22:17:08] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[14/Oct/2022 22:17:08] "  à          " 400 -
+[14/Oct/2022 22:53:02] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[14/Oct/2022 22:53:02] " Pg)§ê " 400 -
+[14/Oct/2022 22:53:03] code 400, message Bad request syntax ('\x05\x01\x00')
+[14/Oct/2022 22:53:03] " " 400 -
+[14/Oct/2022 22:53:05] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[14/Oct/2022 23:20:00] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[14/Oct/2022 23:20:00] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 01:31:49] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[15/Oct/2022 01:32:12] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[15/Oct/2022 01:32:12] " Pg)§ê " 400 -
+[15/Oct/2022 01:32:15] code 400, message Bad request syntax ('\x05\x01\x00')
+[15/Oct/2022 01:32:15] " " 400 -
+[15/Oct/2022 02:10:42] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[15/Oct/2022 02:10:59] code 400, message Bad request syntax ('\x05\x01\x00')
+[15/Oct/2022 02:10:59] " " 400 -
+[15/Oct/2022 02:11:01] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[15/Oct/2022 02:11:01] " Pg)§ê " 400 -
+[15/Oct/2022 02:38:04] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[15/Oct/2022 02:38:04] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 03:34:52] "GET /admin/ HTTP/1.1" 302 0
+[15/Oct/2022 04:46:51] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 05:18:32] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[15/Oct/2022 05:18:32] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 05:22:35] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ò\\"Y3\x81Ç¶üTëkcÅ|¡`!\x00\x16vØ')
+[15/Oct/2022 05:22:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 05:22:35] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x033l\x0eèi3C\x117²øZï\x13B¥\x86>¬)0Ï\x07©Ü)¢ét¾\x9c#\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[15/Oct/2022 05:22:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 05:22:37] code 400, message Bad request version ('À\x14À')
+[15/Oct/2022 05:22:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 06:26:26] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 06:53:45] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[15/Oct/2022 06:53:45] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 07:10:52] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[15/Oct/2022 07:10:52] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 07:41:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[15/Oct/2022 07:41:47] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 09:58:18] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 302 0
+[15/Oct/2022 09:58:18,494] - Broken pipe from ('185.216.140.186', 52840)
+
+[15/Oct/2022 10:23:07] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 10:23:08] code 505, message Invalid HTTP version (2.0)
+[15/Oct/2022 10:23:08] "PRI * HTTP/2.0" 505 -
+[15/Oct/2022 10:23:09] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Not Found: /favicon.ico
+[15/Oct/2022 10:23:10] "GET /favicon.ico HTTP/1.1" 404 7215
+[15/Oct/2022 11:21:19] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[15/Oct/2022 11:21:19] "  à          " 400 -
+[15/Oct/2022 12:46:31] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[15/Oct/2022 12:46:31] " Pg)§ê " 400 -
+[15/Oct/2022 12:46:39] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[15/Oct/2022 12:46:56] code 400, message Bad request syntax ('\x05\x01\x00')
+[15/Oct/2022 12:46:56] " " 400 -
+[15/Oct/2022 13:28:03] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 13:52:18] code 400, message Bad request syntax ('\x16\x03\x01\x00u\x01\x00\x00q\x03\x03ò\x88\x88)Âoi(çy\x1bLK/mÉ')
+[15/Oct/2022 13:52:18] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 14:58:08] code 400, message Bad request syntax ('MGLNDD_39.107.248.28_8000')
+[15/Oct/2022 14:58:08] "MGLNDD_39.107.248.28_8000" 400 -
+Not Found: /qCGCLyY
+[15/Oct/2022 16:21:02] "GET /qCGCLyY HTTP/1.1" 404 7203
+[15/Oct/2022 17:34:58] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[15/Oct/2022 17:34:58] "  /*à     Cookie: mstshash=Administr" 400 -
+[15/Oct/2022 18:19:31] code 400, message Bad request syntax ('\x05\x01\x00')
+[15/Oct/2022 18:19:31] " " 400 -
+[15/Oct/2022 18:19:42] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[15/Oct/2022 18:20:05] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[15/Oct/2022 18:20:05] " Pg)§ê " 400 -
+[15/Oct/2022 18:42:47,082] - Broken pipe from ('167.248.133.120', 59884)
+
+[15/Oct/2022 18:42:49] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 18:42:49,537] - Broken pipe from ('167.248.133.120', 32960)
+
+[15/Oct/2022 18:42:49] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 18:42:50] code 505, message Invalid HTTP version (2.0)
+[15/Oct/2022 18:42:50] "PRI * HTTP/2.0" 505 -
+[15/Oct/2022 18:42:50] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Not Found: /favicon.ico
+[15/Oct/2022 18:42:51] "GET /favicon.ico HTTP/1.1" 404 7215
+[15/Oct/2022 18:50:46] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 20:58:12] code 400, message Bad request syntax ('nil')
+[15/Oct/2022 20:58:12] "nil" 400 -
+[15/Oct/2022 20:58:22] "GET / HTTP/1.0" 200 12481
+[15/Oct/2022 20:58:27] "GET / HTTP/1.1" 200 12481
+[15/Oct/2022 20:58:36] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Not Found: /robots.txt
+[15/Oct/2022 20:58:36] "GET /robots.txt HTTP/1.1" 404 7212
+[15/Oct/2022 21:21:09] code 400, message Bad request syntax ('\x16\x03\x03\x00\x88\x01\x00\x00\x84\x03\x03cK$E¹(=åË_\x1aÙ<çù±ØÙ\x87\x86\x15St\x8aONiô"*h')
+[15/Oct/2022 21:21:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[15/Oct/2022 21:46:41] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[15/Oct/2022 21:46:41] "  à          " 400 -
+[16/Oct/2022 00:54:38] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 00:54:38] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 02:12:30] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 02:12:30] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 02:32:21] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 02:32:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 02:32:21] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x1aa|·\x82h-ZífÑdI'O'UzÕ\x1bCKSÓN\x86\x96Í\x05^ø\x04\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+[16/Oct/2022 02:32:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 02:32:22] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 02:32:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 02:42:30] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[16/Oct/2022 02:42:30] "  à          " 400 -
+[16/Oct/2022 03:41:51] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 03:41:51] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 04:40:23] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 04:40:23] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 04:48:24] code 400, message Bad request syntax ('{\x01\x00\x1615888888888À¨\x90Á\x13\x8a{')
+[16/Oct/2022 04:48:24] "{ 15888888888À¨Á{" 400 -
+[16/Oct/2022 04:54:11] code 400, message Bad request syntax ('&&&&~\x04»8ÅaýT\x07P.VJÃ\x04;\x13\x0600-0C-29-B1-35-79')
+[16/Oct/2022 04:54:11] "&&&&~»8ÅaýTP.VJÃ;00-0C-29-B1-35-79" 400 -
+[16/Oct/2022 05:01:17] code 400, message Bad request version ('OÑËÜ®Ëd')
+[16/Oct/2022 05:01:17] "   TZ         .    I¨À )z» zÚf Ò~Uñi»©                ÃÐ¢|¦v½óOÑËÜ®Ëd" 400 -
+[16/Oct/2022 05:03:17] code 400, message Bad HTTP/0.9 request type ('\x02¤Uÿ\x00\x00\x00')
+[16/Oct/2022 05:03:17] "¤Uÿ   " 400 -
+[16/Oct/2022 05:07:36] code 400, message Bad request syntax ('~~\x01\x00\x124Vx\x124/\x00\x08\x02\x00\x03Y\x10\x11\x15Q\x11\x03kÊ')
+[16/Oct/2022 05:07:36] "~~ 4Vx4/  YQkÊ" 400 -
+[16/Oct/2022 05:09:07] code 400, message Bad request syntax ('333766643833656338616434363333643963363962386536653538383937393235613033653338636434')
+[16/Oct/2022 05:09:07] "333766643833656338616434363333643963363962386536653538383937393235613033653338636434" 400 -
+[16/Oct/2022 05:41:01] "GET / HTTP/1.1" 200 12481
+[16/Oct/2022 09:08:23] code 400, message Bad request syntax ('\x05\x01\x00')
+[16/Oct/2022 09:08:23] " " 400 -
+[16/Oct/2022 09:08:31] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[16/Oct/2022 09:08:43] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[16/Oct/2022 09:08:43] " Pg)§ê " 400 -
+[16/Oct/2022 10:33:31] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 10:33:31] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 11:57:58] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 11:57:58] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 12:42:49] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 12:42:49] "   TZ          0I     " 400 -
+[16/Oct/2022 12:42:49] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 12:42:49] "   TZ          0I     " 400 -
+[16/Oct/2022 12:42:49] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 12:42:49] "   TZ          0I     " 400 -
+[16/Oct/2022 12:42:49] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 12:42:49] "   TZ          0I     " 400 -
+[16/Oct/2022 13:35:49] "GET / HTTP/1.1" 200 12481
+[16/Oct/2022 14:29:59] "GET / HTTP/1.1" 200 12481
+[16/Oct/2022 14:30:00] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[16/Oct/2022 15:14:04] "GET / HTTP/1.1" 200 12481
+[16/Oct/2022 15:14:37] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 15:14:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 15:56:04] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[16/Oct/2022 15:56:04] "  /*à     Cookie: mstshash=Administr" 400 -
+[16/Oct/2022 16:22:17] code 400, message Bad request syntax ('\x05\x01\x00')
+[16/Oct/2022 16:22:17] " " 400 -
+[16/Oct/2022 16:22:29] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[16/Oct/2022 16:22:44] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[16/Oct/2022 16:22:44] " Pg)§ê " 400 -
+[16/Oct/2022 16:33:47] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 16:33:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 16:45:32] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 16:45:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 16:45:33] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 16:45:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 16:45:35] code 400, message Bad request version ('À\x14À')
+[16/Oct/2022 16:45:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Oct/2022 17:45:47] code 400, message Bad request syntax ('MGLNDD_39.107.248.28_8000')
+[16/Oct/2022 17:45:47] "MGLNDD_39.107.248.28_8000" 400 -
+[16/Oct/2022 19:52:25] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 19:52:25] "   TZ          0I     " 400 -
+[16/Oct/2022 19:52:25] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 19:52:25] "   TZ          0I     " 400 -
+[16/Oct/2022 19:52:25] code 400, message Bad request syntax ('\x00\x00\x00TZ\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x04\x010I\x00\x00\x00\x00\x02\x00\x92')
+[16/Oct/2022 19:52:25] "   TZ          0I     " 400 -
+[16/Oct/2022 20:24:39] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[16/Oct/2022 20:24:39] "  à          " 400 -
+[16/Oct/2022 20:56:16] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 302 0
+[16/Oct/2022 20:56:16,440] - Broken pipe from ('185.216.140.186', 39238)
+
+[16/Oct/2022 21:20:24] code 400, message Bad request syntax ("\x16\x03\x03\x00\x88\x01\x00\x00\x84\x03\x03cLu\x98\x191«Ó#\x15ÀÞ¡å,KÀ»Ø\x16·\x08'I]\x14\x99r\x17G\xad.\x00\x00\x16À\x14\x005À\x13\x00/À,À+À0\x00\x9dÀ/\x00\x9c\x00")
+[16/Oct/2022 21:20:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 00:31:22] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 01:00:43] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Oct/2022 01:00:43] " Pg)§ê " 400 -
+[17/Oct/2022 01:00:55] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Oct/2022 01:00:55] " " 400 -
+[17/Oct/2022 01:01:10] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[17/Oct/2022 01:17:25] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 01:17:25] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 01:34:08] code 400, message Bad HTTP/0.9 request type ('Z¥\x01')
+[17/Oct/2022 01:34:08] "Z¥     " 400 -
+[17/Oct/2022 01:55:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 01:55:47] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 02:07:41] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[17/Oct/2022 02:07:49] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Oct/2022 02:07:49] " Pg)§ê " 400 -
+[17/Oct/2022 02:08:19] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Oct/2022 02:08:19] " " 400 -
+[17/Oct/2022 03:07:37] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 03:07:37] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 03:18:52] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Oct/2022 03:18:52] " " 400 -
+[17/Oct/2022 03:19:09] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[17/Oct/2022 03:19:24] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Oct/2022 03:19:24] " Pg)§ê " 400 -
+[17/Oct/2022 03:32:03] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 03:32:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 03:32:03] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 03:32:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 03:32:04] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 03:32:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 04:13:36] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 04:13:36] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 04:41:12] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+[17/Oct/2022 04:41:12] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:12] "GET /static/css/bootstrap-reset.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:12] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:12] "GET /static/css/style.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:12] "GET /static/css/style-responsive.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:12] "GET /static/css/jp.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/respond.min.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/img/search-icon.png HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/img/avatar1_small.jpg HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/js/common-scripts.js HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/img/nav-expand.png HTTP/1.1" 304 0
+[17/Oct/2022 04:41:13] "GET /static/img/favicon.png HTTP/1.1" 304 0
+[17/Oct/2022 04:41:15] "GET /genealogy/doc/add/4 HTTP/1.1" 200 12558
+[17/Oct/2022 04:41:15] "GET /static/assets/summernote/dist/summernote.css HTTP/1.1" 304 0
+[17/Oct/2022 04:41:15] "GET /static/assets/summernote/dist/summernote.min.js HTTP/1.1" 304 0
+[17/Oct/2022 05:37:43] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 05:37:43] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 06:33:46] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 06:33:46] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/css/bootstrap-reset.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/css/style.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/css/style-responsive.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/css/jp.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/img/product1.jpg HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/img/product2.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/img/product3.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/img/avatar-mini.jpg HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/hover-dropdown.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/jquery.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/common-scripts.js HTTP/1.1" 304 0
+[17/Oct/2022 06:33:46] "GET /static/js/respond.min.js HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[17/Oct/2022 06:33:46] "GET /favicon.ico HTTP/1.1" 404 7215
+[17/Oct/2022 06:33:47] "GET /static/img/bg3.jpg HTTP/1.1" 304 0
+[17/Oct/2022 06:33:47] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /genealogy HTTP/1.1" 200 12090
+[17/Oct/2022 06:33:49] "GET /static/img/avatar1_small.jpg HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/pic/header_01.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/pic/header_02.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/pic/header_03.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/pic/header_05.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/pic/header_04.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/search-icon.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:49] "GET /static/img/nav-expand.png HTTP/1.1" 304 0
+[17/Oct/2022 06:33:51] "GET /genealogy/list HTTP/1.1" 200 15527
+[17/Oct/2022 06:33:51] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:51] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:51] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 304 0
+[17/Oct/2022 06:33:54] "GET /genealogy/dtl/4 HTTP/1.1" 200 21006
+Not Found: /genealogy/indi/add_parent/4/3
+[17/Oct/2022 06:33:56] "GET /genealogy/indi/add_parent/4/3 HTTP/1.1" 404 7269
+[17/Oct/2022 06:34:03] "GET /genealogy/indi/tree HTTP/1.1" 200 7324
+[17/Oct/2022 06:34:03] "GET /static/assets/fuelux/css/tree-style.css HTTP/1.1" 304 0
+[17/Oct/2022 06:34:03] "GET /static/js/tree.js HTTP/1.1" 304 0
+[17/Oct/2022 06:34:03] "GET /static/assets/fuelux/js/tree.min.js HTTP/1.1" 304 0
+[17/Oct/2022 06:34:04] "GET /static/assets/fuelux/img/tree-icons.png HTTP/1.1" 304 0
+[17/Oct/2022 06:34:04] "GET /static/img/input-spinner.gif HTTP/1.1" 304 0
+[17/Oct/2022 07:05:43] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 07:05:43] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 07:06:18] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 07:06:18] "  /*à     Cookie: mstshash=Administr" 400 -
+/home/hjiang/myweb/wdjiapu/home/views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 14, 2022 - 13:52:22
+Django version 3.2.16, using settings 'app.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+访问url /genealogy/doc/del/4/16
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /index
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/upd
+权限-- None
+放行
+访问url /genealogy/upd
+权限-- None
+放行
+访问url /genealogy/upd
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /.git/config
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url http://passport.baidu.com/
+权限-- None
+访问url http://passport.baidu.com/
+权限-- None
+访问url /admin/
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url http://www.baidu.com/cache/global/img/gs.gif
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /qCGCLyY
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /robots.txt
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url http://www.baidu.com/cache/global/img/gs.gif
+权限-- None
+访问url /
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url http://passport.baidu.com/
+权限-- None
+访问url http://passport.baidu.com/
+权限-- None
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/doc/add/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add_parent/4/3
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+Watching for file changes with StatReloader
+/home/hjiang/myweb/wdjiapu/app/urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 17, 2022 - 07:16:16
+Django version 3.2.16, using settings 'app.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader

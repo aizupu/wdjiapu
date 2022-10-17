@@ -117,7 +117,7 @@ class Individual(AttachedUser):
     epitaph = models.CharField(max_length=1000, unique=False, verbose_name='墓志铭')
 
     #身份证号
-    idcard_no = models.CharField(max_length=18, unique=True, verbose_name='身份编号')
+    idcard_no = models.CharField(max_length=18, unique=True, blank=True, null=True, verbose_name='身份编号')
 
     #地址
     address = models.CharField(max_length=50, unique=False, verbose_name='住址')

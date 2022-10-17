@@ -1,0 +1,261 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-添加人物 {% endblock %}
+{% block headmore %}
+<link rel="stylesheet" type="text/css" href="/static/assets/bootstrap-datepicker/css/datepicker.css" />
+<link rel="stylesheet" type="text/css" href="/static/assets/bootstrap-timepicker/compiled/timepicker.css" />
+<link rel="stylesheet" type="text/css" href="/static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+<link rel="stylesheet" type="text/css" href="/static/assets/bootstrap-datetimepicker/css/datetimepicker.css" />
+{% endblock %}
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="#">族谱管理</a></li>
+            <li class="active">添加父母</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-primary">添加父母</h3>
+            </header>
+            <div class="panel-body">当前家谱：{{p.gene.title}}</div>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form" action="/genealogy/indi/submit_parent/{{p.id}}">
+                    <div class="row summary-list">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="surname" class="col-sm-3 control-label">姓</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="gname" name="gname" placeholder="李">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zi" class="col-sm-3 control-label">字</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="zi" name="zi" placeholder="字">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="sex">性别</label>
+                                <div class="col-lg-8">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="gender" id="man" value="0"> 男
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="gender" id="women" value="1"> 女
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth_place" class="col-sm-3 control-label">出生地</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="birth_place" id="birth_place" placeholder="出生地">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="death_place" class="col-sm-3 control-label">逝世地</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="death_place" id="death_place" placeholder="逝世地">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ce_birth" class="col-sm-3 control-label">年号纪年出生日期</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="ce_birth" id="ce_birth" placeholder="年号纪年出生日期">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="line_name" class="col-sm-3 control-label">家族排行</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="line_name" id="line_name" placeholder="家族排行">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="rank" class="col-sm-3 control-label">出生排行</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="rank" id="rank" placeholder="出生排行">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-sm-3 control-label">电话</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="phone" id="phone" placeholder="电话">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-3 control-label">名</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="自强">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hao" class="col-sm-3 control-label">号</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="hao" id="hao" placeholder="号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="v control-label col-sm-3" for="isalive">是否健在</label>
+                                <div class="col-lg-8">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="alive_flag" id="alive" value="0"> 健在
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="alive_flag" id="nolive" value="1"> 去世
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" name="alive_flag" id="unknown" value="2"> 未知
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="birth" class="col-sm-3 control-label">出生日期</label>
+                                <div class="col-lg-8">
+                                    <input size="16" type="text" data-format="yyyy-MM-dd hh:mm:ss" readonly class="form_datetime form-control" name="ad_birth" id="birth"
+                                        placeholder="出生时间">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="death" class="col-sm-3 control-label">逝世时间</label>
+                                <div class="col-lg-8">
+                                    <input size="16" type="text" data-format="yyyy-MM-dd hh:mm:ss" readonly class="form_datetime form-control" name="ad_death" id="death"
+                                        placeholder="逝世时间">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ce_death" class="col-sm-3 control-label">年号纪年逝世日期</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="ce_death" id="ce_death" placeholder="年号纪年逝世日期">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="generetion" class="col-sm-3 control-label">世代数</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="generetion" id="generetion" placeholder="世代数">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="idcard_no" class="col-sm-3 control-label">身份证号</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="idcard" id="idcard_no" placeholder="身份证号">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address" class="col-sm-3 control-label">地址</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="address" id="address" placeholder="地址">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="biography" class="col-lg-2 col-sm-2 control-label">生平简介</label>
+                        <div class="col-lg-8">
+                            <textarea class="form-control" rows="5" name="biography" id="biography" placeholder="生平简介"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="epitaph" class="col-lg-2 col-sm-2 control-label">墓志铭</label>
+                        <div class="col-lg-8">
+                            <textarea class="form-control" rows="5" name="epitaph" id="epitaph" placeholder="墓志铭"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-4">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-danger">注意事项</h3>
+            </header>
+            <div class="panel-body">
+                <p>
+                    *本系统严格控制每位用户的修谱权限，权限级别默认如下。您可以点击“权限设置”修改每个用户级别所具有的权限。<br />
+                    家谱创建者<br />
+                    拥有本家谱的所有权限<br />
+                    核心修谱成员<br />
+                    默认拥有查看、修改和审核所有数据的权限；默认可指定用户的权限级别<br />
+                    家谱共建者<br />
+                    指的是上传数据且数据通过核心修谱成员审核的用户，具有查看和修改自己所上传数据的权限<br />
+                    普通家谱成员<br />
+                    默认只具有查看家谱的权限<br />
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+{% block scriptmore %}
+<script type="text/javascript" src="/static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="/static/assets/bootstrap-datetimepicker/js/moment.js"></script>
+<script type="text/javascript" src="/static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js"></script>
+<script type="text/javascript" src="/static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/static/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="/static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+<script>
+    $.fn.datetimepicker.dates['zh-CN'] = {
+        days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+        daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+        daysMin: ["日", "一", "二", "三", "四", "五", "六", "日"],
+        months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+        today: "今天",
+        suffix: [],
+        meridiem: ["上午", "下午"]
+    };
+    $(".form_datetime").datetimepicker({
+        language: 'zh-CN',
+        format: 'yyyy-mm-dd hh:ii',
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition: "bottom-left"
+
+    });
+
+
+    $(".form_datetime-component").datetimepicker({
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition: "bottom-left"
+    });
+
+    $(".form_datetime-adv").datetimepicker({
+        format: "dd MM yyyy - hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        startDate: "2013-02-14 10:00",
+        minuteStep: 10,
+        pickerPosition: "bottom-left"
+
+    });
+
+    $(".form_datetime-meridian").datetimepicker({
+        format: "dd MM yyyy - HH:ii P",
+        showMeridian: true,
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition: "bottom-left"
+    });
+    var ad_birth = $("#birth").data("datetimepicker").getDate();
+    var ad_birth = $("#death").data("datetimepicker").getDate();
+//datetime picker end
+</script>
+{% endblock %}
