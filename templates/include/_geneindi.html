@@ -37,6 +37,7 @@
                 <th>出生日期</th>
                 <th>出生地</th>
                 <th>父亲</th>
+                <th>配偶</th>
                 <th>住址</th>
                 <th>操作</th>
             </tr>
@@ -58,6 +59,11 @@
                 <td>{{ i.birth_place }}</td>
                 {%if i.farther != None %}
                 <td>{{ i.farther }}</td>
+                {%else %}
+                <td></td>
+                {%endif %}
+                {%if i.spouse != None %}
+                <td>{{ i.spouse }}</td>
                 {%else %}
                 <td></td>
                 {%endif %}

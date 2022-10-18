@@ -25,9 +25,9 @@
     <div class="col-lg-8">
         <section class="panel">
             <header class="panel-heading">
-                <h3 class="text-primary">添加人物</h3>
+                <h3 class="text-primary">添加{{p.name}}的子女</h3>
             </header>
-            <div class="panel-body">当前家谱：{{g.title}}</div>
+            <div class="panel-body">当前家谱：{{p.gene.title}}</div>
             <div class="panel-body">
                 <form class="form-horizontal" role="form" action="/genealogy/indi/submit_child/{{p.id}}">
                     <div class="row summary-list">

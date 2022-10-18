@@ -25,23 +25,24 @@
     <div class="col-lg-8">
         <section class="panel">
             <header class="panel-heading">
-                <h3 class="text-primary">李自强</h3>
+                <h3 class="text-primary">{{p.name}}</h3>
             </header>
             <div class="panel-body">当前家谱：{{p.gene}}</div>
             <div class="panel-body">
-                <form class="form-horizontal" role="form">
+                <form class="form-horizontal" role="form" action="/genealogy/indi/upd/{{p.id}}">
+                <!-- <form class="form-horizontal" role="form">     -->
                     <div class="row summary-list">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="surname" class="col-sm-3 control-label">姓</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="gname" value={{p.surname}}>
+                                    <input type="text" class="form-control" id="gname" name="gname" value={{p.surname}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="zi" class="col-sm-3 control-label">字</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="zi" value={{p.zi}}>
+                                    <input type="text" class="form-control" id="zi" name="zi" value={{p.zi}}>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -49,24 +50,24 @@
                                 <div class="col-lg-8">
                                     {%if p.gender == '0' %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="man" value="option1" checked="checked"> 男
+                                        <input type="checkbox" name="gender" id="man" value="0" checked="checked"> 男
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="women" value="option2"> 女
+                                        <input type="checkbox" name="gender" id="women" value="1"> 女
                                     </label>
                                     {%elif p.gender == '1' %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="man" value="option1" checked="checked"> 男
+                                        <input type="checkbox" name="gender" id="man" value="0" checked="checked"> 男
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="women" value="option2"> 女
+                                        <input type="checkbox" name="gender" id="women" value="1"> 女
                                     </label>
                                     {%else %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="man" value="option1"> 男
+                                        <input type="checkbox" name="gender" id="man" value="0"> 男
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="women" value="option2"> 女
+                                        <input type="checkbox" name="gender" id="women" value="1"> 女
                                     </label>
                                     {%endif %}
                                 </div>
@@ -74,13 +75,13 @@
                             <div class="form-group">
                                 <label for="birth_place" class="col-sm-3 control-label">出生地</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="birth_place" value={{p.birth_place}}>
+                                    <input type="text" class="form-control" name="birth_place" id="birth_place" value={{p.birth_place}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="death_place" class="col-sm-3 control-label">逝世地</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="death_place" value={{p.death_place}}>
+                                    <input type="text" class="form-control" name="death_place" id="death_place" value={{p.death_place}}>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -98,13 +99,17 @@
                             <div class="form-group">
                                 <label for="line_name" class="col-sm-3 control-label">家族排行</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="line_name" value={{p.line_name}}>
+                                    <input type="text" class="form-control" name="line_name" id="line_name" value={{p.line_name}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="phone" class="col-sm-3 control-label">电话</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="phone" value={{p.phone}}>
+                                    {%if p.idcard_no != None %}
+                                    <input type="text" class="form-control" name="phone"  id="generetion" value={{p.phone}}>
+                                    {%else %}
+                                    <input type="text" class="form-control" name="phone" id="generetion">
+                                    {%endif %}
                                 </div>
                             </div>
                         </div>
@@ -112,13 +117,13 @@
                             <div class="form-group">
                                 <label for="name" class="col-sm-3 control-label">名</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="name" value={{p.name}}>
+                                    <input type="text" class="form-control" name="name" id="name" value={{p.name}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="hao" class="col-sm-3 control-label">号</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="hao" value={{p.hao}}>
+                                    <input type="text" class="form-control" name="hao" id="hao" value={{p.hao}}>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -126,33 +131,33 @@
                                 <div class="col-lg-8">
                                     {%if p.is_alive == '0' %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="alive" value="option1" checked="checked"> 健在
+                                        <input type="checkbox" name="alive_flag" id="alive" value="1" checked="checked"> 健在
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="nolive" value="option2"> 去世
+                                        <input type="checkbox" name="alive_flag" id="nolive" value="0"> 去世
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="unknown" value="option3"> 未知
+                                        <input type="checkbox" name="alive_flag" id="unknown" value="2"> 未知
                                     </label>
                                     {%elif p.is_alive == '1' %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="alive" value="option1"> 健在
+                                        <input type="checkbox" name="alive_flag" id="alive" value="1"> 健在
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="nolive" value="option2" checked="checked"> 去世
+                                        <input type="checkbox" name="alive_flag" id="nolive" value="0" checked="checked"> 去世
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="unknown" value="option3"> 未知
+                                        <input type="checkbox" name="alive_flag" id="unknown" value="2"> 未知
                                     </label>
                                     {%else %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="alive" value="option1"> 健在
+                                        <input type="checkbox" name="alive_flag" id="alive" value="1"> 健在
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="nolive" value="option2"> 去世
+                                        <input type="checkbox" name="alive_flag" id="nolive" value="0"> 去世
                                     </label>
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="unknown" value="option3" checked="checked"> 未知
+                                        <input type="checkbox" name="alive_flag" id="unknown" value="2" checked="checked"> 未知
                                     </label>
                                     {%endif %}
                                 </div>
@@ -160,14 +165,14 @@
                             <div class="form-group">
                                 <label for="birth" class="col-sm-3 control-label">出生日期</label>
                                 <div class="col-lg-8">
-                                    <input size="16" type="text" readonly class="form_datetime form-control" id="birth"
+                                    <input size="16" type="text" readonly class="form_datetime form-control" id="birth" name="ad_birth"
                                         value={{p.ad_birth|date:'Y-m-d H:m:s'}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="death" class="col-sm-3 control-label">逝世时间</label>
                                 <div class="col-lg-8">
-                                    <input size="16" type="text" readonly class="form_datetime form-control" id="death"
+                                    <input size="16" type="text" readonly class="form_datetime form-control" id="death" name="ad_death"
                                         value={{p.ad_death|date:'Y-m-d H:m:s'}}>
                                 </div>
                             </div>
@@ -180,19 +185,23 @@
                             <div class="form-group">
                                 <label for="rank" class="col-sm-3 control-label">出生排行</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="rank" value={{p.rank}}>
+                                    <input type="text" class="form-control" name="rank" id="rank" value={{p.rank}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="generetion" class="col-sm-3 control-label">世代数</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="generetion" value={{p.generetion}}>
+                                    <input type="text" class="form-control" name="generetion" id="generetion" value={{p.generetion}}>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="idcard_no" class="col-sm-3 control-label">身份证号</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="generetion" value={{p.idcard_no}}>
+                                    {%if p.idcard_no != None %}
+                                    <input type="text" class="form-control" name="idcard_no" id="generetion" value={{p.idcard_no}}>
+                                    {%else %}
+                                    <input type="text" class="form-control" name="idcard_no" id="generetion">
+                                    {%endif %}
                                 </div>
                             </div>
                         </div>
@@ -200,24 +209,25 @@
                     <div class="form-group">
                         <label for="address" class="col-lg-2 col-sm-2 control-label">地址</label>
                         <div class="col-lg-8">
-                            <input type="text" class="form-control" id="address" value={{p.address}}>
+                            <input type="text" class="form-control" name="address" id="address" value={{p.address}}>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="biography" class="col-lg-2 col-sm-2 control-label">生平简介</label>
                         <div class="col-lg-8">
-                            <textarea class="form-control" rows="5" id="biography" value={{p.biography}}></textarea>
+                            <textarea class="form-control" rows="5" name="biography" id="biography" value={{p.biography}}></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="epitaph" class="col-lg-2 col-sm-2 control-label">墓志铭</label>
                         <div class="col-lg-8">
-                            <textarea class="form-control" rows="5" id="epitaph" value={{p.epitaph}}></textarea>
+                            <textarea class="form-control" rows="5" name="epitaph" id="epitaph" value={{p.epitaph}}></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10">
                             <button type="submit" class="btn btn-primary">提交</button>
+                            <!-- <input type="button" value="click" id="btn" onclick="start()"> -->
                         </div>
                     </div>
                 </form>
@@ -254,6 +264,10 @@
 <script type="text/javascript" src="/static/assets/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script type="text/javascript" src="/static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
 <script>
+    function start(){
+    var aa=document.getElementById("surname").value; //通过document.getElementById(“id名”).value来获取value值。
+    alert(aa);
+    }
 
     $.fn.datetimepicker.dates['zh-CN'] = {
         days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
