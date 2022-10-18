@@ -84,7 +84,8 @@ DATABASES = {
         "USER":"totem_user",
         "PASSWORD":"totem123",
         "HOST":"39.107.248.28",
-        "PORT":"9000"
+        "PORT":"9000",
+        "OPTIONS":{'charset':'utf8mb4'}
     },
 }
 

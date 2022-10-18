@@ -53,6 +53,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="dtime" class="col-sm-3 control-label">时间</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="dtime" id="dtime" placeholder="时间">
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="contact_phone" class="col-sm-3 control-label">排序</label>
                                 <div class="col-lg-8">
                                     <input type="text" class="form-control" name="drank" id="drank" placeholder="排序">
@@ -116,13 +122,12 @@
     $(function () {
         $("#submit").on("click",function (){
             const content = $("#summernote").code();
-            alert(content)
             var gname = $("#gname").val();
             var hall_title = $("#hall_title").val();
             var dformat = $("#dformat").val();
             var dtype = $("#dtype").val();
             var drank = $("#drank").val();
-            alert(drank)
+            var dtime = $("#dtime").val();
             $.ajax({
                 method:'get',
                 url:'/genealogy/doc/add/submit/{{gid}}',
@@ -132,9 +137,9 @@
                     "dformat":dformat,
                     "dtype":dtype,
                     "drank":drank,
+                    "dtime":dtime,
                     "content":content
                 },success(){
-                    alert("添加成功");
                     window.location.href='/genealogy/dtl/{{ gid }}';
                 },error(){
                     alert('error')

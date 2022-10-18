@@ -139,7 +139,9 @@ def submit_parent(request,id):
     generetion = request.GET.get('generetion')
     rank = request.GET.get('rank')
     ad_birth = request.GET.get('ad_birth')
+    ce_birth = request.GET.get('ce_birth')
     ad_death = request.GET.get('ad_death')
+    ce_death = request.GET.get('ce_birth')
     birth_place = request.GET.get('birth_place')
     death_place = request.GET.get('death_place')
     biography = request.GET.get('biography')
@@ -147,11 +149,16 @@ def submit_parent(request,id):
     address = request.GET.get('address')
     individual_item = Individual(gene=p.gene, surname=surname, name=name, gender=gender, zi=zi, hao=hao, \
                                  line_name=line_name, generetion=generetion, rank=rank, is_alive=alive_flag,
-                                 ad_birth=ad_birth, ad_death=ad_death, birth_place=birth_place, \
+                                 ce_birth=ce_birth, ce_death=ce_death, birth_place=birth_place, \
                                  death_place=death_place, biography=biography, epitaph=epitaph, address=address)
     individual_item.save()
+    if(ad_birth):
+        individual_item.ad_birth=ad_birth
+        individual_item.save()
+    if(ad_death):
+        individual_item.ad_death=ad_death
+        individual_item.save()
     if gender == '0':
-        print("debug")
         p.farther = individual_item
     else:
         p.mother = individual_item
@@ -170,7 +177,9 @@ def submit_spouse(request,id):
     generetion = request.GET.get('generetion')
     rank = request.GET.get('rank')
     ad_birth = request.GET.get('ad_birth')
+    ce_birth = request.GET.get('ce_birth')
     ad_death = request.GET.get('ad_death')
+    ce_death = request.GET.get('ce_birth')
     birth_place = request.GET.get('birth_place')
     death_place = request.GET.get('death_place')
     biography = request.GET.get('biography')
@@ -178,9 +187,15 @@ def submit_spouse(request,id):
     address = request.GET.get('address')
     individual_item = Individual(gene=p.gene, surname=surname, name=name, gender=gender, zi=zi, hao=hao, \
                                  line_name=line_name, generetion=generetion, rank=rank, is_alive=alive_flag,
-                                 ad_birth=ad_birth, ad_death=ad_death, birth_place=birth_place, spouse = p,\
+                                 ce_birth=ce_birth, ce_death=ce_death, birth_place=birth_place, spouse = p,\
                                  death_place=death_place, biography=biography, epitaph=epitaph, address=address)
     individual_item.save()
+    if(ad_birth):
+        individual_item.ad_birth=ad_birth
+        individual_item.save()
+    if(ad_death):
+        individual_item.ad_death=ad_death
+        individual_item.save()
     p.spouse = individual_item
     p.save()
     return redirect('/genealogy/dtl/' + str(p.gene.id))
@@ -197,7 +212,9 @@ def submit_child(request,id):
     generetion = request.GET.get('generetion')
     rank = request.GET.get('rank')
     ad_birth = request.GET.get('ad_birth')
+    ce_birth = request.GET.get('ce_birth')
     ad_death = request.GET.get('ad_death')
+    ce_death = request.GET.get('ce_birth')
     birth_place = request.GET.get('birth_place')
     death_place = request.GET.get('death_place')
     biography = request.GET.get('biography')
@@ -206,15 +223,21 @@ def submit_child(request,id):
     if p.gender == '0':
         individual_item = Individual(gene=p.gene, surname=surname, name=name, gender=gender, zi=zi, hao=hao, \
                                  line_name=line_name, generetion=generetion, rank=rank, is_alive=alive_flag,
-                                 ad_birth=ad_birth, ad_death=ad_death, birth_place=birth_place, farther = p,\
+                                 ce_birth=ce_birth, ce_death=ce_death, birth_place=birth_place, farther = p,\
                                  death_place=death_place, biography=biography, epitaph=epitaph, address=address)
     else:
         individual_item = Individual(gene=p.gene, surname=surname, name=name, gender=gender, zi=zi, hao=hao, \
                                  line_name=line_name, generetion=generetion, rank=rank, is_alive=alive_flag,
-                                 ad_birth=ad_birth, ad_death=ad_death, birth_place=birth_place, mother = p,\
+                                 ce_birth=ce_birth, ce_death=ce_death, birth_place=birth_place, mother = p,\
                                  death_place=death_place, biography=biography, epitaph=epitaph, address=address)
 
     individual_item.save()
+    if(ad_birth):
+        individual_item.ad_birth=ad_birth
+        individual_item.save()
+    if(ad_death):
+        individual_item.ad_death=ad_death
+        individual_item.save()
     return redirect('/genealogy/dtl/' + str(p.gene.id))
 
 def add_indi(request, id):
@@ -228,19 +251,27 @@ def add_indi(request, id):
     generetion = request.GET.get('generetion')
     rank = request.GET.get('rank')
     ad_birth = request.GET.get('ad_birth')
+    ce_birth = request.GET.get('ce_birth')
     ad_death = request.GET.get('ad_death')
+    ce_death = request.GET.get('ce_birth')
     birth_place = request.GET.get('birth_place')
     death_place = request.GET.get('death_place')
+    cemetery =  request.GET.get('cemetery')
     biography = request.GET.get('biography')
     epitaph = request.GET.get('epitaph')
     address = request.GET.get('address')
     genealogy = Genealogy.objects.get(id=id)
     individual_item = Individual(gene=genealogy, surname=surname, name=name, gender=gender, zi=zi, hao=hao, \
                                  line_name=line_name, generetion=generetion, rank=rank, is_alive=alive_flag,
-                                 ad_birth=ad_birth, ad_death=ad_death, birth_place=birth_place, \
+                                 ce_birth=ce_birth, ce_death=ce_death, birth_place=birth_place, cemetery=cemetery,\
                                  death_place=death_place, biography=biography, epitaph=epitaph, address=address)
     individual_item.save()
-
+    if(ad_birth):
+        individual_item.ad_birth=ad_birth
+        individual_item.save()
+    if(ad_death):
+        individual_item.ad_death=ad_death
+        individual_item.save()
     return redirect('/genealogy/dtl/' + id)
 
 # 删除人物：是一个请求，删除之后直接返回人物首页页面
@@ -282,6 +313,8 @@ def doc_submit(request, id):
     title = request.GET.get('gname')
     author = request.GET.get('hall_title')
     format_str = request.GET.get('dformat')
+    dtime = request.GET.get('dtime')
+    print(dtime)
     doc_format = Docformat.objects.filter(title=format_str)
     if len(doc_format) == 0:
         doc_fitem = Docformat(title=format_str)
@@ -298,7 +331,7 @@ def doc_submit(request, id):
     doc_rank = request.GET.get('drank')
     doc_content = request.GET.get('content')
     doc_item = Document(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
-                        rank=doc_rank, genealogy=genealogy)
+                        time=dtime, rank=doc_rank, genealogy=genealogy)
     doc_item.save()
     return redirect('/genealogy/dtl/' + id)
 

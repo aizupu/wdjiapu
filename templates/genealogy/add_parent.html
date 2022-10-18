@@ -13,7 +13,7 @@
         <ul class="breadcrumb">
             <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
             <li><a href="#">族谱管理</a></li>
-            <li class="active">添加父母</li>
+            <li class="active">添加人物</li>
         </ul>
         <!--breadcrumbs end -->
     </div>
@@ -25,27 +25,21 @@
     <div class="col-lg-8">
         <section class="panel">
             <header class="panel-heading">
-                <h3 class="text-primary">添加父母</h3>
+                <h3 class="text-primary">添加人物</h3>
             </header>
-            <div class="panel-body">当前家谱：{{p.gene.title}}</div>
+            <div class="panel-body">当前家谱：{{g.title}}</div>
             <div class="panel-body">
                 <form class="form-horizontal" role="form" action="/genealogy/indi/submit_parent/{{p.id}}">
                     <div class="row summary-list">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="surname" class="col-sm-3 control-label">姓</label>
+                                <label for="surname" class="col-sm-3 control-label icon">姓</label>
                                 <div class="col-lg-8">
                                     <input type="text" class="form-control" id="gname" name="gname" placeholder="李">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="zi" class="col-sm-3 control-label">字</label>
-                                <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="zi" name="zi" placeholder="字">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="sex">性别</label>
+                                <label class="control-label col-sm-3 icon" for="sex">性别</label>
                                 <div class="col-lg-8">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="gender" id="man" value="0"> 男
@@ -53,6 +47,12 @@
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="gender" id="women" value="1"> 女
                                     </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zi" class="col-sm-3 control-label">字</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="zi" name="zi" placeholder="字">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -74,15 +74,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="line_name" class="col-sm-3 control-label">家族排行</label>
+                                <label for="cemetery" class="col-sm-3 control-label">葬地</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" name="line_name" id="line_name" placeholder="家族排行">
+                                    <input type="text" class="form-control" name="cemetery" id="cemetery" placeholder="葬地">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="rank" class="col-sm-3 control-label">出生排行</label>
+                                <label for="line_name" class="col-sm-3 control-label">家族排行</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" name="rank" id="rank" placeholder="出生排行">
+                                    <input type="text" class="form-control" name="line_name" id="line_name" placeholder="家族排行">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -94,19 +94,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="name" class="col-sm-3 control-label">名</label>
+                                <label for="name" class="col-sm-3 control-label icon">名</label>
                                 <div class="col-lg-8">
                                     <input type="text" class="form-control" name="name" id="name" placeholder="自强">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="hao" class="col-sm-3 control-label">号</label>
-                                <div class="col-lg-8">
-                                    <input type="text" class="form-control" name="hao" id="hao" placeholder="号">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="v control-label col-sm-3" for="isalive">是否健在</label>
+                                <label class="v control-label col-sm-3 icon" for="isalive">是否健在</label>
                                 <div class="col-lg-8">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="alive_flag" id="alive" value="0"> 健在
@@ -117,6 +111,12 @@
                                     <label class="checkbox-inline">
                                         <input type="checkbox" name="alive_flag" id="unknown" value="2"> 未知
                                     </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hao" class="col-sm-3 control-label">号</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="hao" id="hao" placeholder="号">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -140,6 +140,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="rank" class="col-sm-3 control-label">出生排行</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="rank" id="rank" placeholder="出生排行">
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="generetion" class="col-sm-3 control-label">世代数</label>
                                 <div class="col-lg-8">
                                     <input type="text" class="form-control" name="generetion" id="generetion" placeholder="世代数">
@@ -151,12 +157,12 @@
                                     <input type="text" class="form-control" name="idcard" id="idcard_no" placeholder="身份证号">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="address" class="col-sm-3 control-label">地址</label>
-                                <div class="col-lg-8">
-                                    <input type="text" class="form-control" name="address" id="address" placeholder="地址">
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-lg-2 col-sm-2 control-label">地址</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" name="address" id="address" placeholder="地址">
                         </div>
                     </div>
                     <div class="form-group">
@@ -203,6 +209,12 @@
 </div>
 {% endblock %}
 {% block scriptmore %}
+<style>
+    .icon:before {
+         content: '* ';
+         color: red;
+     }
+ </style>
 <script type="text/javascript" src="/static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script type="text/javascript" src="/static/assets/bootstrap-datetimepicker/js/moment.js"></script>
 <script type="text/javascript" src="/static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js"></script>

@@ -90,15 +90,15 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="line_name" class="col-sm-3 control-label">家族排行</label>
+                                <label for="cemetery" class="col-sm-3 control-label">葬地</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="line_name" value={{p.line_name}}>
+                                    <input type="text" class="form-control" name="cemetery" id="cemetery" value={{p.cemetery}}>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="rank" class="col-sm-3 control-label">出生排行</label>
+                                <label for="line_name" class="col-sm-3 control-label">家族排行</label>
                                 <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="rank" value={{p.rank}}>
+                                    <input type="text" class="form-control" id="line_name" value={{p.line_name}}>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -178,6 +178,12 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="rank" class="col-sm-3 control-label">出生排行</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="rank" value={{p.rank}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="generetion" class="col-sm-3 control-label">世代数</label>
                                 <div class="col-lg-8">
                                     <input type="text" class="form-control" id="generetion" value={{p.generetion}}>
@@ -189,12 +195,12 @@
                                     <input type="text" class="form-control" id="generetion" value={{p.idcard_no}}>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <label for="address" class="col-sm-3 control-label">地址</label>
-                                <div class="col-lg-8">
-                                    <input type="text" class="form-control" id="address" value={{p.address}}>
-                                </div>
-                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-lg-2 col-sm-2 control-label">地址</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="address" value={{p.address}}>
                         </div>
                     </div>
                     <div class="form-group">

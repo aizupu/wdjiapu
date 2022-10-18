@@ -6623,3 +6623,1543 @@ Watching for file changes with StatReloader
 [17/Oct/2022 12:43:10] "GET /static/js/echarts.js HTTP/1.1" 200 3146808
 [17/Oct/2022 12:43:10] "GET /static/json/china.json HTTP/1.1" 200 61008
 [17/Oct/2022 12:43:10] "GET /static/json/data.json HTTP/1.1" 200 4761
+[17/Oct/2022 12:44:15] "GET /index HTTP/1.1" 200 12481
+[17/Oct/2022 12:44:18] "GET /genealogy HTTP/1.1" 200 12090
+[17/Oct/2022 12:44:32] "GET /static/img/arrow-up.png HTTP/1.1" 200 1060
+[17/Oct/2022 12:44:36] "GET /genealogy/list HTTP/1.1" 200 15527
+[17/Oct/2022 12:44:37] "GET /genealogy/add HTTP/1.1" 200 13285
+[17/Oct/2022 12:44:43] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[17/Oct/2022 12:44:46] "GET /genealogy/grt HTTP/1.1" 200 5978
+[17/Oct/2022 12:44:59] "GET /genealogy HTTP/1.1" 200 12090
+[17/Oct/2022 12:45:00] "GET /genealogy HTTP/1.1" 200 12090
+[17/Oct/2022 12:45:02] "GET /genealogy/list HTTP/1.1" 200 15527
+[17/Oct/2022 12:45:05] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[17/Oct/2022 12:45:08] "GET /genealogy/indi/add_parent/3 HTTP/1.1" 200 20125
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[17/Oct/2022 12:45:08] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[17/Oct/2022 12:45:09] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[17/Oct/2022 12:45:17] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[17/Oct/2022 12:45:31] "GET /genealogy HTTP/1.1" 200 12090
+[17/Oct/2022 12:45:33] "GET /genealogy HTTP/1.1" 200 12090
+[17/Oct/2022 12:45:40] "GET /genealogy/add HTTP/1.1" 200 13285
+[17/Oct/2022 12:45:44] "GET /index HTTP/1.1" 200 12481
+[17/Oct/2022 12:45:50] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[17/Oct/2022 12:45:50] "  à          " 400 -
+[17/Oct/2022 13:02:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 13:02:55] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 13:36:11] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 13:36:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 13:36:11] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03L8:+1\x8aÉ\x9b°ÚÖçô\x11â\x16\x9fSÑ%\x0fA³ù¥<zÕ-\x12%µ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[17/Oct/2022 13:36:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 13:36:12] code 400, message Bad request version ('À\x14À')
+[17/Oct/2022 13:36:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 13:41:42] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 302 0
+[17/Oct/2022 13:41:42,750] - Broken pipe from ('185.216.140.186', 53096)
+
+[17/Oct/2022 14:57:43] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 14:57:43,462] - Broken pipe from ('167.248.133.60', 37012)
+
+[17/Oct/2022 14:57:43] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 14:57:44] code 505, message Invalid HTTP version (2.0)
+[17/Oct/2022 14:57:44] "PRI * HTTP/2.0" 505 -
+[17/Oct/2022 14:57:44] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Not Found: /favicon.ico
+[17/Oct/2022 14:57:45] "GET /favicon.ico HTTP/1.1" 404 8159
+[17/Oct/2022 16:32:51] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 16:32:51,277] - Broken pipe from ('167.94.146.60', 49062)
+
+[17/Oct/2022 16:32:51] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 16:32:52] code 505, message Invalid HTTP version (2.0)
+[17/Oct/2022 16:32:52] "PRI * HTTP/2.0" 505 -
+[17/Oct/2022 16:32:52] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+Not Found: /favicon.ico
+[17/Oct/2022 16:32:53] "GET /favicon.ico HTTP/1.1" 404 8159
+[17/Oct/2022 16:59:55] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Oct/2022 16:59:55] " Pg)§ê " 400 -
+[17/Oct/2022 16:59:56] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Oct/2022 16:59:56] " " 400 -
+[17/Oct/2022 16:59:57] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[17/Oct/2022 17:59:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[17/Oct/2022 17:59:11] "  /*à     Cookie: mstshash=Administr" 400 -
+[17/Oct/2022 18:40:52] code 400, message Bad HTTP/0.9 request type ('\x00\x00\x00')
+[17/Oct/2022 18:40:52] "    c                           " 400 -
+[17/Oct/2022 18:52:25] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 18:52:27] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[17/Oct/2022 20:35:47] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 21:27:17] code 400, message Bad request syntax ('{\x01\x00\x1615888888888À¨\x90Á\x13\x8a{')
+[17/Oct/2022 21:27:17] "{ 15888888888À¨Á{" 400 -
+[17/Oct/2022 21:30:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00\x88\x01\x00\x00\x84\x03\x03cMÉ`eÖcXîað¡h')
+[17/Oct/2022 21:30:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Oct/2022 21:38:15] code 400, message Bad request syntax ('&&&&~\x04»8ÅaýT\x07P.VJÃ\x04;\x13\x0600-0C-29-B1-35-79')
+[17/Oct/2022 21:38:15] "&&&&~»8ÅaýTP.VJÃ;00-0C-29-B1-35-79" 400 -
+[17/Oct/2022 21:46:21] code 400, message Bad request version ('OÑËÜ®Ëd')
+[17/Oct/2022 21:46:21] "   TZ         .    I¨À )z» zÚf Ò~Uñi»©                ÃÐ¢|¦v½óOÑËÜ®Ëd" 400 -
+[17/Oct/2022 21:55:14] code 400, message Bad request syntax ('~~\x01\x00\x124Vx\x124/\x00\x08\x02\x00\x03Y\x10\x11\x15Q\x11\x03kÊ')
+[17/Oct/2022 21:55:14] "~~ 4Vx4/  YQkÊ" 400 -
+[17/Oct/2022 22:00:43] code 400, message Bad request syntax ('333766643833656338616434363333643963363962386536653538383937393235613033653338636434')
+[17/Oct/2022 22:00:43] "333766643833656338616434363333643963363962386536653538383937393235613033653338636434" 400 -
+[17/Oct/2022 22:03:17] code 400, message Bad HTTP/0.9 request type ('\x02¤Uÿ\x00\x00\x00')
+[17/Oct/2022 22:03:17] "¤Uÿ   " 400 -
+[17/Oct/2022 22:09:25] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 302 0
+[17/Oct/2022 22:09:25,879] - Broken pipe from ('185.216.140.186', 52774)
+
+[17/Oct/2022 22:21:57] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 22:38:07] "GET / HTTP/1.1" 200 12481
+[17/Oct/2022 22:38:07,633] - Broken pipe from ('34.76.158.233', 44222)
+
+[18/Oct/2022 00:07:56] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Oct/2022 00:07:56] "  /*à     Cookie: mstshash=Administr" 400 -
+[18/Oct/2022 00:09:20] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\\\x93¿\x934$É^\x99«\x96oV±â\\Ì>¦")K£¶Unj«ØÇÐ3\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[18/Oct/2022 00:09:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Oct/2022 00:09:21] code 400, message Bad request version ('À\x14À')
+[18/Oct/2022 00:09:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Oct/2022 00:09:21] code 400, message Bad request version ('À\x14À')
+[18/Oct/2022 00:09:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Oct/2022 01:04:16] "GET http://passport.baidu.com/ HTTP/1.1" 302 0
+[18/Oct/2022 01:04:24] code 400, message Bad request syntax ('\x05\x01\x00')
+[18/Oct/2022 01:04:24] " " 400 -
+[18/Oct/2022 01:04:39] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[18/Oct/2022 01:04:39] " Pg)§ê " 400 -
+[18/Oct/2022 01:15:15] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 01:15:15] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 01:15:15] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 01:15:15] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 01:15:15] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 01:15:16] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 01:15:16] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 01:15:16] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 01:15:16] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 01:15:17] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 01:15:17] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 01:15:17] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 01:15:17] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 01:15:17] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 01:15:18] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 01:15:18] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 01:15:18] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 01:15:18] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 01:15:19] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 01:15:19] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 01:15:19] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 01:15:19] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 01:15:19] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 01:15:19] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 01:15:19] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 01:15:19] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 01:15:19] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 01:15:19] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 01:15:19] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 01:15:20] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 01:15:20] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 01:15:20] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 01:15:20] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 01:15:21] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 01:15:21] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 01:15:21] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 01:15:21] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 01:15:22] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 01:15:23] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 01:15:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 01:15:23] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 01:15:23] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 01:15:24] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 01:15:25] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 01:15:25] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 01:15:25] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 01:15:25] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 01:15:25] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 01:17:04] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 01:17:10] "GET /vis HTTP/1.1" 200 11677
+[18/Oct/2022 01:17:10] "GET /static/js/monitor.js HTTP/1.1" 200 15343
+[18/Oct/2022 01:17:10] "GET /static/js/jquery.count.min.js HTTP/1.1" 200 2888
+[18/Oct/2022 01:17:10] "GET /static/js/utils.js HTTP/1.1" 200 987
+[18/Oct/2022 01:17:10] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[18/Oct/2022 01:17:10] "GET /static/js/bootbox.min.js HTTP/1.1" 200 9977
+[18/Oct/2022 01:17:10] "GET /static/js/tableSortPaging.js HTTP/1.1" 200 2600
+[18/Oct/2022 01:17:10] "GET /static/js/vismap.js HTTP/1.1" 200 4156
+[18/Oct/2022 01:17:10] "GET /static/js/myFunction.js HTTP/1.1" 200 15654
+[18/Oct/2022 01:17:12] "GET /vis HTTP/1.1" 200 11677
+[18/Oct/2022 01:18:56] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 01:19:08] "GET /? HTTP/1.1" 200 12481
+[18/Oct/2022 01:25:12] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 01:25:12] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 01:25:12] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 01:25:12] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 01:25:12] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 01:25:12] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 01:25:12] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 01:25:12] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 01:25:12] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 01:25:12] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 01:25:13] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 01:25:13] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 01:25:13] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 01:25:13] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 01:25:13] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 01:25:13] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 01:25:13] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 01:25:14] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 01:25:14] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 01:25:14] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 01:25:14] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 01:25:15] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 01:25:15] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 01:25:17] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 01:25:20] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 01:25:20] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[18/Oct/2022 01:25:20] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[18/Oct/2022 01:25:20] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[18/Oct/2022 01:25:20] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[18/Oct/2022 01:25:20] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[18/Oct/2022 01:25:20] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[18/Oct/2022 01:25:22] "GET /genealogy/list HTTP/1.1" 200 15527
+[18/Oct/2022 01:25:22] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[18/Oct/2022 01:25:22] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[18/Oct/2022 01:25:22] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[18/Oct/2022 01:25:29] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 02:17:47] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Oct/2022 02:17:47] "  /*à     Cookie: mstshash=Administr" 400 -
+[18/Oct/2022 02:40:28] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 02:40:28] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 02:40:28] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 02:40:28] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 02:40:28] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 02:40:28] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 02:40:28] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 02:40:28] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 02:40:28] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 02:40:29] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 02:40:29] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 02:40:29] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 02:40:29] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 02:40:29] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 02:40:29] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 02:40:29] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 02:40:30] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 02:40:30] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 02:40:30] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 02:40:30] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 02:40:30] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 02:40:33] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 02:40:33] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 02:40:33] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 02:41:22] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Oct/2022 02:41:22] "  /*à     Cookie: mstshash=Administr" 400 -
+[18/Oct/2022 02:42:31,999] - Broken pipe from ('59.172.176.125', 16457)
+
+[18/Oct/2022 02:42:32,000] - Broken pipe from ('59.172.176.125', 16459)
+
+[18/Oct/2022 02:42:32,000] - Broken pipe from ('59.172.176.125', 16455)
+
+[18/Oct/2022 02:42:32,000] - Broken pipe from ('59.172.176.125', 16458)
+
+[18/Oct/2022 02:42:32,000] - Broken pipe from ('59.172.176.125', 16456)
+
+[18/Oct/2022 02:42:32,000] - Broken pipe from ('59.172.176.125', 16454)
+
+[18/Oct/2022 03:04:09] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Oct/2022 03:04:09] "  /*à     Cookie: mstshash=Administr" 400 -
+[18/Oct/2022 03:30:39] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 03:37:44] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 03:37:44] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 03:37:44] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 03:37:44] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 03:37:44] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 03:37:44] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 03:37:44] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 03:37:44] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 03:37:44] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 03:37:44] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 03:37:44] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 03:37:44] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 03:37:44] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 03:37:44] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 03:37:44] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 03:37:45] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 03:37:45] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 03:37:45] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 03:37:45] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 03:37:45] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 03:37:45] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 03:37:46] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 03:37:46] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 03:37:48] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 03:37:48] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 03:37:48] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[18/Oct/2022 03:37:48] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[18/Oct/2022 03:37:48] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[18/Oct/2022 03:37:48] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[18/Oct/2022 03:37:48] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[18/Oct/2022 03:37:48] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[18/Oct/2022 03:37:48] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[18/Oct/2022 03:37:48] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[18/Oct/2022 03:37:50] "GET /genealogy/add HTTP/1.1" 200 13285
+[18/Oct/2022 03:37:52] "GET /genealogy/list HTTP/1.1" 200 15527
+[18/Oct/2022 03:37:53] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[18/Oct/2022 03:37:53] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[18/Oct/2022 03:37:53] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[18/Oct/2022 03:37:59] "GET /genealogy/add HTTP/1.1" 200 13285
+[18/Oct/2022 03:42:32] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Oct/2022 03:42:32] "  /*à     Cookie: mstshash=Administr" 400 -
+[18/Oct/2022 03:45:05] "GET /genealogy/add_genealogy?gname=%E9%BB%84%E5%86%88%E9%9D%96%E6%B0%8F%E5%AE%B6%E8%B0%B1&hall_title=%E4%B8%89%E6%98%9F%E5%A0%82&location=%E6%B9%96%E5%8C%97%E7%9C%81%E9%BB%84%E5%86%88%E5%B8%82&contact_phone=&sername=%E9%9D%96&county_title=%E6%AD%A6%E6%B1%89%E6%96%B0%E6%B4%B2&contact=&access_pwd=654321&sample-radio=1&note= HTTP/1.1" 302 0
+[18/Oct/2022 03:45:05] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 03:47:10] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 03:47:20] "GET /genealogy/doc/add/5 HTTP/1.1" 200 12558
+[18/Oct/2022 03:47:20] "GET /static/assets/summernote/dist/summernote.min.js HTTP/1.1" 200 62158
+[18/Oct/2022 03:47:34] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 03:47:37] "GET /genealogy/indi/add/5 HTTP/1.1" 200 20102
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[18/Oct/2022 03:47:37] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[18/Oct/2022 03:47:38] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[18/Oct/2022 03:47:45] "GET /genealogy/doc/add/5 HTTP/1.1" 200 12558
+[18/Oct/2022 03:47:45] "GET /static/assets/summernote/dist/summernote.css HTTP/1.1" 200 10619
+[18/Oct/2022 03:47:56] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 03:48:01] "GET /genealogy/info/5 HTTP/1.1" 200 10852
+[18/Oct/2022 03:49:33] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 03:49:33] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[18/Oct/2022 03:49:33] "GET /static/js/common-scripts.js HTTP/1.1" 304 0
+[18/Oct/2022 03:49:33] "GET /static/css/style.css HTTP/1.1" 304 0
+[18/Oct/2022 03:49:35] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 03:49:35] "GET /static/img/pic/header_01.png HTTP/1.1" 304 0
+[18/Oct/2022 03:49:35] "GET /static/img/pic/header_02.png HTTP/1.1" 304 0
+[18/Oct/2022 03:49:35] "GET /static/img/pic/header_03.png HTTP/1.1" 304 0
+[18/Oct/2022 03:49:35] "GET /static/img/pic/header_05.png HTTP/1.1" 304 0
+[18/Oct/2022 03:49:35] "GET /static/img/pic/header_04.png HTTP/1.1" 304 0
+[18/Oct/2022 03:49:36] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 03:49:40] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 03:49:44] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 03:49:44] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 03:51:53] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 03:52:01] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 03:52:05] "GET /genealogy/indi/add_spouse/11 HTTP/1.1" 200 20126
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[18/Oct/2022 03:52:05] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[18/Oct/2022 03:52:06] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[18/Oct/2022 03:52:14] "GET /genealogy/grt HTTP/1.1" 200 5978
+[18/Oct/2022 04:32:56] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 04:32:56] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 04:32:56] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 04:32:56] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 04:32:56] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 04:32:56] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 04:32:56] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 04:32:56] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 04:32:56] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 04:32:57] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 04:32:57] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 04:32:57] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 04:32:57] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 04:32:57] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 04:32:57] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 04:32:57] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 04:32:57] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 04:32:58] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 04:32:58] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 04:32:58] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 04:32:58] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 04:32:59] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 04:33:00] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 04:33:00] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 04:33:17] "GET /index HTTP/1.1" 200 12481
+[18/Oct/2022 04:33:19] "GET /about HTTP/1.1" 200 0
+Not Found: /favicon.ico
+[18/Oct/2022 04:33:19] "GET /favicon.ico HTTP/1.1" 404 8159
+[18/Oct/2022 04:33:26] "GET /login HTTP/1.1" 200 0
+[18/Oct/2022 04:33:30] "GET /index HTTP/1.1" 200 12481
+[18/Oct/2022 04:33:40] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 04:33:40] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[18/Oct/2022 04:33:40] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[18/Oct/2022 04:33:40] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[18/Oct/2022 04:33:40] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[18/Oct/2022 04:33:40] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[18/Oct/2022 04:33:40] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[18/Oct/2022 04:33:40] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[18/Oct/2022 04:33:40] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[18/Oct/2022 04:33:46] "GET /vis HTTP/1.1" 200 11677
+[18/Oct/2022 04:33:46] "GET /static/js/utils.js HTTP/1.1" 200 987
+[18/Oct/2022 04:33:46] "GET /static/js/monitor.js HTTP/1.1" 200 15343
+[18/Oct/2022 04:33:46] "GET /static/js/bootbox.min.js HTTP/1.1" 200 9977
+[18/Oct/2022 04:33:46] "GET /static/js/jquery.count.min.js HTTP/1.1" 200 2888
+[18/Oct/2022 04:33:46] "GET /static/js/map/china.js HTTP/1.1" 200 61833
+[18/Oct/2022 04:33:46] "GET /static/js/tableSortPaging.js HTTP/1.1" 200 2600
+[18/Oct/2022 04:33:46] "GET /static/js/myFunction.js HTTP/1.1" 200 15654
+[18/Oct/2022 04:33:46] "GET /static/js/vismap.js HTTP/1.1" 200 4156
+[18/Oct/2022 04:33:49] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:33:49] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[18/Oct/2022 04:33:49] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[18/Oct/2022 04:33:49] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[18/Oct/2022 04:33:53] "GET /genealogy/info/5 HTTP/1.1" 200 10852
+[18/Oct/2022 04:34:00] "GET /genealogy/grt HTTP/1.1" 200 5978
+[18/Oct/2022 04:34:04] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 04:34:16] "GET /genealogy/doc/add/5 HTTP/1.1" 200 12558
+[18/Oct/2022 04:34:16] "GET /static/assets/summernote/dist/summernote.css HTTP/1.1" 200 10619
+[18/Oct/2022 04:34:16] "GET /static/assets/summernote/dist/summernote.min.js HTTP/1.1" 200 62158
+[18/Oct/2022 04:34:19] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 04:36:09] "GET /vis HTTP/1.1" 200 11677
+[18/Oct/2022 04:37:04] "GET /genealogy/indi/add/5 HTTP/1.1" 200 20102
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[18/Oct/2022 04:37:04] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[18/Oct/2022 04:43:14] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 04:43:14] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 04:43:14] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 04:43:14] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 04:43:14] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 04:43:14] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 04:43:14] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 04:43:14] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 04:43:14] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 04:43:15] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 04:43:15] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 04:43:15] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 04:43:15] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 04:43:15] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 04:43:15] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 04:43:15] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 04:43:15] "GET /vis HTTP/1.1" 200 11677
+[18/Oct/2022 04:43:15] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 04:43:16] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 04:43:16] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 04:43:18] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 04:43:18] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 04:43:18] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 04:43:18] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 04:43:19] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 04:43:26] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 04:43:26] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[18/Oct/2022 04:43:26] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[18/Oct/2022 04:43:26] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[18/Oct/2022 04:43:26] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[18/Oct/2022 04:43:26] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[18/Oct/2022 04:43:26] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[18/Oct/2022 04:43:26] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[18/Oct/2022 04:43:26] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[18/Oct/2022 04:43:29] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:43:29] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[18/Oct/2022 04:43:29] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[18/Oct/2022 04:43:29] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[18/Oct/2022 04:43:32] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 04:43:35] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:43:36] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:44:54] "GET /genealogy/indi/add/5 HTTP/1.1" 200 20102
+[18/Oct/2022 04:44:56] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 04:46:40] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 04:46:42] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 04:46:44] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:46:46] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:49:23] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:49:26] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 04:51:16] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:51:20] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:51:22] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:52:12] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=&rank=&phone=&name=&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=%E7%AC%AC%E4%B8%80%E4%B8%96&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158584
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:52:25] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=&rank=&phone=&name=&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=%E7%AC%AC%E4%B8%80%E4%B8%96&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158584
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:52:36] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=&rank=&phone=&name=&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=%E7%AC%AC%E4%B8%80%E4%B8%96&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158584
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:52:52] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=&rank=&phone=&name=&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158404
+[18/Oct/2022 04:52:57] "GET /genealogy/indi/dtl/3 HTTP/1.1" 200 19533
+[18/Oct/2022 04:53:05] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:53:32] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=1&rank=1&phone=&name=%E8%B4%A4%E5%85%AC&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=1&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158602
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:53:53] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=1&rank=1&phone=&name=%E8%B4%A4%E5%85%AC&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=1&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158602
+[18/Oct/2022 04:55:14] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 04:55:25] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 04:55:27] "GET /genealogy/grt HTTP/1.1" 200 5978
+[18/Oct/2022 04:55:31] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:55:43] "GET /genealogy/info/4 HTTP/1.1" 200 10816
+[18/Oct/2022 04:55:46] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:55:48] "GET /genealogy/indi/dtl/3 HTTP/1.1" 200 19533
+[18/Oct/2022 04:55:58] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:56:58] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=3&rank=3&phone=&name=%E8%B4%A4%E5%B1%B1&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=3&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158602
+Internal Server Error: /genealogy/indi/add_indi/4
+Traceback (most recent call last):
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/core/handlers/base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hjiang/myweb/wdjiapu/home/views.py", line 242, in add_indi
+    individual_item.save()
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 740, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 778, in save_base
+    force_update, using, update_fields,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 881, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/base.py", line 921, in _do_insert
+    using=using, raw=raw,
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1415, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in as_sql
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1360, in <listcomp>
+    for obj in self.query.objs
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1359, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/sql/compiler.py", line 1300, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1427, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1406, in get_prep_value
+    value = super().get_prep_value(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1266, in get_prep_value
+    return self.to_python(value)
+  File "/home/hjiang/downloads/py378/lib/python3.7/site-packages/django/db/models/fields/__init__.py", line 1391, in to_python
+    params={'value': value},
+django.core.exceptions.ValidationError: ['“” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+[18/Oct/2022 04:57:10] "GET /genealogy/indi/add_indi/4?gname=%E9%9D%96&zi=%E6%99%AE%E5%B1%B1&gender=0&birth_place=&death_place=&ce_birth=&line_name=10&rank=12&phone=&name=%E8%B4%A4%E5%B1%B1&hao=&alive_flag=1&ad_birth=&ad_death=&ce_death=&generetion=15&idcard=&address=&biography=&epitaph= HTTP/1.1" 500 158626
+[18/Oct/2022 04:57:14] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:57:14] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:57:15] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 04:57:38] "GET /genealogy/indi/dtl/11 HTTP/1.1" 200 19537
+[18/Oct/2022 04:59:54] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-timepicker/compiled/timepicker.css HTTP/1.1" 200 1946
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-daterangepicker/daterangepicker-bs3.css HTTP/1.1" 200 4814
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-datetimepicker/css/datetimepicker.css HTTP/1.1" 200 12381
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-datetimepicker/js/moment_zh-CN.js HTTP/1.1" 200 4507
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 46822
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-daterangepicker/daterangepicker.js HTTP/1.1" 200 21624
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-timepicker/js/bootstrap-timepicker.js HTTP/1.1" 200 30640
+[18/Oct/2022 04:59:55] "GET /static/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js HTTP/1.1" 200 52656
+[18/Oct/2022 04:59:56] "GET /static/assets/bootstrap-datetimepicker/js/moment.js HTTP/1.1" 200 174604
+[18/Oct/2022 05:00:14] "GET /static/assets/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 4366
+[18/Oct/2022 05:01:19] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 05:01:23] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 05:01:26] "GET /genealogy/doc/add/4 HTTP/1.1" 200 12558
+[18/Oct/2022 05:01:26] "GET /static/assets/summernote/dist/summernote.css HTTP/1.1" 200 10619
+[18/Oct/2022 05:01:26] "GET /static/assets/summernote/dist/summernote.min.js HTTP/1.1" 200 62158
+[18/Oct/2022 05:01:31] "GET / HTTP/1.1" 200 12481
+Not Found: /favicon.ico
+[18/Oct/2022 05:01:31] "GET /favicon.ico HTTP/1.1" 404 8159
+[18/Oct/2022 05:01:32] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 05:01:34] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 05:01:38] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 05:01:39] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[18/Oct/2022 05:01:51] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 05:01:51] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 05:01:51] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 05:01:51] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 05:01:51] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 05:01:51] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 05:01:51] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 05:01:51] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 05:01:51] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 05:01:51] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 05:01:51] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 05:01:51] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 05:01:51] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 05:01:52] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 05:01:52] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 05:01:52] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 05:01:52] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 05:01:53] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 05:01:53] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 05:01:54] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 05:01:54] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 05:01:54] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 05:01:54] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 05:02:03] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 05:02:03] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 05:02:03] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 05:02:03] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 05:02:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 05:02:03] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 05:02:04] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 05:02:04] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 05:02:04] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 05:02:04] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 05:02:05] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 05:02:05] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 05:02:05] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 05:02:05] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 05:02:05] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 05:02:05] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 05:02:05] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 05:02:06] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 05:02:06] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 05:02:06] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 05:02:07] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 05:02:07] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 05:02:07] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 05:02:08] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 05:02:09] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 05:02:09] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[18/Oct/2022 05:02:09] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[18/Oct/2022 05:02:09] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[18/Oct/2022 05:02:09] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[18/Oct/2022 05:02:09] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[18/Oct/2022 05:02:09] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[18/Oct/2022 05:02:27,226] - Broken pipe from ('59.172.176.244', 58853)
+
+[18/Oct/2022 05:02:27,226] - Broken pipe from ('59.172.176.244', 58854)
+
+[18/Oct/2022 05:02:27,226] - Broken pipe from ('59.172.176.244', 58858)
+
+[18/Oct/2022 05:02:27,227] - Broken pipe from ('59.172.176.244', 58850)
+
+[18/Oct/2022 05:02:27,227] - Broken pipe from ('59.172.176.244', 58855)
+
+[18/Oct/2022 05:02:29] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[18/Oct/2022 05:02:38] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 05:02:38] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[18/Oct/2022 05:02:38] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[18/Oct/2022 05:02:38] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[18/Oct/2022 05:02:38] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 05:02:42] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 05:02:52,593] - Broken pipe from ('59.172.176.244', 58865)
+
+[18/Oct/2022 05:02:52,594] - Broken pipe from ('59.172.176.244', 58867)
+
+[18/Oct/2022 05:02:52,594] - Broken pipe from ('59.172.176.244', 58868)
+
+[18/Oct/2022 05:02:52,594] - Broken pipe from ('59.172.176.244', 58866)
+
+[18/Oct/2022 05:08:55] "GET /genealogy/add HTTP/1.1" 200 13285
+[18/Oct/2022 05:09:02] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[18/Oct/2022 05:09:02] "  /*à     Cookie: mstshash=Administr" 400 -
+[18/Oct/2022 05:09:06] "GET /genealogy/add_genealogy?gname=%E6%AD%A6%E6%B1%89%E5%AE%B6%E8%B0%B1&hall_title=&location=&contact_phone=&sername=&county_title=&contact=&access_pwd=&note= HTTP/1.1" 302 0
+[18/Oct/2022 05:09:06] "GET /genealogy/list HTTP/1.1" 200 17531
+[18/Oct/2022 05:09:09] "GET /genealogy/del/6 HTTP/1.1" 302 0
+[18/Oct/2022 05:09:09] "GET /genealogy/list HTTP/1.1" 200 16532
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 17, 2022 - 08:34:08
+Django version 3.2.16, using settings 'app.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /index
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url http://passport.baidu.com/
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /login
+权限-- None
+放行
+访问url /register
+权限-- None
+放行
+访问url /login
+权限-- None
+放行
+访问url /login
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /login
+权限-- None
+放行
+访问url /register
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/tree
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /index
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/add
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/grt
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add_parent/3
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/add
+权限-- None
+放行
+访问url /index
+权限-- None
+放行
+访问url http://www.baidu.com/cache/global/img/gs.gif
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url http://www.baidu.com/cache/global/img/gs.gif
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url http://passport.baidu.com/
+权限-- None
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/add
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/add
+权限-- None
+放行
+访问url /genealogy/add_genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/doc/add/5
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/indi/add/5
+权限-- None
+放行
+访问url /genealogy/doc/add/5
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/info/5
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add_spouse/11
+权限-- None
+放行
+访问url /genealogy/grt
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /index
+权限-- None
+放行
+访问url /about
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url /login
+权限-- None
+放行
+访问url /index
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/info/5
+权限-- None
+放行
+访问url /genealogy/grt
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/doc/add/5
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /genealogy/indi/add/5
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /vis
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add/5
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/dtl/3
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/grt
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/info/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/dtl/3
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/indi/add_indi/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/dtl/11
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/doc/add/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /favicon.ico
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/add
+权限-- None
+放行
+访问url /genealogy/add_genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/del/6
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/4
+权限-- None[18/Oct/2022 05:13:11] "GET /genealogy/dtl/4 HTTP/1.1" 200 22831
+[18/Oct/2022 05:13:12] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20102
+[18/Oct/2022 05:15:00] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20464
+[18/Oct/2022 05:15:17] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20473
+[18/Oct/2022 05:15:44] "GET /genealogy/indi/add/4 HTTP/1.1" 200 20473
+[18/Oct/2022 05:15:56] "GET / HTTP/1.1" 200 12481
+[18/Oct/2022 05:15:56] "GET /static/css/bootstrap-reset.css HTTP/1.1" 200 6914
+[18/Oct/2022 05:15:56] "GET /static/css/jp.css HTTP/1.1" 200 1386
+[18/Oct/2022 05:15:56] "GET /static/css/style-responsive.css HTTP/1.1" 200 12345
+[18/Oct/2022 05:15:56] "GET /static/assets/font-awesome/css/font-awesome.css HTTP/1.1" 200 37414
+[18/Oct/2022 05:15:56] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121457
+[18/Oct/2022 05:15:56] "GET /static/css/style.css HTTP/1.1" 200 110628
+[18/Oct/2022 05:15:56] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 39680
+[18/Oct/2022 05:15:56] "GET /static/js/jquery.dcjqaccordion.2.7.js HTTP/1.1" 200 6401
+[18/Oct/2022 05:15:56] "GET /static/js/jquery.js HTTP/1.1" 200 93106
+[18/Oct/2022 05:15:56] "GET /static/js/hover-dropdown.js HTTP/1.1" 200 4885
+[18/Oct/2022 05:15:56] "GET /static/js/jquery.scrollTo.min.js HTTP/1.1" 200 2434
+[18/Oct/2022 05:15:57] "GET /static/js/jquery.nicescroll.js HTTP/1.1" 200 64240
+[18/Oct/2022 05:15:57] "GET /static/js/respond.min.js HTTP/1.1" 200 4047
+[18/Oct/2022 05:15:57] "GET /static/js/common-scripts.js HTTP/1.1" 200 4205
+[18/Oct/2022 05:15:57] "GET /static/img/product1.jpg HTTP/1.1" 200 12161
+[18/Oct/2022 05:15:57] "GET /static/img/product2.png HTTP/1.1" 200 12094
+[18/Oct/2022 05:15:57] "GET /static/img/product3.png HTTP/1.1" 200 14437
+[18/Oct/2022 05:15:58] "GET /static/img/bg3.jpg HTTP/1.1" 200 61930
+[18/Oct/2022 05:15:58] "GET /static/img/avatar-mini.jpg HTTP/1.1" 200 3211
+[18/Oct/2022 05:15:58] "GET /static/img/avatar-mini2.jpg HTTP/1.1" 200 3424
+[18/Oct/2022 05:15:58] "GET /static/img/avatar-mini3.jpg HTTP/1.1" 200 3378
+[18/Oct/2022 05:15:58] "GET /static/assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 77160
+[18/Oct/2022 05:16:02] "GET /static/img/favicon.png HTTP/1.1" 200 33310
+[18/Oct/2022 05:16:04] "GET /genealogy HTTP/1.1" 200 12090
+[18/Oct/2022 05:16:04] "GET /static/img/avatar1_small.jpg HTTP/1.1" 200 2401
+[18/Oct/2022 05:16:04] "GET /static/img/pic/header_01.png HTTP/1.1" 200 6082
+[18/Oct/2022 05:16:04] "GET /static/img/pic/header_02.png HTTP/1.1" 200 6030
+[18/Oct/2022 05:16:04] "GET /static/img/pic/header_05.png HTTP/1.1" 200 5542
+[18/Oct/2022 05:16:04] "GET /static/img/pic/header_03.png HTTP/1.1" 200 6388
+[18/Oct/2022 05:16:04] "GET /static/img/pic/header_04.png HTTP/1.1" 200 6028
+[18/Oct/2022 05:16:04] "GET /static/img/search-icon.png HTTP/1.1" 200 1153
+[18/Oct/2022 05:16:04] "GET /static/img/nav-expand.png HTTP/1.1" 200 973
+[18/Oct/2022 05:16:06] "GET /genealogy/list HTTP/1.1" 200 16532
+[18/Oct/2022 05:16:06] "GET /static/assets/advanced-datatable/media/css/demo_page.css HTTP/1.1" 200 1765
+[18/Oct/2022 05:16:06] "GET /static/assets/data-tables/DT_bootstrap.css HTTP/1.1" 200 3680
+[18/Oct/2022 05:16:06] "GET /static/assets/advanced-datatable/media/css/demo_table.css HTTP/1.1" 200 10772
+[18/Oct/2022 05:16:08] "GET /genealogy/dtl/5 HTTP/1.1" 200 19252
+[18/Oct/2022 05:17:00] "GET /genealogy/doc/add/5 HTTP/1.1" 200 12558
+[18/Oct/2022 05:17:00] "GET /static/assets/summernote/dist/summernote.css HTTP/1.1" 200 10619
+[18/Oct/2022 05:17:00] "GET /static/assets/summernote/dist/summernote.min.js HTTP/1.1" 200 62158
+/home/hjiang/myweb/wdjiapu/home/views.py changed, reloading.
+
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /genealogy/indi/add/4
+权限-- None
+放行
+访问url /
+权限-- None
+放行
+访问url /genealogy
+权限-- None
+放行
+访问url /genealogy/list
+权限-- None
+放行
+访问url /genealogy/dtl/5
+权限-- None
+放行
+访问url /genealogy/doc/add/5
+权限-- None
+放行
+Watching for file changes with StatReloader
+/home/hjiang/myweb/wdjiapu/home/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 18, 2022 - 05:18:04
+Django version 3.2.16, using settings 'app.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader

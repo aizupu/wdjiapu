@@ -57,16 +57,16 @@ class Individual(AttachedUser):
     surname = models.CharField(max_length=10, unique=False, verbose_name='姓')
 
     #名
-    name = models.CharField(max_length=10, unique=False, verbose_name='名')
+    name = models.CharField(max_length=10, null=True, blank=True, unique=False, verbose_name='名')
 
     #字
-    zi = models.CharField(max_length=10, unique=False, verbose_name='字')
+    zi = models.CharField(max_length=10, null=True, blank=True, unique=False, verbose_name='字')
 
     #号
-    hao = models.CharField(max_length=10, unique=False, verbose_name='号')
+    hao = models.CharField(max_length=10, null=True, blank=True, unique=False, verbose_name='号')
 
     #常用名
-    common_name = models.CharField(max_length=10, unique=False, verbose_name='常用名')
+    common_name = models.CharField(max_length=10, null=True, blank=True, unique=False, verbose_name='常用名')
 
     #性别  0男 1女 2保密
     gender = models.CharField(max_length=1, unique=False, default='0', verbose_name='性别')
@@ -84,55 +84,58 @@ class Individual(AttachedUser):
     ad_birth = models.DateTimeField(null=True, blank=True, verbose_name='公元出生日期')
 
     #年号纪年出生日期
-    ce_birth = models.CharField(max_length=32, unique=False, verbose_name='年号出生日期')
+    ce_birth = models.CharField(max_length=32, null=True, blank=True, unique=False, verbose_name='年号出生日期')
 
     #出生地
-    birth_place = models.CharField(max_length=50, unique=False, verbose_name='出生地')
+    birth_place = models.CharField(max_length=50, null=True, blank=True, unique=False, verbose_name='出生地')
 
     #公元纪年逝世日期
     ad_death = models.DateTimeField(null=True, blank=True, verbose_name='公元逝世日期')
 
     #年号纪年逝世日期
-    ce_death = models.CharField(max_length=32, unique=False, verbose_name='年号逝世日期')
+    ce_death = models.CharField(max_length=32, null=True, blank=True, unique=False, verbose_name='年号逝世日期')
 
     #逝世地
-    death_place = models.CharField(max_length=50, unique=False, verbose_name='逝世地')
+    death_place = models.CharField(max_length=50, null=True, blank=True, unique=False, verbose_name='逝世地')
+
+    #葬地
+    cemetery = models.CharField(max_length=50, null=True, blank=True, unique=False, verbose_name='葬地')
 
     #家族排行
-    line_name = models.CharField(max_length=2, unique=False, verbose_name='家族排行')
+    line_name = models.CharField(max_length=2, null=True, blank=True, unique=False, verbose_name='家族排行')
 
     #世代数
-    generetion = models.CharField(max_length=2, unique=False, verbose_name='世代数')
+    generetion = models.CharField(max_length=2, null=True, blank=True, unique=False, verbose_name='世代数')
 
     #出生排行
-    rank = models.CharField(max_length=32, unique=False, verbose_name='出生排行')
+    rank = models.CharField(max_length=32, null=True, blank=True, unique=False, verbose_name='出生排行')
 
     #是否健在  0去世  1健在  2未知
-    is_alive = models.CharField(max_length=1, unique=False, verbose_name='是否健在')
+    is_alive = models.CharField(max_length=1, null=True, blank=True, unique=False, verbose_name='是否健在')
 
     #生平简介
-    biography = models.CharField(max_length=1000, unique=False, verbose_name='生平简介')
+    biography = models.CharField(max_length=1000, null=True, blank=True, unique=False, verbose_name='生平简介')
 
     #墓志铭
-    epitaph = models.CharField(max_length=1000, unique=False, verbose_name='墓志铭')
+    epitaph = models.CharField(max_length=1000, null=True, blank=True, unique=False, verbose_name='墓志铭')
 
     #身份证号
     idcard_no = models.CharField(max_length=18, unique=True, blank=True, null=True, verbose_name='身份编号')
 
     #地址
-    address = models.CharField(max_length=50, unique=False, verbose_name='住址')
+    address = models.CharField(max_length=50, null=True, blank=True, unique=False, verbose_name='住址')
 
     #电话号码
-    phone = models.CharField(max_length=11, unique=False, verbose_name='电话号码')
+    phone = models.CharField(max_length=11, null=True, blank=True, unique=False, verbose_name='电话号码')
 
     #身份类型
-    idcard_type = models.CharField(max_length=32, default='居民身份证', verbose_name='身份证')
+    idcard_type = models.CharField(max_length=32, null=True, blank=True, default='居民身份证', verbose_name='身份证')
 
     #是否删除
     is_del = models.CharField(max_length=1, default='0', verbose_name='删除标记')
 
     #备注
-    note = models.CharField(max_length=500, unique=False, verbose_name='')
+    note = models.CharField(max_length=500, null=True, blank=True, unique=False, verbose_name='')
 
     def __str__(self):
         return self.surname + self.name
@@ -194,7 +197,7 @@ class Document(models.Model):
     title = models.CharField(max_length=50, unique=False, verbose_name='')
 
     #作者
-    author = models.CharField(max_length=10, unique=False, verbose_name='')
+    author = models.CharField(max_length=50, unique=False, verbose_name='')
 
     #格式
     docformat = models.ForeignKey('Docformat', to_field='title', null=True, blank=True, on_delete=models.DO_NOTHING)
@@ -207,6 +210,9 @@ class Document(models.Model):
 
     #排序
     rank = models.CharField(max_length=500, unique=False, verbose_name='')
+
+    #时间
+    time = models.CharField(max_length=500, null=True, blank=True, unique=False, verbose_name='')
 
     #所属族谱
     genealogy = models.ForeignKey('Genealogy', to_field='title', null=True, blank=True, verbose_name='', on_delete=models.DO_NOTHING)
