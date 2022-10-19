@@ -100,7 +100,7 @@ def gene_dtl(request, id):
 
 
 # 生成某个家族的电子谱书
-def gene_grt(request):
+def gene_grt(request, id):
     return render(request, 'genealogy/gene_grt.html')
 
 

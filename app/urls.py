@@ -38,7 +38,7 @@ urlpatterns = [
     path('genealogy/del/<id>', views.gene_del, name='gene_del'),
     path('genealogy/upd', views.gene_upd, name='gene_upd'),
     path('genealogy/dtl/<id>', views.gene_dtl, name='gene_dtl'),
-    path('genealogy/grt', views.gene_grt, name='gene_grt'),
+    path('genealogy/grt/<id>', views.gene_grt, name='gene_grt'),
 
     #=========================与人物相关的页面=========================
     path('genealogy/indi', views.indi, name='indi'),
