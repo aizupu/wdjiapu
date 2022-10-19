@@ -71,6 +71,7 @@
                 </thead>
                 <tbody>
                     {% for i in genealogy %}
+                    {% if i.is_del == '0' %}
                     <tr>
                         <td><input type="checkbox" /></td>
                         <td>{{ i.id }}</td>
@@ -95,6 +96,7 @@
                             </div>
                         </td>
                     </tr>
+                    {%endif %}
                     {% endfor %}
                     <!-- <tr>
                         <td>1</td>

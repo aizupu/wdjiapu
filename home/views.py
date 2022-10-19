@@ -84,8 +84,7 @@ def genealogy_add(request):
 
 # 删除家谱：是一个请求，删除之后直接返回我的家谱页面
 def gene_del(request, id):
-    g = Genealogy.objects.get(id=id)
-    g.delete()
+    Genealogy.objects.filter(id=id).update(is_del = '1')
     return redirect('/genealogy/list')
 
 
