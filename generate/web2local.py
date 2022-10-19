@@ -127,7 +127,7 @@ def web2local(gid):
     server_conn.commit()
     server_conn.close()
     local_conn.commit()
-    local_conn.close()
+    # local_conn.close()
     return local_zp_id, local_zp_name
 
 

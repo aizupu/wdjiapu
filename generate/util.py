@@ -5,7 +5,7 @@ import shutil
 import pdfkit
 import psycopg2
 from PyPDF2 import PdfFileReader, PdfFileWriter
-from app.settings import PDF_OUTPUT_PATH, LOCAL_DATABASE, LOCAL_HOST, LOCAL_PASSWORD, LOCAL_PORT, LOCAL_USER
+from app.settings import PDF_OUTPUT_PATH, LOCAL_DATABASE, LOCAL_HOST, LOCAL_PASSWORD, LOCAL_PORT, LOCAL_USER, WK_PATH
 
 resources_path = os.path.abspath('.') + r"/resources"
 
@@ -25,8 +25,10 @@ def createPdf(htmlStr, zp_name, docType, pageNum):
         'margin-bottom': '10mm',
         'margin-left': '10mm',
         'encoding': 'UTF-8',
+        "enable-local-file-access": "",
     }
-    path_wk = os.path.join(resources_path, "wkhtmltopdf.exe")  # 安装位置
+    # path_wk = os.path.join(resources_path, "wkhtmltopdf.exe")  # 安装位置
+    path_wk = WK_PATH
     config = pdfkit.configuration(wkhtmltopdf=path_wk)
     pdfkit.from_string(htmlStr, pdf_path + "/" + filename, options=options, configuration=config)
 

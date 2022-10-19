@@ -142,6 +142,7 @@ MAX_LINE_TREE = 25  # 吊线图每页最多的行数
 
 image_path = os.path.join(os.path.abspath('.'), "resources", "image")
 IMAGE_PATH = image_path.replace('\\', '/')
+WK_PATH = '/usr/local/bin/wkhtmltopdf'
 
 
 PRESET_DOC_TYPE = ["凡例", "源流", "文献", "人物事迹", "家族事件", "公德榜", "附录", "后记"]
