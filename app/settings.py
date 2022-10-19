@@ -120,6 +120,56 @@ USE_I18N = True
 
 USE_TZ = True
 
+SERVER_DATABASE = "family"
+SERVER_USER = "totem_user"
+SERVER_PASSWORD = "totem123"
+SERVER_HOST = "39.107.248.28"
+SERVER_PORT = 9000
+
+LOCAL_DATABASE = "family"
+LOCAL_USER = "postgres"
+LOCAL_PASSWORD = "123456"
+LOCAL_HOST = "localhost"
+LOCAL_PORT = 5432
+
+RESOURCE_PATH = os.path.join(os.path.abspath('.'), "resources")
+PDF_OUTPUT_PATH = os.path.join(os.path.abspath('.'), "output")
+
+MAX_ROW_STR = 26  # 每行最多的字符数  # 35
+MAX_LINE = 40  # 行传每页最多的行数  # 47
+
+MAX_LINE_TREE = 25  # 吊线图每页最多的行数
+
+image_path = os.path.join(os.path.abspath('.'), "resources", "image")
+IMAGE_PATH = image_path.replace('\\', '/')
+
+
+PRESET_DOC_TYPE = ["凡例", "源流", "文献", "人物事迹", "家族事件", "公德榜", "附录", "后记"]
+
+PERSON_ATTRIBUTE = ['id', 'family_name', 'name', 'zi', 'hao', 'sex', 'generation', 'ranknum', 'isliving', 'date_birth',
+                    'date_dead', 'education', 'title_post', 'desc_living', 'desc_dead', 'father_id', 'zp_id']
+
+PERSON_ATTRIBUTE_INDEX = [9, 10, 13, 14]
+
+GENERATION_OPTIONS = {
+    "father": "{0}{1}{2}；",  # 格式例：礼周 长 子
+    "zi": "字：{}；",
+    "hao": "号：{}；\n",
+
+    "spouse": "娶妻：{}\n",
+    "son": "子{}：{}\n",  # 格式例：子 二：兴元 兴知
+    "daughter": "女{}：{}\n",  # 格式例：同上
+
+    "date_birth": "生于{}；",
+    "date_dead": "卒于{}；\n",
+
+    "education": "教育程度：{}；",
+    "title_post": "曾任：{}；\n",
+
+    "desc_living": "{}\n",
+    "desc_dead": "{}\n"
+}
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

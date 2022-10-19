@@ -1,8 +1,15 @@
 from django.shortcuts import render, redirect
+from django.utils.encoding import escape_uri_path
 from home.models import Genealogy, Docformat, Doctype
 from home.models import Individual
 from home.models import File
 from home.models import Document
+from generate.family_tree import FamilyTree
+from generate.line_biography import LineBiography
+from generate.util import mergeHzAndDxt
+from generate.web2local import web2local
+from app.settings import PDF_OUTPUT_PATH
+from django.http import FileResponse
 import time, datetime
 import os
 
@@ -101,7 +108,20 @@ def gene_dtl(request, id):
 
 # 生成某个家族的电子谱书
 def gene_grt(request, id):
-    return render(request, 'genealogy/gene_grt.html')
+    zp_id, zp_name = web2local(id)
+    print("---数据库转换结束---")
+    # 生成
+    LineBiography(zp_id)
+    print("---行传生成完成---")
+    FamilyTree(zp_id)
+    print("---吊线图生成完成---")
+    pdf_path = mergeHzAndDxt(zp_name)
+    print("---合并完成---")
+    file_path = os.path.join(PDF_OUTPUT_PATH, zp_name, pdf_path)
+    response = FileResponse(open(file_path, "rb"))
+    response['Content-Type'] = 'application/octet-stream'
+    response['Content-Disposition'] = "attachment; filename*=utf-8''{}".format(escape_uri_path(pdf_path))
+    return response
 
 
 # =========================与人物相关的页面=========================
