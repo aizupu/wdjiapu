@@ -92,7 +92,7 @@ def gene_dtl(request, id):
     g = Genealogy.objects.get(id=id)
     p = Individual.objects.filter(gene=g.title)
     p_cnt = p.count()
-    d = Document.objects.filter(genealogy=g.title)
+    d = Document.objects.filter(genealogy=g.title).order_by("rank")
     d_cnt = d.count()
     f = File.objects.filter(Genealogy=g.title)
     f_cnt = f.count()
@@ -281,10 +281,34 @@ def indi_del(request, gid, id):
     return redirect('/genealogy/dtl/' + gid)
 
 
-# 添加人物关系
-def indi_rel(request):
-    return render(request, 'genealogy/indi_rel.html')
-
+# 更新人物信息
+def indi_upd(request,id):
+    individual_item = Individual.objects.get(id = id)
+    individual_item.surname = request.GET.get('gname')
+    individual_item.name = request.GET.get('name')
+    individual_item.zi = request.GET.get('zi')
+    individual_item.hao = request.GET.get('hao')
+    individual_item.gender = request.GET.get('gender')
+    individual_item.is_alive = request.GET.get('alive_flag')
+    individual_item.line_name = request.GET.get('line_name')
+    individual_item.generetion = request.GET.get('generetion')
+    individual_item.rank = request.GET.get('rank')
+    ad_birth = request.GET.get('ad_birth')
+    individual_item.ce_birth = request.GET.get('ce_birth')
+    ad_death = request.GET.get('ad_death')
+    individual_item.ce_death = request.GET.get('ce_birth')
+    individual_item.birth_place = request.GET.get('birth_place')
+    individual_item.death_place = request.GET.get('death_place')
+    individual_item.cemetery =  request.GET.get('cemetery')
+    individual_item.biography = request.GET.get('biography')
+    individual_item.epitaph = request.GET.get('epitaph')
+    individual_item.address = request.GET.get('address')
+    if(ad_birth):
+        individual_item.ad_birth=ad_birth
+    if(ad_death):
+        individual_item.ad_death=ad_death
+    individual_item.save()
+    return redirect('/genealogy/dtl/' + str(individual_item.gene.id))
 
 # 查看详细的人物：查看某个人物的详细信息页面，
 def indi_dtl(request, id):
@@ -314,7 +338,6 @@ def doc_submit(request, id):
     author = request.GET.get('hall_title')
     format_str = request.GET.get('dformat')
     dtime = request.GET.get('dtime')
-    print(dtime)
     doc_format = Docformat.objects.filter(title=format_str)
     if len(doc_format) == 0:
         doc_fitem = Docformat(title=format_str)

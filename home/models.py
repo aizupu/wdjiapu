@@ -162,7 +162,7 @@ class Docformat(models.Model):
     文档格式：文本、图片、视频、音频等
     '''
     #标题
-    title = models.CharField(max_length=10, unique=True, verbose_name='')
+    title = models.CharField(max_length=50, unique=True, verbose_name='')
 
     #描述
     disc = models.CharField(max_length=50, unique=False, verbose_name='')
@@ -178,7 +178,7 @@ class Doctype(models.Model):
     文档类型：源流、艺文、传记、田产地契等
     '''
     #标题
-    title = models.CharField(max_length=10, unique=True, verbose_name='')
+    title = models.CharField(max_length=50, unique=True, verbose_name='')
 
     #描述
     disc = models.CharField(max_length=50, unique=False, verbose_name='')
@@ -206,10 +206,10 @@ class Document(models.Model):
     doctype = models.ForeignKey('Doctype', to_field='title', null=True, blank=True, on_delete=models.DO_NOTHING)
 
     #内容
-    content = models.CharField(max_length=5000, unique=False, verbose_name='')
+    content = models.TextField(unique=False, verbose_name='')
 
     #排序
-    rank = models.CharField(max_length=500, unique=False, verbose_name='')
+    rank = models.IntegerField(unique=False, verbose_name='')
 
     #时间
     time = models.CharField(max_length=500, null=True, blank=True, unique=False, verbose_name='')

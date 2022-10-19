@@ -36,7 +36,7 @@ urlpatterns = [
     path('genealogy/add', views.gene_add, name='gene_add'),
     path('genealogy/add_genealogy', views.genealogy_add, name='genealogy_add'),
     path('genealogy/del/<id>', views.gene_del, name='gene_del'),
-    path('genealogy/upd', views.gene_upd, name='gene_upd'),
+    path('genealogy/upd/<id>', views.gene_upd, name='gene_upd'),
     path('genealogy/dtl/<id>', views.gene_dtl, name='gene_dtl'),
     path('genealogy/grt/<id>', views.gene_grt, name='gene_grt'),
 
@@ -51,7 +51,7 @@ urlpatterns = [
     path('genealogy/indi/submit_spouse/<id>', views.submit_spouse, name='submit_spouse'),
     path('genealogy/indi/submit_child/<id>', views.submit_child, name='submit_child'),
     path('genealogy/indi/del/<gid>/<id>', views.indi_del, name='indi_del'),
-    path('genealogy/indi/rel', views.indi_rel, name='indi_rel'),
+    path('genealogy/indi/upd/<id>', views.indi_upd, name='indi_upd'),
     path('genealogy/indi/dtl/<id>', views.indi_dtl, name='indi_dtl'),
     path('genealogy/indi/tree', views.indi_tree, name='indi_tree'),
 
