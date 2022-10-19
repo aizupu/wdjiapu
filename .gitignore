@@ -1,4 +1,5 @@
 .vscode/
+output/
 *pycache*/
 db.sqlite3
 nohup.out
