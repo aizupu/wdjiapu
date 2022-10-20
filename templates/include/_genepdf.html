@@ -1,5 +1,5 @@
 <div class="panel-body">
-    当前家谱共有pdf文件：{{f_cnt}}部 <a class="btn btn-success" data-toggle="modal" href="#myModal">添加文件</a>
+    当前家谱共有pdf文件：{{cnt}}部 <a class="btn btn-success" data-toggle="modal" href="#myModal">添加文件</a>
     <div class="modal fade modal-dialog-center " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog ">
@@ -49,10 +49,12 @@
         </ul>
     </div>
     <div class="input-group col-md-6">
-        <input type="text" class="form-control" placeholder="Search for...">
+        <form action="/genealogy/file/search/{{gid}}">
+            <div class="form-group col-md-10"><input type="text" id="name" name='name' class="form-control col-md-6" placeholder="输入文件名"></div>
         <span class="input-group-btn">
-            <button class="btn btn-default" type="button">搜索</button>
+            <input class="btn btn-default" type="submit" value="搜索">
         </span>
+        <form>
     </div>
 </div>
 <div class="adv-table col-lg-12 mt-3">
@@ -84,24 +86,34 @@
     </table>
 </div>
 <div class="row">
-    <div class="pagination"> 显示 1 至 10， 共 57 条数据</div>
+    <div class="pagination">共 {{f_cnt}} 条数据</div>
     <nav aria-label="Page navigation" class="pull-right">
         <ul class="pagination">
-            <li>
-                <a href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-                <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
+             <!--上一页-->
+        <li class="{% if not page.has_previous %}disabled{% endif %}">
+            {% if page.has_previous %}
+              <a href="/genealogy/dtl_pdf/{{gid}}?page={{ page.previous_page_number }}" aria-label="Previous">
+            {% endif %}
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+  
+          <!--页码-->
+          <!--这里展示页码使用传递过来的dis_range -->
+          {% for num in dis_range %}
+          <li class="{% if num == page.number %}active{% else %}{% endif %}" >
+            <a href="/genealogy/dtl_pdf/{{gid}}?page={{ num }}">{{ num }}</a>
+          </li>
+          {% endfor %}
+  
+          <!--下一页-->  
+          <li class="{% if not page.has_next %}disabled{% endif %}">
+            {% if page.has_next %}
+              <a href="/genealogy/dtl_pdf/{{gid}}?page={{ page.next_page_number }}" aria-label="Next">
+            {% endif %}
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
         </ul>
     </nav>
 </div>

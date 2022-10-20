@@ -6,8 +6,8 @@
     <div class="col-lg-12">
         <!--breadcrumbs start -->
         <ul class="breadcrumb">
-            <li><a href="#"><i class="fa fa-home"></i> 首页</a></li>
-            <li><a href="#">族谱管理</a></li>
+            <li><a href="/genealogy"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="/genealogy/list">族谱管理</a></li>
             <li class="active">家谱详情</li>
         </ul>
         <!--breadcrumbs end -->
@@ -20,7 +20,7 @@
     <div class="col-lg-8">
         <section class="panel">
             <header class="panel-heading">
-                <h3 class="text-primary">武汉李氏家谱</h3>
+                <h3 class="text-primary">{{g.title}}</h3>
             </header>
             <div class="panel-body">
                 <form class="form-horizontal" role="form" action="/genealogy/upd">

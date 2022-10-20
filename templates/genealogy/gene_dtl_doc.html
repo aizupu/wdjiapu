@@ -1,0 +1,37 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-家谱管理 {% endblock %}
+
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="/genealogy"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="/genealogy/list">族谱管理</a></li>
+            <li class="active">查看：{{g.title}}</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<ul class="panel">
+    <li class="panel-heading">{{g.title}}-详细信息</li>
+    <li class="panel-body">
+        <ul id="myTab" class="nav nav-tabs">
+            <li><a href="/genealogy/dtl/{{g.id}}">人物</a></li>
+            <li class="active"><a href="#doc" data-toggle="tab">文档</a></li>
+            <li><a href="/genealogy/dtl_pdf/{{g.id}}">PDF文件</a></li>
+        </ul>
+        <div id="myContent" class="tab-content">
+            <div class="tab-pane fade in active" id="doc">
+                {% include 'include/_genedoc.html' %}
+            </div>
+        </div>
+
+    </li>
+</ul>
+
+{% endblock %}

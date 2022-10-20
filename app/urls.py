@@ -38,7 +38,10 @@ urlpatterns = [
     path('genealogy/del/<id>', views.gene_del, name='gene_del'),
     path('genealogy/upd/<id>', views.gene_upd, name='gene_upd'),
     path('genealogy/dtl/<id>', views.gene_dtl, name='gene_dtl'),
+    path('genealogy/dtl_doc/<id>', views.gene_doc, name='gene_doc'),
+    path('genealogy/dtl_pdf/<id>', views.gene_pdf, name='gene_pdf'),
     path('genealogy/grt/<id>', views.gene_grt, name='gene_grt'),
+    path('genealogy/search', views.gene_search, name='gene_search'),
 
     #=========================与人物相关的页面=========================
     path('genealogy/indi', views.indi, name='indi'),
@@ -53,6 +56,7 @@ urlpatterns = [
     path('genealogy/indi/del/<gid>/<id>', views.indi_del, name='indi_del'),
     path('genealogy/indi/upd/<id>', views.indi_upd, name='indi_upd'),
     path('genealogy/indi/dtl/<id>', views.indi_dtl, name='indi_dtl'),
+    path('genealogy/indi/search/<id>', views.indi_search, name='indi_search'),
     path('genealogy/indi/tree', views.indi_tree, name='indi_tree'),
 
     # =========================与文档相关的页面=========================
@@ -62,6 +66,7 @@ urlpatterns = [
     path('genealogy/doc/del/<gid>/<id>', views.doc_del, name='doc_del'),
     path('genealogy/doc/upd', views.doc_upd, name='doc_upd'),
     path('genealogy/doc/dtl/<id>', views.doc_dtl, name='doc_dtl'),
+    path('genealogy/doc/search/<id>', views.doc_search, name='doc_search'),
     
     #=========================与PDF文件相关的页面=========================
     path('genealogy/file', views.file, name='file'),
@@ -70,6 +75,7 @@ urlpatterns = [
     path('genealogy/file/upd', views.file_upd, name='file_upd'),
     path('genealogy/file/dtl', views.file_dtl, name='file_dtl'),
     path('genealogy/file/download/<id>', views.file_dwn, name='file_dwn'),
+    path('genealogy/file/search/<id>', views.file_search, name='file_search'),
     
     #=========================与可视化相关的页面=========================
     path('vis', views.vis, name='vis'),
