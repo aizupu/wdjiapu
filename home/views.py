@@ -609,6 +609,17 @@ def file_dwn(request, id):
     return response
 
 
+#=========================与指导说明相关的页面=========================
+# 创建族谱指导说明页面
+def guide_gene(request):
+    return render(request, 'guide/gene.html')
+
+def guide_indi(request):
+    return render(request, 'guide/indi.html')
+
+def guide_doc(request):
+    return render(request, 'guide/doc.html')
+
 # =========================与可视化相关的页面=========================
 # 可视化首页
 def vis(request):

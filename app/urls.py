@@ -78,6 +78,11 @@ urlpatterns = [
     path('genealogy/file/download/<id>', views.file_dwn, name='file_dwn'),
     path('genealogy/file/search', views.search_file, name='search_file'),
     path('genealogy/file/search/<id>', views.file_search, name='file_search'),
+
+    #=========================与指导说明相关的页面=========================
+    path('guide/gene', views.guide_gene, name='guide_gene'),
+    path('guide/indi', views.guide_indi, name='guide_indi'),
+    path('guide/doc', views.guide_doc, name='guide_doc'),
     
     #=========================与可视化相关的页面=========================
     path('vis', views.vis, name='vis'),
