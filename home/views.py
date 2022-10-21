@@ -462,7 +462,10 @@ def indi_tree(request):
 # =========================与文档相关的页面=========================
 # 文档首页
 def doc(request):
-    return render(request, 'genealogy/doc.html')
+    d = Document.objects.all()
+    d_cnt = d.count()
+    page,paginator,dis_range = split_page(request,d)
+    return render(request, 'genealogy/doc.html', {"document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 
 # 添加文档
@@ -514,6 +517,7 @@ def doc_dtl(request, id):
     d = Document.objects.get(id=id)
     return render(request, 'genealogy/doc_view.html', {"d": d})
 
+#在给定族谱中查找文档
 def doc_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
@@ -523,11 +527,22 @@ def doc_search(request,id):
     page,paginator,dis_range = split_page(request,d)
     return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
+#在所有文档中查找文档
+def search_doc(request):
+    name = request.GET.get('name')
+    cnt = Document.objects.all().count()
+    d = Document.objects.filter(title__contains=name)
+    d_cnt = d.count()
+    page,paginator,dis_range = split_page(request,d)
+    return render(request, 'genealogy/doc.html', {"document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 # =========================与PDF文件相关的页面=========================
 # 文件首页
 def file(request):
-    return render(request, 'genealogy/file.html')
+    f = File.objects.all()
+    f_cnt = f.count()
+    page,paginator,dis_range = split_page(request,f)
+    return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":f_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 
 # 添加文件
@@ -563,6 +578,7 @@ def file_upd(request):
 def file_dtl(request):
     return render(request, 'genealogy/file_dtl.html')
 
+#在给定族谱内查找文件
 def file_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
@@ -570,7 +586,16 @@ def file_search(request,id):
     f = Document.objects.filter(Genealogy=g.title,filename__contains=name)
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
-    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":f_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+
+#在所有文件中查找文件
+def search_file(request):
+    name = request.GET.get('name')
+    cnt = Document.objects.all().count()
+    f = Document.objects.filter(filename__contains=name)
+    f_cnt = f.count()
+    page,paginator,dis_range = split_page(request,f)
+    return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 
 # 文件下载，需要检查权限

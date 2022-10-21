@@ -7,12 +7,10 @@
   <div class="container-fluid get">
     <h1 class="get-title">探索家族发展奥秘&nbsp;&nbsp;&nbsp;&nbsp;寻找人类繁衍规律</h1>
     <div class="container" style="width: 450px; margin: 30px auto;">
-      <form class="form-group input-group" role="form">
-        <input type="text" class="form-control" />
+      <form class="form-group input-group" role="form" action="/genealogy/search">
+        <input type="text" class="form-control" name='name' placeholder="输入家谱名称"/>
         <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            搜索
-          </button>
+          <input class="btn btn-default"  type="submit" value="搜索">
         </span>
       </form>
     </div>

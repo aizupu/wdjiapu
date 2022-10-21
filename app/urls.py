@@ -66,6 +66,7 @@ urlpatterns = [
     path('genealogy/doc/del/<gid>/<id>', views.doc_del, name='doc_del'),
     path('genealogy/doc/upd', views.doc_upd, name='doc_upd'),
     path('genealogy/doc/dtl/<id>', views.doc_dtl, name='doc_dtl'),
+    path('genealogy/doc/search', views.search_doc, name='search_doc'),
     path('genealogy/doc/search/<id>', views.doc_search, name='doc_search'),
     
     #=========================与PDF文件相关的页面=========================
@@ -75,6 +76,7 @@ urlpatterns = [
     path('genealogy/file/upd', views.file_upd, name='file_upd'),
     path('genealogy/file/dtl', views.file_dtl, name='file_dtl'),
     path('genealogy/file/download/<id>', views.file_dwn, name='file_dwn'),
+    path('genealogy/file/search', views.search_file, name='search_file'),
     path('genealogy/file/search/<id>', views.file_search, name='file_search'),
     
     #=========================与可视化相关的页面=========================
