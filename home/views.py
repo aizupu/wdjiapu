@@ -101,7 +101,7 @@ def gene_upd(request):
 # 查看详细的家谱：查看某个家谱的详细信息页面，
 def gene_dtl(request, id):
     g = Genealogy.objects.get(id=id)
-    p = Individual.objects.filter(gene=g.title)
+    p = Individual.objects.filter(gene=g.title,is_del='0')
     p_cnt = p.count()
     paginator = Paginator(p, 10)
     page_num = request.GET.get('page', default='1')
@@ -136,14 +136,14 @@ def gene_dtl(request, id):
 
 def gene_doc(request, id):
     g = Genealogy.objects.get(id=id)
-    d = Document.objects.filter(genealogy=g.title).order_by("rank")
+    d = Document.objects.filter(genealogy=g.title,is_del='0').order_by("rank")
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
     return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 def gene_pdf(request,id):
     g = Genealogy.objects.get(id=id)
-    f = File.objects.filter(Genealogy=g.title)
+    f = File.objects.filter(Genealogy=g.title,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":f_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -380,8 +380,7 @@ def add_indi(request, id):
 
 # 删除人物：是一个请求，删除之后直接返回人物首页页面
 def indi_del(request, gid, id):
-    p = Individual.objects.get(id=id)
-    p.delete()
+    Individual.objects.filter(id=id).update(is_del='1')
     return redirect('/genealogy/dtl/' + gid)
 
 
@@ -422,9 +421,9 @@ def indi_dtl(request, id):
 def indi_search(request, id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
-    p = Individual.objects.filter(gene = g.title, name__contains=name)
+    p = Individual.objects.filter(gene = g.title, name__contains=name, is_del='0')
     p_cnt = p.count()
-    cnt = Individual.objects.filter(gene=g.title).count()
+    cnt = Individual.objects.filter(gene=g.title,is_del='0').count()
     paginator = Paginator(p, 10)
     page_num = request.GET.get('page', default='1')
     try:
@@ -465,7 +464,7 @@ def indi_tree(request):
 # =========================与文档相关的页面=========================
 # 文档首页
 def doc(request):
-    d = Document.objects.all()
+    d = Document.objects.filter(is_del='0')
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
     return render(request, 'genealogy/doc.html', {"document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -505,8 +504,7 @@ def doc_submit(request, id):
 
 # 删除文档：是一个请求，删除之后直接返回当前族谱的文档首页
 def doc_del(request, gid, id):
-    d = Document.objects.get(id=id)
-    d.delete()
+    Document.objects.filter(id=id).update(is_del='1')
     return redirect('/genealogy/dtl/' + gid)
 
 
@@ -524,8 +522,8 @@ def doc_dtl(request, id):
 def doc_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
-    cnt = Document.objects.filter(genealogy=g.title).count()
-    d = Document.objects.filter(genealogy=g.title,title__contains=name)
+    cnt = Document.objects.filter(genealogy=g.title,is_del='0').count()
+    d = Document.objects.filter(genealogy=g.title,title__contains=name,is_del='0')
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
     return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -534,7 +532,7 @@ def doc_search(request,id):
 def search_doc(request):
     name = request.GET.get('name')
     cnt = Document.objects.all().count()
-    d = Document.objects.filter(title__contains=name)
+    d = Document.objects.filter(title__contains=name,is_del='0')
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
     return render(request, 'genealogy/doc.html', {"document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -542,7 +540,7 @@ def search_doc(request):
 # =========================与PDF文件相关的页面=========================
 # 文件首页
 def file(request):
-    f = File.objects.all()
+    f = File.objects.filter(is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":f_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -585,8 +583,8 @@ def file_dtl(request):
 def file_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
-    cnt = Document.objects.filter(Genealogy=g.title).count()
-    f = Document.objects.filter(Genealogy=g.title,filename__contains=name)
+    cnt = Document.objects.filter(Genealogy=g.title,is_del='0').count()
+    f = Document.objects.filter(Genealogy=g.title,filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -594,8 +592,8 @@ def file_search(request,id):
 #在所有文件中查找文件
 def search_file(request):
     name = request.GET.get('name')
-    cnt = Document.objects.all().count()
-    f = Document.objects.filter(filename__contains=name)
+    cnt = Document.objects.filter(is_del='0').count()
+    f = Document.objects.filter(filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
