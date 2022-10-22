@@ -42,6 +42,9 @@ def logout(request):
 def register(request):
     return render(request, 'home/register.html')
 
+def achievement(request):
+    return render(request, 'home/achievement.html')
+
 
 # =========================与家谱相关的页面=========================
 # 家谱首页

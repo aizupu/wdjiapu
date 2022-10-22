@@ -1,0 +1,168 @@
+{% extends 'comm/_base.html' %}
+
+{% block title %} 武大智慧家谱管理平台{% endblock %}
+
+{% block headmore %} {% endblock %}
+
+{% block main %}
+<main class="container-fluid">
+    <!-- page start-->
+    <section class="panel">
+        <header class="panel-heading">
+            <span style="font-size:20px; color:#000;">关于我们</span>
+            <span class="pull-right">
+                <button type="button" id="loading-btn" class="btn btn-warning btn-xs"><i class="fa fa-globe"></i> <a
+                        href="/index">返回首页</a></button>
+            </span>
+            </h2>
+
+    </section>
+    <div class="row">
+        <div class="col-md-3">
+            <section class="panel">
+                <header class="panel-heading">
+                    项目简介
+                </header>
+                <div class="panel-body">
+                    <a href="#"><img src="/static/img/team/totem_02.jpg" class="img-responsive center-block"
+                            alt="" /></a>
+
+                    <p>
+                        珞珈图腾家谱数字化平台是武汉大学大数据研究院、武汉大学计算机学院、武汉大学历史学院联合研发。它是致力于中国传统家谱文化管理与研究的平台，专门用于管理和分析中国家谱。系统基于自主知识产权的Totem数据库，以高效、灵活的方式表示并存储中国家谱大数据。在其上，提供对探索家族祖先事迹、寻亲问祖、家族发展历程、家族事件分析等功能。该系统支持个人编修、制作家谱，同时还用于人文社科相关领域的研究。对于发扬优秀的中国传统家族文化有重要的作用。
+                    </p>
+                    <div class="alert alert-success fade in">
+                        <strong>欢迎各位领导、专家和朋友们的光临和指导！</strong>
+                    </div>
+                    <h5 class="bold">联系方式</h5>
+                    <ul class="list-unstyled p-files">
+                        <li><a href=""><i class="fa fa-envelope"></i> 邮箱：rrli@whu.edu.cn</a></li>
+                        <li><a href=""><i class="fa fa-file"></i> 联系人：李老师</a></li>
+                    </ul>
+                    <br />
+
+                    <h5 class="bold">联系地址</h5>
+                    <ul class="nav nav-pills nav-stacked labels-info ">
+                        <li><i class=" fa fa-circle text-danger"></i> 湖北省武汉市武昌区八一路299号</p>
+                        </li>
+                    </ul>
+                    <br />
+
+                    <h5 class="bold">扫描关注</h5>
+                    <a href="#"><img src="/static/img/team/ewm.png" class="img-responsive center-block"
+                            style="width: 230px;" alt="" /></a>
+
+                    <h5 class="bold">友情链接</h5>
+                    <ul class="p-tag-list">
+                        <li><a href="http://totemdb.whu.edu.cn/"><i class="fa fa-tag"></i> 珞珈图腾数据库实验室</a></li>
+                        <li><a href="http://bdi.whu.edu.cn/news_show.aspx?id=937"><i class="fa fa-tag"></i>
+                                武汉大学文化遗产智能计算实验室</a></li>
+                        <li><a href="http://bdi.whu.edu.cn/"><i class="fa fa-tag"></i> 武汉大学大数据研究院</a></li>
+                        <li><a href="http://cs.whu.edu.cn/"><i class="fa fa-tag"></i> 武汉大学计算机学院</a></li>
+                        <li><a href="http://www.history.whu.edu.cn/"><i class="fa fa-tag"></i> 武汉大学历史学院</a></li>
+                    </ul>
+
+                    <div class="text-center mtop20">
+                        <a href="#" class="btn btn-sm btn-primary">点赞支持</a>
+                        <a href="#" class="btn btn-sm btn-warning">爱心捐助</a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <div class="col-md-9">
+            <section class="panel">
+                <div class="panel-body">
+                    <ul class="nav nav-tabs">
+                        <li><a href="/about">研发团队</a></li>
+                        <li class="active"><a href="#" style="color:#000; background-color:#fff;">项目成果</a></li>
+                    </ul>
+                    <div class="panel">
+                        <header class="panel-heading">学术专著</header>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-2 col-sm-2">
+                                    <img src="/static/img/team/zz.png" class="img-responsive center-block"
+                                        style="width: 100px;" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10">
+                                    <h4><a href="#">【专著】：徐斌．明清鄂东宗族与地方社会[M] ，武汉大学出版社，出版年：2010年，ISBN：9787307074057</a>
+                                    </h4>
+                                    <span>【内容简介】在中国移民史的研究中，“江西填湖广”一直是一个重要的研究课题，大多数学者也将之视为一个曾在移民史中真实发生的现象，他们的研究表明，这一移民浪潮发生于元明交替之际，同时，江西移民的后代构成了今天的湖南、湖北人口的主要组成部分。然而，深入到这一问题的背后，即可发现这种研究主要是建立于民间谱牒资料的基础之上，并且，在谱牒资料中还出现了“江西填湖广”的一些地方版本，鄂东地区即有“江西瓦屑坝”、“南昌筷子巷”等移民传说。众所周知，谱牒是宗族关于本族历史及现实情况的记载，因此，对于这些移民传说的解读应当建立于对本地宗族的深入研究之上。《明清鄂东宗族与地方社会》以明清时期鄂东地区宗族为视角，通过考察在宗族组织形成与发展过程中的户籍、赋役等政策的影响，以及祖先崇拜与神祇崇拜之间的关系等方面，力图破解“江西瓦屑坝”的移民传说，从而深入地反映出明清时期鄂东基层社会的全貌。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <header class="panel-heading">学术论文</header>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[1]
+                                        徐斌.围垦活动中的水域产权纠纷与宗族、跨宗族联合——以民国时期湖北樊湖水域为例[J].近代史研究,2019(04):64-79+160-161.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[2]
+                                        徐斌.明清鄂东家族性庙宇的经营与管理[J].武汉大学学报(人文科学版),2012,65(03):77-82.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[3]
+                                        徐斌.明清军役负担与卫军家族的成立——以鄂东地区为中心[J].华中师范大学学报(人文社会科学版),2009,48(02):73-81.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[4]
+                                        徐斌.作为象征的宗族公产——以黄梅县程氏宗族为例[J].武汉大学学报(人文科学版),2008(06):782-788.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[5]
+                                        徐斌.由涣散到整合：国家、地方及宗族之内——以黄冈县郭氏宗族的形成与发展为例[J].中国社会历史评论,2006(00):321-335.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[6] Yuwei Peng, Huan Jiang, Rongrong Li, Zhiyong
+                                        Peng: PZXG: A Genealogy Data Service Platform for Kinship Management and
+                                        Application. ICKG 2020: 505-512</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <p class="list-group-item-text">[7] Huan Jiang, Honghao Liu, Rongrong Li, Yuwei
+                                        Peng, Bin Xu, Zhiyong Peng: An Object-Deputy Approach For Chinese Genealogy
+                                        Collaborative Management. CSCWD 2022: 95-100</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <header class="panel-heading">专利与软著</header>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="thumbnail">
+                                        <img src="/static/img/team/zl.png" style="width: 200px;" alt="">
+                                        <div class="caption">
+                                            <h4>【专利】：一种并行处理的大型族谱世系图的生成方法及装置
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-6">
+                                    <div class="thumbnail">
+                                        <img src="/static/img/team/rz.png" style="width: 200px;" alt="">
+                                        <div class="caption">
+                                            <h4>【软件著作权】：珞珈图腾家谱管理系统（简称图谱）v1.0
+                                            </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- page end-->
+</main>
+
+
+
+{% endblock %}
+
+{% block scriptmore %} {% endblock %}
