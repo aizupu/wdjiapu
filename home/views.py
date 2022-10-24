@@ -583,8 +583,8 @@ def file_dtl(request):
 def file_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
-    cnt = Document.objects.filter(Genealogy=g.title,is_del='0').count()
-    f = Document.objects.filter(Genealogy=g.title,filename__contains=name,is_del='0')
+    cnt = File.objects.filter(Genealogy=g.title,is_del='0').count()
+    f = File.objects.filter(Genealogy=g.title,filname__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -592,8 +592,8 @@ def file_search(request,id):
 #在所有文件中查找文件
 def search_file(request):
     name = request.GET.get('name')
-    cnt = Document.objects.filter(is_del='0').count()
-    f = Document.objects.filter(filename__contains=name,is_del='0')
+    cnt = File.objects.filter(is_del='0').count()
+    f = File.objects.filter(filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
