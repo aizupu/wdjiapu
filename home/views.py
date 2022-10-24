@@ -63,9 +63,9 @@ def gene_list(request):
     g = Genealogy.objects.all().values()
     cnt = Genealogy.objects.filter(is_del='0').count()
     for i in g:
-        i['indi_sum'] = Individual.objects.filter(gene=i['title']).count()
-        i['file_sum'] = File.objects.filter(Genealogy=i['title']).count()
-        i['doc_sum'] = Document.objects.filter(genealogy=i['title']).count()
+        i['indi_sum'] = Individual.objects.filter(gene=i['title'],is_del='0').count()
+        i['file_sum'] = File.objects.filter(Genealogy=i['title'],is_del='0').count()
+        i['doc_sum'] = Document.objects.filter(genealogy=i['title'],is_del='0').count()
     page,paginator,dis_range = split_page(request,g)
     return render(request, 'genealogy/gene_list.html', {"genealogy":page, "count": cnt,"g_cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
@@ -548,7 +548,7 @@ def file(request):
 
 # 添加文件
 def file_add(request, id):
-    title = request.GET.get('name')
+    title = request.POST.get('name')
     file = request.FILES.get('inputfile')
     if file:
         basedir = os.path.abspath(os.path.join(os.path.dirname("__file__")))
@@ -558,16 +558,16 @@ def file_add(request, id):
             f.write(chunk)
         f.close()
         genealogy = Genealogy.objects.get(id=id)
-        file_item = File(filename=file.name, path=file_path, Genealogy=genealogy)
+        file_item = File(filename=title, path=file.name, Genealogy=genealogy)
         file_item.save()
 
-    return redirect('/genealogy/dtl/' + id)
+    return redirect('/genealogy/dtl_pdf/' + id)
 
 
 # 删除文件：是一个请求，删除之后直接返回当前家谱的文件首页页面
 def file_del(request, gid, id):
     File.objects.filter(id=id).update(is_del='1')
-    return redirect('/genealogy/dtl/' + gid)
+    return redirect('/genealogy/dtl_pdf/' + gid)
 
 
 # 更新文件：分为get和post，get定位到update的文件编号；post之后直接返回当前家谱的文件首页页面
@@ -603,10 +603,10 @@ def search_file(request):
 def file_dwn(request, id):
     f = File.objects.get(id=id)
     basedir = os.path.abspath(os.path.join(os.path.dirname("__file__")))
-    file_path = os.path.join(basedir, 'static', 'files', f.filename)
+    file_path = os.path.join(basedir, 'static', 'files', f.path)
     response = FileResponse(open(file_path, "rb"))
     response['Content-Type'] = 'application/octet-stream'
-    response['Content-Disposition'] = 'attachment;filename=' + f.filename
+    response['Content-Disposition'] = "attachment; filename*=utf-8''{}".format(escape_uri_path(f.path))
     return response
 
 

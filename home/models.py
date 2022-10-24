@@ -147,7 +147,7 @@ class File(models.Model):
     '''
     filename = models.CharField(max_length=50, unique=False, verbose_name='')
 
-    path = models.CharField(max_length=50, unique=False, verbose_name='')
+    path = models.CharField(max_length=100, unique=False, verbose_name='')
 
     Genealogy = models.ForeignKey('Genealogy', to_field='title',  null=True, blank=True, on_delete=models.DO_NOTHING)
 
