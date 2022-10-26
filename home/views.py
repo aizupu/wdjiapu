@@ -14,8 +14,6 @@ from app.settings import PDF_OUTPUT_PATH
 from django.http import FileResponse
 import time, datetime
 import os
-
-
 # Create your views here.
 
 # ------------------------网站首页-----------------------
@@ -38,9 +36,6 @@ def login(request):
 def logout(request):
     return render(request, 'home/index.html')
 
-
-def register(request):
-    return render(request, 'home/register.html')
 
 def achievement(request):
     return render(request, 'home/achievement.html')
