@@ -135,9 +135,16 @@
             //获取session值
             if ($.trim($("#islogin").val()) != "") 
             {
-               var is_login = $.trim($("#islogin").val());
+               var login_str = $.trim($("#islogin").val());
             }
-           if(is_login.toLocaleLowerCase() == 'true')
+            var is_login=null;
+            if(typeof(login_str) == "undefined"){
+                is_login=false;
+            }
+            else{
+                is_login=login_str.toLocaleLowerCase() == 'true'
+            }
+           if(is_login)
            { 
             document.getElementById("login").style.display="None";
         }else {
