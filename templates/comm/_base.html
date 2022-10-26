@@ -71,12 +71,18 @@
                         <li><a href="/about">
                                 <span class="icon fa fa-envelope"></span> 关于我们
                             </a></li>
+                        <li id="username"><a href="">
+                                <span class="username"></span> 欢迎您：{{request.session.username}}
+                            </a></li>
                     </ul>
-                    <div class="nav navbar-nav">
+                    <div id="login" class="nav navbar-nav">
                         <a href="/register" class="btn btn-primary navbar-btn"><span class="icon fa fa-user"></span>
                             注册</a>
                         <a href="/login" class="btn btn-primary navbar-btn"><span class="icon fa fa-pencil"></span>
                             登录</a>
+                
+                        <input type="hidden" class="input-text" value="{{request.session.logged_in}}"
+                                                    name="islogin" id="islogin">     
                     </div>
                 </div>
             </div>
@@ -114,6 +120,30 @@
 
     <!--common script for all pages-->
     <script src="/static/js/common-scripts.js"></script>
-    
+    <script>
+    function getCookie(name) {
+        var cookies = document.cookie;
+        var list = cookies.split("; ");     // 解析出名/值对列表     
+        for(var i = 0; i < list.length; i++) {
+            var arr = list[i].split("=");   // 解析出名和值
+            if(arr[0] == name)
+            return decodeURIComponent(arr[1]);   // 对cookie值解码
+        } 
+        return "";
+    }
+        window.onload = function(){
+            //获取session值
+            if ($.trim($("#islogin").val()) != "") 
+            {
+               var is_login = $.trim($("#islogin").val());
+            }
+           if(is_login.toLocaleLowerCase() == 'true')
+           { 
+            document.getElementById("login").style.display="None";
+        }else {
+            document.getElementById("username").style.display="None";
+        }
+        }
+    </script>
 </body>
 </html>

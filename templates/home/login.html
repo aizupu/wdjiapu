@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="武汉大学智慧家谱, 武汉大学智慧族谱">
+
+    <title>{% block title %}珞珈图腾家谱数字化平台 {% endblock %}</title>
+    <link rel="shortcut icon" href="/static/img/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--<link href="css/navbar-fixed-top.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/style-responsive.css" rel="stylesheet" />
+    <link href="/static/css/jp.css" rel="stylesheet">
+
+    {% block headmore %} {% endblock %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+{% block content %} 
+<div class="container">
+
+    <form class="form-signin">
+      <h2 class="form-signin-heading">珞珈图腾<span>家谱数字化平台</span>登录</h2>
+      <div class="login-wrap">
+          <input id="username" type="text" class="form-control" placeholder="用户名" autofocus>
+          <input id="password" type="password" class="form-control" placeholder="密码">
+          <label class="checkbox">
+              <input type="checkbox" value="remember-me">记住我
+              <span class="pull-right">
+                  <a data-toggle="modal" href="#myModal"> 忘记密码?</a>
+
+              </span>
+          </label>
+          <button id="submit" class="btn btn-lg btn-login btn-block" type="button">登录</button>
+        
+          <div class="registration">
+              还没有账号?
+              <a class="" href="registration.html">
+                  注册
+              </a>
+          </div>
+
+      </div>
+
+        <!-- Modal -->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Forgot Password ?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Enter your e-mail address below to reset your password.</p>
+                        <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                        <button class="btn btn-success" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+
+    </form>
+
+  </div>
+{% endblock %}
+{% block scriptmore %}
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $("#submit").on("click",function (){
+            var username = $("#username").val();
+            var password = $("#password").val();
+            $.ajax({
+                method:'get',
+                url:'/login_submit',
+                data:{
+                    "username":username,
+                    "password":password,
+                },success(){
+                    window.location.href='/index';
+                },error(){
+                    alert('登录失败')
+                }
+            })
+        })
+        
+    })
+</script>
+{% endblock %}

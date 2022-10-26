@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 
 from home import views
+from mana import views as mana_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,9 +26,11 @@ urlpatterns = [
     path('index', views.index, name='index'),
     path('test', views.test, name='test'),
     path('about', views.about, name='about'),
-    path('login', views.login, name='login'),
-    path('logout', views.logout, name='logout'),
-    path('register', views.register, name='register'),
+    path('login', mana_views.login, name='login'),
+    path('login_submit',mana_views.login_submit, name='login_submit'),
+    path('logout', mana_views.logout, name='logout'),
+    path('register', mana_views.register, name='register'),
+    path('register_submit', mana_views.register_submit,name='register_submit'),
 
     #=========================与家谱相关的页面=========================
     path('genealogy', views.genealogy, name='genealogy'),

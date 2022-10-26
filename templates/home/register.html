@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keyword" content="武汉大学智慧家谱, 武汉大学智慧族谱">
+
+    <title>{% block title %}珞珈图腾家谱数字化平台 {% endblock %}</title>
+    <link rel="shortcut icon" href="/static/img/favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!--<link href="css/navbar-fixed-top.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/style-responsive.css" rel="stylesheet" />
+    <link href="/static/css/jp.css" rel="stylesheet">
+
+    {% block headmore %} {% endblock %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+{% block content %} 
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">注册</h2>
+        <div class="login-wrap">
+            <p>请输入您的个人信息</p>
+            <input type="text" id="nickname" class="form-control" placeholder="姓名" autofocus>
+            <input type="text" id="phone" class="form-control" placeholder="电话" autofocus>
+            <!-- <input type="text" class="form-control" placeholder="Email" autofocus> -->
+            <input type="text" id="email" class="form-control" placeholder="邮件" autofocus>
+            <div class="radios">
+                <label class="label_radio col-lg-6 col-sm-6" for="radio-01">
+                    <input name="sample-radio" id="radio-01" value="0" type="radio" checked /> 男
+                </label>
+                <label class="label_radio col-lg-6 col-sm-6" for="radio-02">
+                    <input name="sample-radio" id="radio-02" value="1" type="radio" /> 女
+                </label>
+            </div>
+
+            <p>请在下方输入您的账号详细信息</p>
+            <input id="username" type="text" class="form-control" placeholder="用户名" autofocus>
+            <input id="password" type="password" class="form-control" placeholder="密码">
+            <input id="password_check" type="password" class="form-control" placeholder="再次输入密码">
+            <label class="checkbox">
+                <input type="checkbox" value="agree this condition"> 我同意服务条款和隐私政策
+            </label>
+            <button id="submit" class="btn btn-lg btn-login btn-block" type="button">提交</button>
+
+            <div class="registration">
+                已有账号？
+                <a class="" href="login.html">
+                    登录
+                </a>
+            </div>
+
+        </div>
+
+      </form>
+
+    </div>
+{% endblock %}
+{% block scriptmore %}
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $("#submit").on("click",function (){
+            var username = $("#username").val();
+            var nickname = $("#nickname").val();
+            var phone = $("#phone").val();
+            var password = $("#password").val();
+            var password_check = $("#password_check").val();
+            var email = $("#email").val();
+            var gender = $("input[type='radio']:checked").val();
+            $.ajax({
+                method:'get',
+                url:'/register_submit',
+                data:{
+                    "username":username,
+                    "nickname":nickname,
+                    "phone":phone,
+                    "password":password,
+                    "email":email,
+                    "rtitle":'普通用户',
+                    "rpermission":'默认权限',
+                    "gender":gender
+                },success(){
+                    window.location.href='/login';
+                },error(){
+                    alert('注册失败')
+                }
+            })
+        })
+        
+    })
+</script>
+{% endblock %}

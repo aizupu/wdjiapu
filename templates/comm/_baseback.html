@@ -51,15 +51,15 @@
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <img alt="" src="/static/img/avatar1_small.jpg">
-                        <span class="username">Jhon Doue</span>
+                        <span id="user" class="username">{{request.session.username}}</span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
                         <div class="log-arrow-up"></div>
-                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-                        <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li>
-                        <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>个人资料</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> 设置</a></li>
+                        <!-- <li><a href="#"><i class="fa fa-bell-o"></i> Notification</a></li> -->
+                        <li><a href='/logout'><i class="fa fa-key"></i> 登出</a></li>
                     </ul>
                 </li>
             </ul>
@@ -109,7 +109,6 @@
     <script src="/static/js/respond.min.js"></script>
     <!--common script for all pages-->
     <script src="/static/js/common-scripts.js"></script>
-
 </body>
 
 </html>
