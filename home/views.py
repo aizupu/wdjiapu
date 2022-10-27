@@ -164,6 +164,8 @@ def gene_grt(request, id):
     return response
 
 def gene_search(request):
+    if 'logged_in' not in request.session or request.session['logged_in']!=True:
+        return render(request, 'home/login.html') 
     name = request.GET.get('name')
     g = Genealogy.objects.filter(is_del='0',title__contains=name).values()
     cnt = Genealogy.objects.filter(is_del='0').count()
