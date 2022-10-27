@@ -44,7 +44,10 @@ def achievement(request):
 # =========================与家谱相关的页面=========================
 # 家谱首页
 def genealogy(request):
-    return render(request, 'genealogy/gene.html')
+    if 'logged_in' in request.session and request.session['logged_in']:
+        return render(request, 'genealogy/gene.html')
+    else:
+        return render(request, 'home/login.html')
 
 
 # 家谱详情
