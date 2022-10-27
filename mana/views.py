@@ -1,4 +1,6 @@
+from math import e
 from django.shortcuts import render, redirect
+from home.views import genealogy
 from mana.models import Role, Permission, UserInfo,Menu
 from django.http import HttpResponse
 import datetime
@@ -20,6 +22,7 @@ def login_submit(request):
         return render(request,'home/login.html',{"message":"密码错误","code":401})
     else:
         request.session['username']=user[0].nickname
+        request.session['name']=username
         request.session['logged_in']=True
         print("登录成功")
         response=HttpResponse("success")
@@ -66,6 +69,35 @@ def register_submit(request):
     user_item.save()
     return render(request, 'home/login.html')
 
+def upd_passwd(request):
+    return render(request, 'home/upd_passwd.html')
+
+def upd_passwd_submit(request):
+    username = request.session['name']
+    user = UserInfo.objects.filter(username=username)
+    password = request.GET.get('password')
+    if password!=user[0].password:
+        return render(request,'home/upd_passwd.html',{"message":"密码错误","code":401})
+    new_password = request.GET.get('new_password')
+    new_password_check = request.GET.get('new_password_check')
+    if new_password_check!=new_password:
+        return render(request,'home/upd_passwd.html',{"message":"两次密码输入不一致","code":402})
+    user.update(password=new_password)
+    return redirect('/genealogy')
+
+def upd_userinfo(request):
+    username = request.session['name']
+    user = UserInfo.objects.get(username=username)
+    return render(request, 'home/upd_userinfo.html',{'user':user})
+
+def upd_userinfo_submit(request):
+    username = request.session['name']
+    user = UserInfo.objects.filter(username=username)
+    nickname = request.GET.get('nickname')
+    email = request.GET.get('email')
+    phone = request.GET.get('phone')
+    user.update(nickname=nickname,email=email,phone=phone)
+    return redirect('/genealogy')
 
 def main(request):
     return render(request, 'mana/main.html')

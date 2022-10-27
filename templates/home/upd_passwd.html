@@ -1,0 +1,58 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-修改密码 {% endblock %}
+
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="/genealogy"><i class="fa fa-home"></i> 首页</a></li>
+            <li class="active">修改密码</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <form class="form-signin">
+        <div class="login-wrap">
+            <h2 class="form-signin-heading">修改密码</h2>
+            <input id="password" type="password" class="form-control" placeholder="旧密码">
+            <input id="new_password" type="password" class="form-control" placeholder="新密码">
+            <input id="new_password_check" type="password" class="form-control" placeholder="再次输入密码">
+            <button id="submit" class="btn btn-lg btn-login btn-block" type="button">提交</button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}
+
+{% block scriptmore %}
+<script>
+    $(function () {
+        $("#submit").on("click",function (){
+            var password = $("#password").val();
+            var new_password = $("#new_password").val();
+            var new_password_check = $("#new_password_check").val();
+            $.ajax({
+                method:'get',
+                url:'/upd_passwd_submit',
+                data:{
+                    "password":password,
+                    "new_password":new_password,
+                    "new_password_check":new_password_check
+                },success(){
+                    alert('修改成功')
+                    window.location.href='/genealogy';
+                },error(){
+                    alert('修改失败')
+                }
+            })
+        })
+        
+    })
+</script>
+{% endblock %}

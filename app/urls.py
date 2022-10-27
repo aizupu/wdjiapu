@@ -32,6 +32,10 @@ urlpatterns = [
     path('logout', mana_views.logout, name='logout'),
     path('register', mana_views.register, name='register'),
     path('register_submit', mana_views.register_submit,name='register_submit'),
+    path('upadte_passwd', mana_views.upd_passwd, name='upadte_passwd'),
+    path('upd_passwd_submit', mana_views.upd_passwd_submit, name='upd_passwd_submit'),
+    path('upadte_userinfo', mana_views.upd_userinfo, name='upadte_userinfo'),
+    path('upd_userinfo_submit', mana_views.upd_userinfo_submit, name='upadte_userinfo_submit'),
 
     #=========================与家谱相关的页面=========================
     path('genealogy', views.genealogy, name='genealogy'),

@@ -1,0 +1,61 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-管理首页 {% endblock %}
+
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="/genealogy"><i class="fa fa-home"></i> 首页</a></li>
+            <li class="active">更新资料</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <form class="form-signin">
+        <h2 class="form-signin-heading">修改信息</h2>
+        <div class="login-wrap">
+            <label for="nickname">姓名</label>
+            <input type="text" id="nickname" class="form-control" value={{user.nickname}} autofocus>
+            <label for="phone">电话</label>
+            <input type="text" id="phone" class="form-control" value={{user.phone}} autofocus>
+            <label for="email">邮件</label>
+            <input type="text" id="email" class="form-control" value={{user.email}} autofocus>
+        </div>
+        <button id="submit" class="btn btn-lg btn-login btn-block" type="button">提交</button>
+    </form>
+
+</div>
+{% endblock %}
+
+{% block scriptmore %}
+<script>
+    $(function () {
+        $("#submit").on("click",function (){
+            var nickname = $("#nickname").val();
+            var phone = $("#phone").val();
+            var email = $("#email").val();
+            $.ajax({
+                method:'get',
+                url:'/upd_userinfo_submit',
+                data:{
+                    "nickname":nickname,
+                    "phone":phone,
+                    "email":email,
+                },success(){
+                    alert('修改成功')
+                    window.location.href='/genealogy';
+                },error(){
+                    alert('修改失败')
+                }
+            })
+        })
+        
+    })
+</script>
+{% endblock %}
