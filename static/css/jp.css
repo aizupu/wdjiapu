@@ -1,12 +1,12 @@
 .get {
-  background: url(../img/bg3.jpg) no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
+  background: url(../img/picture1.jpg) no-repeat;
+  /* background-attachment: fixed; */
+  background-position: top;
+  background-size: auto;
   background-color: #4682b4;
   color: rgb(31, 31, 51);
   text-align: center;
-  padding: 100px 0;
+  padding: 110px 0;
   /* border: 2px solid #f00; */
 }
 
