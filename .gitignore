@@ -3,5 +3,4 @@ output/
 *pycache*/
 db.sqlite3
 nohup.out
-app/settings.py
 wkhtml*
