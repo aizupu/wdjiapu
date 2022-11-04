@@ -21,10 +21,11 @@ import os
 def index(request):
     change_info(request,'/')
     gcnt = Genealogy.objects.filter(is_del='0').count()
+    scnt = Genealogy.objects.filter(is_del='0').values('sername').distinct().count()
     pcnt =  Individual.objects.filter(is_del='0').count()
     total_visit = VisitNumber.objects.get(id=1)
     today_visit = DayNumber.objects.get(day=datetime.date.today())
-    return render(request, 'home/index.html',{"gcnt":gcnt,"pcnt":pcnt,"total_visit":total_visit,"today_visit":today_visit})
+    return render(request, 'home/index.html',{"gcnt":gcnt,"scnt":scnt,"pcnt":pcnt,"total_visit":total_visit,"today_visit":today_visit})
 
 
 def test(request):
