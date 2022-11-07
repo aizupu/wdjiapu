@@ -591,7 +591,7 @@ def file_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
     cnt = File.objects.filter(Genealogy=g.title,is_del='0').count()
-    f = File.objects.filter(Genealogy=g.title,filname__contains=name,is_del='0')
+    f = File.objects.filter(Genealogy=g.title,filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
