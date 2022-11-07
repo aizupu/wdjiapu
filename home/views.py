@@ -616,6 +616,10 @@ def file_dwn(request, id):
     response['Content-Disposition'] = "attachment; filename*=utf-8''{}".format(escape_uri_path(f.path))
     return response
 
+#文件预览
+def file_view(request, id):
+    f = File.objects.get(id=id)
+    return render(request,'genealogy/file_dtl.html',{"f":f})
 
 #=========================与指导说明相关的页面=========================
 # 创建族谱指导说明页面
