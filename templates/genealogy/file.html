@@ -7,7 +7,7 @@
         <!--breadcrumbs start -->
         <ul class="breadcrumb">
             <li><a href="/genealogy"><i class="fa fa-home"></i> 首页</a></li>
-            <li class="active">文档查看</li>
+            <li class="active">pdf查看</li>
         </ul>
         <!--breadcrumbs end -->
     </div>
@@ -15,38 +15,7 @@
 {% endblock %}
 {% block content %}
 <div class="panel-body">
-    当前家谱共有pdf文件：{{cnt}}部 <a class="btn btn-success" data-toggle="modal" href="#myModal">添加文件</a>
-    <div class="modal fade modal-dialog-center " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog ">
-            <div class="modal-content-wrap">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">上传文件</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form role="form" action="/genealogy/file/add/{{gid}}" method = "POST" enctype = "multipart/form-data">
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">标题</label>
-                                <input type="text" class="form-control" name="name" id="exampleInputPassword1" placeholder="标题">
-                            </div>
-                            <div class="form-group">
-                                <input type="file" name="inputfile" id="exampleInputFile">
-                            </div>
-                            <button data-dismiss="modal" class="btn btn-default" type="button">取消</button>
-                            <input class="btn btn-warning" type="submit">
-                            {% csrf_token %}
-                        </form>
-                    </div>
-                    <!-- <div class="modal-footer">
-                        <button data-dismiss="modal" class="btn btn-default" type="button">取消</button>
-                        <button class="btn btn-warning" type="button">提交</button>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-    </div>
+    当前家谱共有pdf文件：{{cnt}}部 
 </div>
 <div class="row">
     <div class="btn-group col-md-6 text-left">
@@ -92,6 +61,7 @@
                 <td>{{ i.filename }}</td>
                 <td>
                     <div class="btn-group btn-group-sm">
+                        <a href="/genealogy/file/view/{{i.id}}" class="btn btn-white">预览</a>
                         <a href="/genealogy/file/download/{{i.id}}" class="btn btn-white">下载</a>
                     </div>
                 </td>
@@ -107,7 +77,7 @@
              <!--上一页-->
         <li class="{% if not page.has_previous %}disabled{% endif %}">
             {% if page.has_previous %}
-              <a href="/genealogy/pdf?page={{ page.previous_page_number }}" aria-label="Previous">
+              <a href="/genealogy/file?page={{ page.previous_page_number }}" aria-label="Previous">
             {% endif %}
               <span aria-hidden="true">&laquo;</span>
             </a>
@@ -117,14 +87,14 @@
           <!--这里展示页码使用传递过来的dis_range -->
           {% for num in dis_range %}
           <li class="{% if num == page.number %}active{% else %}{% endif %}" >
-            <a href="/genealogy/pdf?page={{ num }}">{{ num }}</a>
+            <a href="/genealogy/file?page={{ num }}">{{ num }}</a>
           </li>
           {% endfor %}
   
           <!--下一页-->  
           <li class="{% if not page.has_next %}disabled{% endif %}">
             {% if page.has_next %}
-              <a href="/genealogy/pdf?page={{ page.next_page_number }}" aria-label="Next">
+              <a href="/genealogy/file?page={{ page.next_page_number }}" aria-label="Next">
             {% endif %}
               <span aria-hidden="true">&raquo;</span>
             </a>
