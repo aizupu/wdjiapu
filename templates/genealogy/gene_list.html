@@ -214,7 +214,7 @@
         <div class="row">
             <div class="pagination">共 {{g_cnt}} 条数据</div>
             <nav aria-label="Page navigation" class="pull-right">
-                {%if g_cnt == cnt %}
+                {%if g_cnt == count %}
                 <ul class="pagination">
                     <!--上一页-->
                     <li class="{% if not page.has_previous %}disabled{% endif %}">
