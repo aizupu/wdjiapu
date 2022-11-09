@@ -40,7 +40,7 @@
           <input id="username" type="text" class="form-control" placeholder="用户名" autofocus>
           <input id="password" type="password" class="form-control" placeholder="密码">
           <label class="checkbox">
-              <input type="checkbox" value="remember-me">记住我
+              <!-- <input type="checkbox" value="remember-me">记住我 -->
               <span class="pull-right">
                   <a data-toggle="modal" href="#myModal"> 忘记密码?</a>
 
@@ -97,10 +97,16 @@
                 data:{
                     "username":username,
                     "password":password,
-                },success(){
-                    window.location.href='/index';
-                },error(){
-                    alert('登录失败')
+                },success(data){
+                    if(data=="success")
+                    {
+                        window.location.href='/index';
+                    }
+                    else{
+                        alert(data)
+                    }
+                },error(data){
+                    alert(data)
                 }
             })
         })

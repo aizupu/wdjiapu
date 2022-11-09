@@ -30,6 +30,7 @@ class PermMiddleware(MiddlewareMixin):
         print('权限--',permission_url)
         # 如果请求url在白名单，放行
         for url in settings.SAFE_URL:
+            # print(url)
             if re.match(url, request_url):
                 print('放行')
                 return None
@@ -44,19 +45,20 @@ class PermMiddleware(MiddlewareMixin):
         flag = False
         for url in permission_url:
             url_pattern = settings.REGEX_URL.format(url=url)
+            # print(url_pattern)
             if re.match(url_pattern, request_url):
                 flag = True
                 break
         if flag:
+            print("通过")
             return None
         else:
             # 如果是调试模式，显示可访问url
-            if settings.DEBUG:
-                info ='<br/>' + ( '<br/>'.join(permission_url))
-                return HttpResponse('无权限，请尝试访问以下地址：%s' %info)
-            else:
-                return HttpResponse('无权限访问')
-
+            # if settings.DEBUG:
+            #     info ='<br/>' + ( '<br/>'.join(permission_url))
+            #     return HttpResponse('无权限，请尝试访问以下地址：%s' %info)
+            # else:
+            return HttpResponse("<script>alert('无权限操作!');window.history.go(-1);</script>")
 
 
 

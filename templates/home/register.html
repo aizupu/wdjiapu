@@ -53,9 +53,10 @@
             <p>请在下方输入您的账号详细信息</p>
             <input id="username" type="text" class="form-control" placeholder="用户名" autofocus>
             <input id="password" type="password" class="form-control" placeholder="密码">
-            <input id="password_check" type="password" class="form-control" placeholder="再次输入密码">
+            <input id="password_check" type="password" class="form-control" onblur="check2pwd()" placeholder="再次输入密码">
             <label class="checkbox">
-                <input type="checkbox" value="agree this condition"> 我同意服务条款和隐私政策
+                <input type="checkbox" id="tos" value="agree this condition"> 
+                <a href="">我同意服务条款和隐私政策</a> 
             </label>
             <button id="submit" class="btn btn-lg btn-login btn-block" type="button">提交</button>
 
@@ -76,35 +77,57 @@
 <script src="/static/js/jquery.js"></script>
 <script src="/static/js/bootstrap.min.js"></script>
 <script>
+    
+    function check2pwd() {  
+        if(password.value != password_check.value) {  
+            alert("两次输入密码不一致！")
+            password.value = "";  
+            password_check.value = "";  
+        }
+    }
     $(function () {
         $("#submit").on("click",function (){
-            var username = $("#username").val();
-            var nickname = $("#nickname").val();
-            var phone = $("#phone").val();
-            var password = $("#password").val();
-            var password_check = $("#password_check").val();
-            var email = $("#email").val();
-            var gender = $("input[type='radio']:checked").val();
-            $.ajax({
-                method:'get',
-                url:'/register_submit',
-                data:{
-                    "username":username,
-                    "nickname":nickname,
-                    "phone":phone,
-                    "password":password,
-                    "email":email,
-                    "rtitle":'普通用户',
-                    "rpermission":'默认权限',
-                    "gender":gender
-                },success(){
-                    window.location.href='/login';
-                },error(){
-                    alert('注册失败')
-                }
-            })
-        })
-        
+            if(!$("#tos").get(0).checked)
+            {
+                alert("请先同意服务条款和隐私条款！")
+            }
+            else{
+                var username = $("#username").val();
+                var nickname = $("#nickname").val();
+                var phone = $("#phone").val();
+                var password = $("#password").val();
+                var password_check = $("#password_check").val();
+                var email = $("#email").val();
+                var gender = $("input[type='radio']:checked").val();
+                if(nickname==""){alert("请输入姓名！")}
+                else if(phone==""){alert("请输入电话！")}
+                else if(email==""){alert("请输入邮箱！")}
+                else if(username==""){alert("请输入用户名！")}
+                else if(password==""){alert("请输入密码！")}
+                else if(password_check==""){alert("请输入密码！")}
+                else{
+                    $.ajax({
+                    method:'get',
+                    url:'/register_submit',
+                    data:{
+                        "username":username,
+                        "nickname":nickname,
+                        "phone":phone,
+                        "password":password,
+                        "email":email,
+                        "rtitle":'普通用户',
+                        "rpermission":'普通权限',
+                        "gender":gender
+                    },success(data){
+                        alert("注册成功！")
+                        window.location.href='/login';
+                    },error(){
+                        alert('注册失败')
+                    }
+                })
+            }
+        } 
+    }) 
     })
 </script>
 {% endblock %}
