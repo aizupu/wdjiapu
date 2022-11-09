@@ -119,7 +119,7 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
+SILENCED_SYSTEM_CHECKS = ['mysql.E001']
 SERVER_DATABASE = "family"
 SERVER_USER = "totem_user"
 SERVER_PASSWORD = "totem123"
@@ -184,7 +184,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+PASSWORD_SECRET_KEY = 'totem'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -200,17 +200,117 @@ SESSION_MENU_KEY = 'awesome'
 ALL_MENU_KEY = 'k1'
 PERMISSION_MENU_KEY = 'k2'
 
-LOGIN_URL = '/login/'
+LOGIN_URL = '/login'
 
 REGEX_URL = r'^{url}$'  # url作严格匹配
 
 # 配置url权限白名单
 SAFE_URL = [
-    r'/login/',
-    r'/regist/',
-    '/admin/.*',
-    '/test/',
-    '/',
-    '^/mana/',
-    '/static/.*',
+    r'/login',
+    r'/regist',
+    # r'',
+    # '/admin/.*',
+    # r'/test/',
+    # '/',
+    # '^/mana/',
+    # '/static/.*',
+    r'/index',
+    r'/logout',
 ]
+
+
+COMMON_USER_URL = [
+    r'/about',
+    r'/achievement',
+    r'/upadte_passwd',
+    r'/upd_passwd_submit',
+    r'/upadte_userinfo',
+    r'/upd_userinfo_submit',
+    #=========================与家谱相关的url=========================
+    r'/genealogy',
+    r'/genealogy/info/\d+',
+    r'/genealogy/list',
+    r'/genealogy/add',
+    r'/genealogy/add_genealogy',
+    r'/genealogy/dtl/\d+',
+    r'/genealogy/dtl_doc/\d+',
+    r'/genealogy/dtl_pdf/\d+',
+    r'/genealogy/grt/\d+',
+    r'/genealogy/search',
+    #=========================与人物相关的url=========================
+    r'/genealogy/indi',
+    r'/genealogy/indi/add/\d+',
+    r'/genealogy/indi/add_indi/\d+',
+    r'/genealogy/indi/add_parent/\d+',
+    r'/genealogy/indi/add_spouse/\d+',
+    r'/genealogy/indi/add_child/\d+',
+    r'/genealogy/indi/submit_parent/\d+',
+    r'/genealogy/indi/submit_spouse/\d+',
+    r'/genealogy/indi/submit_child/\d+',
+    r'/genealogy/indi/dtl/\d+',
+    r'/genealogy/indi/search/\d+',
+    r'/genealogy/indi/tree',
+    # =========================与文档相关的url=========================
+    r'/genealogy/doc',
+    r'/genealogy/doc/add/\d+',
+    r'/genealogy/doc/add/submit/\d+',
+    r'/genealogy/doc/dtl/\d+',
+    r'/genealogy/doc/search',
+    r'/genealogy/doc/search/\d+'
+        #=========================与PDF文件相关的页面=========================
+    r'/genealogy/file',
+    r'/genealogy/file/add/<id>', 
+    # r'/genealogy/file/del/<gid>/<id>',
+    r'/genealogy/file/upd', 
+    r'/genealogy/file/dtl', 
+    r'/genealogy/file/download/\d+', 
+    r'/genealogy/file/search', 
+    r'/genealogy/file/search/\d+', 
+    #=========================与指导说明相关的页面=========================
+    r'/guide/*',
+    #=========================与可视化相关的页面=========================
+    r'/vis', 
+]
+RESEARCHER_USER_URL = [
+    r'/about',
+    r'/achievement',
+    r'/upadte_passwd',
+    r'/upd_passwd_submit',
+    r'/upadte_userinfo',
+    r'/upd_userinfo_submit',
+    #=========================与家谱相关的url=========================
+    r'/genealogy',
+    r'/genealogy/info/\d+',
+    r'/genealogy/list',
+    r'/genealogy/add',
+    r'/genealogy/add_genealogy',
+    r'/genealogy/dtl/\d+',
+    r'/genealogy/dtl_doc/\d+',
+    r'/genealogy/dtl_pdf/\d+',
+    r'/genealogy/grt/\d+',
+    r'/genealogy/search',
+    #=========================与人物相关的url=========================
+    r'/genealogy/indi',
+    r'/genealogy/indi/dtl/\d+',
+    r'/genealogy/indi/search/\d+',
+    r'/genealogy/indi/tree',
+    # =========================与文档相关的url=========================
+    r'/genealogy/doc',
+    r'/genealogy/doc/dtl/\d+',
+    r'/genealogy/doc/search',
+    r'/genealogy/doc/search/\d+'
+        #=========================与PDF文件相关的页面=========================
+    r'/genealogy/file', 
+    r'/genealogy/file/dtl', 
+    r'/genealogy/file/download/\d+', 
+    r'/genealogy/file/search', 
+    r'/genealogy/file/search/\d+', 
+    #=========================与指导说明相关的页面=========================
+    r'/guide/*',
+    #=========================与可视化相关的页面=========================
+    r'/vis', 
+]
+
+ADMIN_URL = [
+    r'[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]',
+    ]

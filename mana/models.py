@@ -2,6 +2,7 @@ from email.policy import default
 from enum import unique
 from unittest.util import _MAX_LENGTH
 from django.db import models
+# from home.models import Genealogy
 
 # Create your models here.
 
@@ -10,7 +11,7 @@ class UserInfo(models.Model):
     用户：划分角色
     """
     username = models.CharField(max_length=32, unique=True)
-    password = models.CharField(max_length=64)
+    password = models.CharField(max_length=128)
     gender = models.CharField(max_length=1,default='0') #0男1女2保密
     nickname = models.CharField(max_length=32)
     email = models.EmailField()
@@ -22,6 +23,9 @@ class UserInfo(models.Model):
 
     # 定义用户的额外的权限
     permissions = models.ManyToManyField("Permission", blank=True)
+    
+    # 定义用户和族谱的多对多关系
+    # genealogys =models.ManyToManyField("Genealogy")
 
     def __str__(self):
         return self.nickname
@@ -61,7 +65,7 @@ class Permission(models.Model):
     权限
     """
     title = models.CharField(max_length=32, unique=True)
-    url = models.CharField(max_length=128, unique=True)
+    url = models.CharField(max_length=1280, unique=True)
     menu = models.ForeignKey("Menu", null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
