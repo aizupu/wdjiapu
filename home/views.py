@@ -37,14 +37,6 @@ def about(request):
     return render(request, 'home/about.html')
 
 
-def login(request):
-    return render(request, 'home/login.html')
-
-
-def logout(request):
-    return render(request, 'home/index.html')
-
-
 def achievement(request):
     return render(request, 'home/achievement.html')
 
