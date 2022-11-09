@@ -86,7 +86,6 @@ def register_submit(request):
     user_item.roles.set([role_item])
     user_item.permissions.set([permission_item])
     return HttpResponse("注册成功")
-
 def upd_passwd(request):
     return render(request, 'home/upd_passwd.html')
 
