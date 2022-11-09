@@ -80,6 +80,7 @@
 <div class="row">
     <div class="pagination">共 {{d_cnt}} 条数据</div>
     <nav aria-label="Page navigation" class="pull-right">
+        {%if d_cnt == cnt %}
         <ul class="pagination">
             <!--上一页-->
             <li class="{% if not page.has_previous %}disabled{% endif %}">
@@ -107,6 +108,35 @@
                 </a>
             </li>
         </ul>
+        {%else %}
+        <ul class="pagination">
+            <!--上一页-->
+            <li class="{% if not page.has_previous %}disabled{% endif %}">
+                {% if page.has_previous %}
+                <a href="/genealogy/doc/search?name={{name}}&page={{ page.previous_page_number }}" aria-label="Previous">
+                    {% endif %}
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <!--页码-->
+            <!--这里展示页码使用传递过来的dis_range -->
+            {% for num in dis_range %}
+            <li class="{% if num == page.number %}active{% else %}{% endif %}">
+                <a href="/genealogy/doc/search?name={{name}}&page={{ num }}">{{ num }}</a>
+            </li>
+            {% endfor %}
+
+            <!--下一页-->
+            <li class="{% if not page.has_next %}disabled{% endif %}">
+                {% if page.has_next %}
+                <a href="/genealogy/doc/search?name={{name}}&page={{ page.next_page_number }}" aria-label="Next">
+                    {% endif %}
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+        {%endif %}
     </nav>
 </div>
 
