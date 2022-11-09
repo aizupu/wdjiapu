@@ -31,7 +31,7 @@ class PermMiddleware(MiddlewareMixin):
         # 如果请求url在白名单，放行
         for url in settings.SAFE_URL:
             # print(url)
-            if re.match(url, request_url):
+            if url != '' and re.match(url, request_url):
                 print('放行')
                 return None
 
