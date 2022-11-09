@@ -234,6 +234,7 @@ class UserIP(models.Model):
     ip = models.CharField(verbose_name='IP 地址', max_length=30)
     end_point = models.CharField(verbose_name='访问端点', default='/', max_length=30)
     count = models.IntegerField(verbose_name='访问次数', default=0)
+    last_visit= models.DateTimeField(verbose_name='最近一次访问', default=timezone.now)
     
     class Meta:
         verbose_name = '访问用户信息'
