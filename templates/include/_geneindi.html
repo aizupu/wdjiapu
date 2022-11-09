@@ -19,11 +19,12 @@
     </div>
     <div class="input-group col-md-6">
         <form action="/genealogy/indi/search/{{gid}}">
-            <div class="form-group col-md-10"><input type="text" id="name" name='name' class="form-control col-md-6" placeholder="输入人名"></div>
-        <span class="input-group-btn">
-            <input class="btn btn-default" type="submit" value="搜索">
-        </span>
-        <form>
+            <div class="form-group col-md-10"><input type="text" id="name" name='name' class="form-control col-md-6"
+                    placeholder="输入人名"></div>
+            <span class="input-group-btn">
+                <input class="btn btn-default" type="submit" value="搜索">
+            </span>
+            <form>
     </div>
 </div>
 <div class="adv-table col-lg-12 mt-3">
@@ -95,32 +96,62 @@
 <div class="row">
     <div class="pagination">共 {{p_cnt}} 条数据</div>
     <nav aria-label="Page navigation" class="pull-right">
+        {%if cnt == p_cnt %}
         <ul class="pagination">
-             <!--上一页-->
-        <li class="{% if not page.has_previous %}disabled{% endif %}">
-            {% if page.has_previous %}
-              <a href="/genealogy/dtl/{{gid}}?page={{ page.previous_page_number }}" aria-label="Previous">
-            {% endif %}
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-  
-          <!--页码-->
-          <!--这里展示页码使用传递过来的dis_range -->
-          {% for num in dis_range %}
-          <li class="{% if num == page.number %}active{% else %}{% endif %}" >
-            <a href="/genealogy/dtl/{{gid}}?page={{ num }}">{{ num }}</a>
-          </li>
-          {% endfor %}
-  
-          <!--下一页-->  
-          <li class="{% if not page.has_next %}disabled{% endif %}">
-            {% if page.has_next %}
-              <a href="/genealogy/dtl/{{gid}}?page={{ page.next_page_number }}" aria-label="Next">
-            {% endif %}
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
+            <!--上一页-->
+            <li class="{% if not page.has_previous %}disabled{% endif %}">
+                {% if page.has_previous %}
+                <a href="/genealogy/dtl/{{gid}}?page={{ page.previous_page_number }}" aria-label="Previous">
+                    {% endif %}
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <!--页码-->
+            <!--这里展示页码使用传递过来的dis_range -->
+            {% for num in dis_range %}
+            <li class="{% if num == page.number %}active{% else %}{% endif %}">
+                <a href="/genealogy/dtl/{{gid}}?page={{ num }}">{{ num }}</a>
+            </li>
+            {% endfor %}
+
+            <!--下一页-->
+            <li class="{% if not page.has_next %}disabled{% endif %}">
+                {% if page.has_next %}
+                <a href="/genealogy/dtl/{{gid}}?page={{ page.next_page_number }}" aria-label="Next">
+                    {% endif %}
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
         </ul>
+        {%else %}
+        <ul class="pagination">
+            <!--上一页-->
+            <li class="{% if not page.has_previous %}disabled{% endif %}">
+                {% if page.has_previous %}
+                <a href="/genealogy/indi/search/{{gid}}?name={{name}}&page={{ page.previous_page_number }}" aria-label="Previous">
+                    {% endif %}
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <!--页码-->
+            <!--这里展示页码使用传递过来的dis_range -->
+            {% for num in dis_range %}
+            <li class="{% if num == page.number %}active{% else %}{% endif %}">
+                <a href="/genealogy/indi/search/{{gid}}?name={{name}}&page={{ num }}">{{ num }}</a>
+            </li>
+            {% endfor %}
+
+            <!--下一页-->
+            <li class="{% if not page.has_next %}disabled{% endif %}">
+                {% if page.has_next %}
+                <a href="/genealogy/indi/search/{{gid}}?name={{name}}&page={{ page.next_page_number }}" aria-label="Next">
+                    {% endif %}
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+        {%endif %}
     </nav>
 </div>

@@ -110,35 +110,7 @@ def gene_dtl(request, id):
     g = Genealogy.objects.get(id=id)
     p = Individual.objects.filter(gene=g.title,is_del='0')
     p_cnt = p.count()
-    paginator = Paginator(p, 10)
-    page_num = request.GET.get('page', default='1')
-    try:
-        page = paginator.page(page_num)
-    except PageNotAnInteger as e:
-        # 不是整数返回第一页数据
-        page = paginator.page('1')
-        page_num = 1
-    except EmptyPage as e:
-        # 当参数页码大于或小于页码范围时,会触发该异常
-        print('EmptyPage:{}'.format(e))
-        if int(page_num) > paginator.num_pages:
-            # 大于 获取最后一页数据返回
-            page = paginator.page(paginator.num_pages)
-        else:
-            # 小于 获取第一页
-            page = paginator.page(1)
-
-    # 这部分是为了再有大量数据时，仍然保证所显示的页码数量不超过10，
-    page_num = int(page_num)
-    if page_num < 6:
-        if paginator.num_pages <= 10:
-            dis_range = range(1, paginator.num_pages + 1)
-        else:
-            dis_range = range(1, 11)
-    elif (page_num >= 6) and (page_num <= paginator.num_pages - 5):
-        dis_range = range(page_num - 5, page_num + 5)
-    else:
-        dis_range = range(paginator.num_pages - 9, paginator.num_pages + 1)
+    page,paginator,dis_range = split_page(request,p)
     return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "cnt":p_cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 def gene_doc(request, id):
@@ -183,37 +155,8 @@ def gene_search(request):
         i['indi_sum'] = Individual.objects.filter(gene=i['title']).count()
         i['file_sum'] = File.objects.filter(Genealogy=i['title']).count()
         i['doc_sum'] = Document.objects.filter(genealogy=i['title']).count()
-    paginator = Paginator(g, 10)
-    page_num = request.GET.get('page', default='1')
-    try:
-        page = paginator.page(page_num)
-    except PageNotAnInteger as e:
-        # 不是整数返回第一页数据
-        page = paginator.page('1')
-        page_num = 1
-    except EmptyPage as e:
-        # 当参数页码大于或小于页码范围时,会触发该异常
-        print('EmptyPage:{}'.format(e))
-        if int(page_num) > paginator.num_pages:
-            # 大于 获取最后一页数据返回
-            page = paginator.page(paginator.num_pages)
-        else:
-            # 小于 获取第一页
-            page = paginator.page(1)
-
-    # 这部分是为了再有大量数据时，仍然保证所显示的页码数量不超过10，
-    page_num = int(page_num)
-    if page_num < 6:
-        if paginator.num_pages <= 10:
-            dis_range = range(1, paginator.num_pages + 1)
-        else:
-            dis_range = range(1, 11)
-    elif (page_num >= 6) and (page_num <= paginator.num_pages - 5):
-        dis_range = range(page_num - 5, page_num + 5)
-    else:
-        dis_range = range(paginator.num_pages - 9, paginator.num_pages + 1)
-    print(dis_range)
-    return render(request, 'genealogy/gene_list.html', {"genealogy":page, "count": cnt, "g_cnt":g_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    page,paginator,dis_range = split_page(request,g)
+    return render(request, 'genealogy/gene_list.html', {"genealogy":page, "name":name, "count": cnt, "g_cnt":g_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 
 
@@ -433,37 +376,8 @@ def indi_search(request, id):
     p = Individual.objects.filter(gene = g.title, name__contains=name, is_del='0')
     p_cnt = p.count()
     cnt = Individual.objects.filter(gene=g.title,is_del='0').count()
-    paginator = Paginator(p, 10)
-    page_num = request.GET.get('page', default='1')
-    try:
-        page = paginator.page(page_num)
-    except PageNotAnInteger as e:
-        # 不是整数返回第一页数据
-        page = paginator.page('1')
-        page_num = 1
-    except EmptyPage as e:
-        # 当参数页码大于或小于页码范围时,会触发该异常
-        print('EmptyPage:{}'.format(e))
-        if int(page_num) > paginator.num_pages:
-            # 大于 获取最后一页数据返回
-            page = paginator.page(paginator.num_pages)
-        else:
-            # 小于 获取第一页
-            page = paginator.page(1)
-
-    # 这部分是为了再有大量数据时，仍然保证所显示的页码数量不超过10，
-    page_num = int(page_num)
-    if page_num < 6:
-        if paginator.num_pages <= 10:
-            dis_range = range(1, paginator.num_pages + 1)
-        else:
-            dis_range = range(1, 11)
-    elif (page_num >= 6) and (page_num <= paginator.num_pages - 5):
-        dis_range = range(page_num - 5, page_num + 5)
-    else:
-        dis_range = range(paginator.num_pages - 9, paginator.num_pages + 1)
-    print(dis_range)
-    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "cnt":cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    page,paginator,dis_range = split_page(request,p)
+    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "name":name, "cnt":cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 # 查看人物树
 def indi_tree(request):
@@ -535,7 +449,7 @@ def doc_search(request,id):
     d = Document.objects.filter(genealogy=g.title,title__contains=name,is_del='0')
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
-    return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "name":name, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 #在所有文档中查找文档
 def search_doc(request):
@@ -544,7 +458,7 @@ def search_doc(request):
     d = Document.objects.filter(title__contains=name,is_del='0')
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
-    return render(request, 'genealogy/doc.html', {"document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/doc.html', {"document": page, "d_cnt":d_cnt, "cnt":cnt, 'page': page, "name":name, 'paginator': paginator, 'dis_range': dis_range})
 
 # =========================与PDF文件相关的页面=========================
 # 文件首页
@@ -596,7 +510,7 @@ def file_search(request,id):
     f = File.objects.filter(Genealogy=g.title,filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
-    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "name":name, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
 
 #在所有文件中查找文件
 def search_file(request):
@@ -605,7 +519,7 @@ def search_file(request):
     f = File.objects.filter(filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
-    return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/file.html', {"file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, "name":name, 'paginator': paginator, 'dis_range': dis_range})
 
 
 # 文件下载，需要检查权限

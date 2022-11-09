@@ -208,7 +208,7 @@ REGEX_URL = r'^{url}$'  # url作严格匹配
 SAFE_URL = [
     r'/login',
     r'/regist',
-    # r'',
+    r'',
     # '/admin/.*',
     # r'/test/',
     # '/',

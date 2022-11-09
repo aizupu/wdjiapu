@@ -94,13 +94,13 @@ def upd_passwd_submit(request):
     username = request.session['name']
     user = UserInfo.objects.filter(username=username)
     password = request.GET.get('password')
-    if password!=user[0].password:
+    if not check_password(password, user[0].password):
         return render(request,'home/upd_passwd.html',{"message":"密码错误","code":401})
     new_password = request.GET.get('new_password')
     new_password_check = request.GET.get('new_password_check')
     if new_password_check!=new_password:
         return render(request,'home/upd_passwd.html',{"message":"两次密码输入不一致","code":402})
-    user.update(password=new_password)
+    user.update(password=make_password(new_password, settings.PASSWORD_SECRET_KEY))
     return redirect('/genealogy')
 
 def upd_userinfo(request):

@@ -68,6 +68,7 @@ def change_info(request, end_point):
         uobj.ip = client_ip
         uobj.end_point = end_point
         uobj.count = 1
+    uobj.last_visit = datetime.datetime.now()
     uobj.save()
     
     # 增加今日访问次数
