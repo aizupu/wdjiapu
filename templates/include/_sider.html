@@ -1,4 +1,6 @@
 <ul class="sidebar-menu" id="nav-accordion">
+    <input type="hidden" class="input-text" value="{{request.session.role}}"
+    name="role" id="role">  
     <li>
         <a href="/genealogy">
             <i class="fa fa-dashboard"></i>
@@ -30,16 +32,16 @@
             <li><a href="/upadte_userinfo">更新资料</a></li>
         </ul>
     </li>
-    <!-- <li class="sub-menu">
-        <a href="javascript:;">
+    <li id="usermanage" class="sub-menu">
+        <a href="/user/list">
             <i class="fa fa-tasks"></i>
-            <span>权限管理</span>
+            <span>用户管理</span>
         </a>
-        <ul class="sub">
+        <!-- <ul class="sub">
             <li><a href="#">用户管理</a></li>
             <li><a href="#">权限管理</a></li>
-        </ul>
-    </li> -->
+        </ul> -->
+    </li>
 
     <li>
         <a href="/logout">
@@ -48,3 +50,29 @@
         </a>
     </li>
 </ul>
+{% block scriptmore %}
+    <script src="/static/js/respond.min.js"></script>
+
+    <!--common script for all pages-->
+    <script src="/static/js/common-scripts.js"></script>
+    <script>
+        window.onload = function(){
+            //获取session值
+            if ($.trim($("#role").val()) != "") 
+            {
+               var role_str = $.trim($("#role").val());
+            }
+            var is_admin=null;
+            if(typeof(role_str) == "undefined"){
+                is_login=false;
+            }
+            else{
+                is_login=role_str.toLocaleLowerCase() == '管理员用户'
+            }
+           if(!is_login)
+           { 
+            document.getElementById("usermanage").style.display="None";
+        }
+        }
+    </script>
+{% endblock %}

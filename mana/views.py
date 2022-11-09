@@ -4,6 +4,7 @@ from home.views import genealogy
 from mana.models import Role, Permission, UserInfo,Menu
 from django.http import HttpResponse,JsonResponse
 import datetime
+from home.util import split_page
 import re
 from django.contrib.auth.hashers import make_password, check_password
 from django.conf import settings
@@ -19,7 +20,7 @@ def logout(request):
 def login_submit(request):
     password = request.GET.get('password')
     username = request.GET.get('username')
-    user = UserInfo.objects.filter(username=username)
+    user = UserInfo.objects.filter(username=username, is_del=0)
     if len(user)==0:
         return HttpResponse("用户不存在")
     elif not check_password(password, user[0].password):
@@ -35,9 +36,10 @@ def login_submit(request):
             permission_str=re.findall(reg, permission.url)
             permission_url.update(set(permission_str))
         request.session[settings.SESSION_PERMISSION_URL_KEY]=list(permission_url)
+        request.session['role']=user[0].roles.all()[0].title
         # request.session[settings.SESSION_PERMISSION_URL_KEY]=settings.RESEARCHER_USER_URL
         response=HttpResponse(content="success", status=200)
-        response.set_cookie("logged_in",True)
+        # response.set_cookie("logged_in",True)
         return response
     
 
@@ -114,6 +116,51 @@ def upd_userinfo_submit(request):
     phone = request.GET.get('phone')
     user.update(nickname=nickname,email=email,phone=phone)
     return redirect('/genealogy')
+
+
+def user_list(request):
+    u = UserInfo.objects.all().values()
+    cnt = UserInfo.objects.filter(is_del='0').count()
+    page,paginator,dis_range = split_page(request,u)
+    return render(request, 'mana/user_list.html', {"user":page, "count": cnt,"u_cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+
+
+def u_add(request):
+    return render(request, 'mana/user_add.html')
+
+
+def user_add(request):
+    username = request.GET.get('username')
+    nickname = request.GET.get('nickname')
+    phone = request.GET.get('phone')
+    email = request.GET.get('email')
+    role_type = int(request.GET.get('role'))
+    print(role_type)
+    if role_type==0:
+        role_item=Role.objects.filter(title="研究人员")[0]
+        permission_item=Permission.objects.filter(title="研究人员权限")[0]
+    elif role_type==1:
+        role_item=Role.objects.filter(title="普通用户")[0]
+        permission_item=Permission.objects.filter(title="普通权限")[0]
+    elif role_type==2:
+        role_item=Role.objects.filter(title="管理员用户")[0]
+        permission_item=Permission.objects.filter(title="管理员权限")[0]
+
+    db_password=make_password(phone, settings.PASSWORD_SECRET_KEY)
+    gender = int(request.GET.get('gender'))
+    add_time = datetime.datetime.now()
+    user_item = UserInfo(username=username, password=db_password, gender=gender,nickname=nickname,
+                         email=email,phone=phone,addtime=add_time)
+    user_item.save()
+    print(role_item)
+    user_item.roles.set([role_item])
+    user_item.permissions.set([permission_item])
+    return redirect('/user/list')
+
+def user_del(request, id):
+    UserInfo.objects.filter(id=id).update(is_del = '1')
+    return redirect('/user/list')
+
 
 def main(request):
     return render(request, 'mana/main.html')

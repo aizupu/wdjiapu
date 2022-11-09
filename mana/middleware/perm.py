@@ -30,7 +30,6 @@ class PermMiddleware(MiddlewareMixin):
         print('权限--',permission_url)
         # 如果请求url在白名单，放行
         for url in settings.SAFE_URL:
-            # print(url)
             if re.match(url, request_url):
                 print('放行')
                 return None
@@ -45,7 +44,6 @@ class PermMiddleware(MiddlewareMixin):
         flag = False
         for url in permission_url:
             url_pattern = settings.REGEX_URL.format(url=url)
-            # print(url_pattern)
             if re.match(url_pattern, request_url):
                 flag = True
                 break

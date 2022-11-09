@@ -36,6 +36,10 @@ urlpatterns = [
     path('upd_passwd_submit', mana_views.upd_passwd_submit, name='upd_passwd_submit'),
     path('upadte_userinfo', mana_views.upd_userinfo, name='upadte_userinfo'),
     path('upd_userinfo_submit', mana_views.upd_userinfo_submit, name='upadte_userinfo_submit'),
+    path('user/list', mana_views.user_list,name='user_list'),
+    path('user/add',mana_views.u_add,name='u_add'),
+    path('user/add_user',mana_views.user_add,name='user_add'),
+    path('user/del/<id>',mana_views.user_del,name='user_del'),
 
     #=========================与家谱相关的页面=========================
     path('genealogy', views.genealogy, name='genealogy'),
