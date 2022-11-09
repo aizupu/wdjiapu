@@ -1,16 +1,33 @@
 {% extends 'comm/_base.html' %}
 {% block title %} 珞珈图腾家谱数字化平台 {% endblock %}
+{% block headmore %}
+<style scoped>
+  .form-control::-webkit-input-placeholder {
+    /* Edge */
+    color:aliceblue;
+  }
+
+  .form-control:-ms-input-placeholder {
+    /* Internet Explorer */
+    color: aliceblue;
+  }
+
+  .form-control::placeholder {
+    color: aliceblue;
+  }
+</style>
+{% endblock %}
 
 {% block main %}
 
 <main>
   <div class="container-fluid get">
-    <h1 class="get-title">探索家族发展奥秘&nbsp;&nbsp;&nbsp;&nbsp;寻找人类繁衍规律</h1>
+    <h1 class="get-title" style="color: aliceblue;">探索家族发展奥秘&nbsp;&nbsp;&nbsp;&nbsp;寻找人类繁衍规律</h1>
     <div class="container" style="width: 450px; margin: 30px auto;">
       <form class="form-group input-group" role="form" action="/genealogy/search">
-        <input type="text" class="form-control" name='name' placeholder="输入家谱名称"/>
+        <input type="text" class="form-control" name='name' placeholder="输入家谱名称" />
         <span class="input-group-btn">
-          <input class="btn btn-default"  type="submit" value="搜索">
+          <input class="btn btn-default" type="submit" value="搜索">
         </span>
       </form>
     </div>
@@ -26,31 +43,31 @@
             <li>
               <a href="javascript:;">
                 <i class=" fa fa-shopping-cart text-primary"></i>
-                6000+ 家谱
+                {{gcnt}} 家谱
               </a>
             </li>
             <li>
               <a href="javascript:;">
                 <i class="fa fa-envelope text-info"></i>
-                150+ 姓氏
+                {{scnt}} 姓氏
               </a>
             </li>
             <li>
               <a href="javascript:;">
                 <i class=" fa fa-picture-o text-muted"></i>
-                3000万+ 人物
+                {{pcnt}} 人物
               </a>
             </li>
             <li>
               <a href="javascript:;">
                 <i class="fa fa-tags text-success"></i>
-                552817 访问量
+                {{total_visit}} 访问量
               </a>
             </li>
             <li>
               <a href="javascript:;">
                 <i class="fa fa-microphone text-danger"></i>
-                3028 日访问量
+                {{today_visit.count}} 日访问量
               </a>
             </li>
           </ul>
@@ -159,7 +176,7 @@
     <div class="row">
       <div class="col-md-4 text-center">
         <div class="intro text-center">
-          <p><img src="/static/img/product1.jpg" class="img-rounded img-responsive center-block" alt="" /></p>
+          <p><img src="/static/img/pic1.jpeg" class="img-rounded img-responsive center-block" alt="" /></p>
           <h3>修建家谱</h3>
           <p>您可以创建自己的家谱，也可以和亲人协同修建家谱。家谱制作完成后，可以生成电子谱书并下载</p>
           <p>
@@ -169,7 +186,7 @@
       </div>
       <div class="col-md-4">
         <div class="intro text-center">
-          <img src="/static/img/product2.png" class="img-rounded img-responsive center-block" alt="" />
+          <img src="/static/img/pic2.jpg" class="img-rounded img-responsive center-block" alt="" />
           <h3>家谱探索</h3>
           <p>可以查询到公开的家谱内容，并探索家谱知识；结合视觉检索技术，从家谱古籍中检索兴趣点</p>
           <p>
@@ -179,7 +196,7 @@
       </div>
       <div class="col-md-4 text-center">
         <div class="intro text-center">
-          <img src="/static/img/product3.png" class="img-rounded img-responsive center-block" alt="" />
+          <img src="/static/img/pic3.jpeg" class="img-rounded img-responsive center-block" alt="" />
           <h3>家族研究</h3>
           <p>发现家族发展的客观规律，家谱知识图谱的构建，各类统计图及数据可视化信息。</p>
           <p>
@@ -190,5 +207,4 @@
     </div><!-- /.row -->
   </div><!-- /.container -->
 </main>
-
 {% endblock %}

@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.utils.encoding import escape_uri_path
 from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
-from home.util import split_page
+from home.util import split_page,change_info
 from home.models import Genealogy, Docformat, Doctype
+from home.models import UserIP, VisitNumber, DayNumber
 from home.models import Individual
 from home.models import File
 from home.models import Document
@@ -18,7 +19,13 @@ import os
 
 # ------------------------网站首页-----------------------
 def index(request):
-    return render(request, 'home/index.html')
+    change_info(request,'/')
+    gcnt = Genealogy.objects.filter(is_del='0').count()
+    scnt = Genealogy.objects.filter(is_del='0').values('sername').distinct().count()
+    pcnt =  Individual.objects.filter(is_del='0').count()
+    total_visit = VisitNumber.objects.get(id=1)
+    today_visit = DayNumber.objects.get(day=datetime.date.today())
+    return render(request, 'home/index.html',{"gcnt":gcnt,"scnt":scnt,"pcnt":pcnt,"total_visit":total_visit,"today_visit":today_visit})
 
 
 def test(request):
@@ -586,7 +593,7 @@ def file_search(request,id):
     g = Genealogy.objects.get(id=id)
     name = request.GET.get('name')
     cnt = File.objects.filter(Genealogy=g.title,is_del='0').count()
-    f = File.objects.filter(Genealogy=g.title,filname__contains=name,is_del='0')
+    f = File.objects.filter(Genealogy=g.title,filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
     return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
@@ -611,6 +618,10 @@ def file_dwn(request, id):
     response['Content-Disposition'] = "attachment; filename*=utf-8''{}".format(escape_uri_path(f.path))
     return response
 
+#文件预览
+def file_view(request, id):
+    f = File.objects.get(id=id)
+    return render(request,'genealogy/file_dtl.html',{"f":f})
 
 #=========================与指导说明相关的页面=========================
 # 创建族谱指导说明页面

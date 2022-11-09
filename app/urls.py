@@ -84,6 +84,7 @@ urlpatterns = [
     path('genealogy/file/upd', views.file_upd, name='file_upd'),
     path('genealogy/file/dtl', views.file_dtl, name='file_dtl'),
     path('genealogy/file/download/<id>', views.file_dwn, name='file_dwn'),
+    path('genealogy/file/view/<id>', views.file_view, name='file_view'),
     path('genealogy/file/search', views.search_file, name='search_file'),
     path('genealogy/file/search/<id>', views.file_search, name='file_search'),
 
