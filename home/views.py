@@ -93,8 +93,14 @@ def gene_del(request, id):
 
 
 # 更新家谱：分为get和post，get定位到update的家谱编号；post之后直接返回我的家谱
-def gene_upd(request):
-    return render(request, 'genealogy/gene_upd.html')
+def gene_upd(request,id):
+    g = Genealogy.objects.get(id=id)
+    g.sername = request.GET.get('sername')
+    g.hall_title = request.GET.get('hall_title')
+    g.county_title = request.GET.get('county_title')
+    g.location = request.GET.get('location')
+    g.save()
+    return redirect('/genealogy/list')
 
 
 # 查看详细的家谱：查看某个家谱的详细信息页面，
