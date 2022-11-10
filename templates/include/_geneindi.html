@@ -1,5 +1,8 @@
 <div class="panel-body">
-    当前家谱共有人物：{{cnt}}人<a href="/genealogy/indi/add/{{gid}}" class="btn btn-default">添加人物</a>
+    当前家谱共有人物：{{cnt}}人
+    {%if can_operate == 1 or can_operate == 2 %}
+    <a href="/genealogy/indi/add/{{gid}}" class="btn btn-default">添加人物</a>
+    {%endif %}
 </div>
 <div class="row">
     <div class="btn-group col-md-6 text-left">

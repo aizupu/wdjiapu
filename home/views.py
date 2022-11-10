@@ -149,6 +149,8 @@ def gene_doc(request, id):
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
         can_operate = 1
     d = Document.objects.filter(genealogy=g.title,is_del='0').order_by("rank")
     d_cnt = d.count()
@@ -161,6 +163,8 @@ def gene_pdf(request,id):
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
         can_operate = 1
     g = Genealogy.objects.get(id=id)
     f = File.objects.filter(Genealogy=g.title,is_del='0')
@@ -502,6 +506,8 @@ def doc_search(request,id):
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
         can_operate = 1
     name = request.GET.get('name')
     cnt = Document.objects.filter(genealogy=g.title,is_del='0').count()
@@ -568,6 +574,8 @@ def file_search(request,id):
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
         can_operate = 1
     name = request.GET.get('name')
     cnt = File.objects.filter(Genealogy=g.title,is_del='0').count()
