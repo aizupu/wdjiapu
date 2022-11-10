@@ -96,6 +96,7 @@ urlpatterns = [
     path('guide/gene', views.guide_gene, name='guide_gene'),
     path('guide/indi', views.guide_indi, name='guide_indi'),
     path('guide/doc', views.guide_doc, name='guide_doc'),
+    path('guide/permission', views.guide_permission, name='guide_permission'),
     
     #=========================与可视化相关的页面=========================
     path('vis', views.vis, name='vis'),

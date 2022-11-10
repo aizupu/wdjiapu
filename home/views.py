@@ -620,6 +620,9 @@ def guide_indi(request):
 def guide_doc(request):
     return render(request, 'guide/doc.html')
 
+def guide_permission(request):
+    return render(request, 'guide/permission.html')
+
 # =========================与可视化相关的页面=========================
 # 可视化首页
 def vis(request):
