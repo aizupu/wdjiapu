@@ -81,7 +81,9 @@
                     <div class="btn-group btn-group-sm">
                         <a href="/genealogy/file/view/{{i.id}}" class="btn btn-white">预览</a>
                         <a href="/genealogy/file/download/{{i.id}}" class="btn btn-white">下载</a>
+                        {%if can_operate == 1 %}
                         <a href="/genealogy/file/del/{{gid}}/{{i.id}}" class="btn btn-white">删除</a>
+                        {%endif %}
                     </div>
                 </td>
             </tr>

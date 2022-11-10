@@ -89,13 +89,21 @@
                         {%else %}
                         <td>私有家谱</td>
                         {%endif %}
+                        {%if i.is_create == 1 %}
                         <td>读|写|删除</td>
+                        {%elif i.is_public == '1' %}
+                        <td>读|写</td>
+                        {%elif i.is_public == '2' %}
+                        <td>读</td>
+                        {%endif %}
                         <td>
                             <div class="btn-group btn-group-sm">
                                 <a href="/genealogy/info/{{i.id}}" class="btn btn-white">查看详情</a>
                                 <a href="/genealogy/dtl/{{i.id}}" class="btn btn-white">进入家谱</a>
                                 <a href="/genealogy/grt/{{i.id}}" class="btn btn-white">生成</a>
+                                {%if i.is_create == 1 %}
                                 <a href="/genealogy/del/{{i.id}}" class="btn btn-white">删除</a>
+                                {%endif %}
                             </div>
                         </td>
                     </tr>

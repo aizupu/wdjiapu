@@ -109,3 +109,9 @@ class Menu(AttachedUser):
             title_list.insert(0, p.title)
             p = p.parent
         return '-'.join(title_list)
+
+class User2Genealogy(models.Model):
+    user = models.ForeignKey("UserInfo", null=True, blank=True, on_delete=models.CASCADE)
+    gene = models.ForeignKey("home.Genealogy", null=True, blank=True, on_delete=models.CASCADE)
+    #是否自己创建：0否，1是
+    is_create = models.CharField(max_length=32, default='0', verbose_name='是否公开')
