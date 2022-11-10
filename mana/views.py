@@ -4,7 +4,7 @@ from home.views import genealogy
 from mana.models import Role, Permission, UserInfo,Menu
 from django.http import HttpResponse,JsonResponse
 import datetime
-from home.util import split_page
+from home.util import split_page, toJson
 import re
 from django.contrib.auth.hashers import make_password, check_password
 from django.conf import settings
@@ -14,7 +14,9 @@ def login(request):
 
 def logout(request):
     request.session['logged_in'] = False # 变成false 就意味着需要重新登录了
-    request.session[settings.SESSION_PERMISSION_URL_KEY]=None
+    del request.session[settings.SESSION_PERMISSION_URL_KEY]
+    del request.session['user']
+    del request.session['username']
     return render(request, 'home/index.html')
 
 def login_submit(request):
@@ -27,7 +29,7 @@ def login_submit(request):
         return HttpResponse("密码错误")
     else:
         request.session['username']=user[0].nickname
-        request.session['name']=username
+        request.session['user']=toJson(user[0])
         request.session['logged_in']=True
         permissions=user[0].permissions.all()
         permission_url=set()
@@ -37,9 +39,7 @@ def login_submit(request):
             permission_url.update(set(permission_str))
         request.session[settings.SESSION_PERMISSION_URL_KEY]=list(permission_url)
         request.session['role']=user[0].roles.all()[0].title
-        # request.session[settings.SESSION_PERMISSION_URL_KEY]=settings.RESEARCHER_USER_URL
         response=HttpResponse(content="success", status=200)
-        # response.set_cookie("logged_in",True)
         return response
     
 

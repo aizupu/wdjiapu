@@ -2,6 +2,28 @@ import datetime
 from django.shortcuts import render, redirect
 from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
 from home.models import UserIP, VisitNumber, DayNumber
+import json
+
+class ComplexEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, datetime.datetime):
+            return obj.strftime('%Y-%m-%d %H:%M:%S')
+        elif isinstance(obj, datetime.date):
+            return obj.strftime('%Y-%m-%d')
+        else:
+            return json.JSONEncoder.default(self, obj)
+
+
+def toJson(model):
+        fields = []
+        for field in model._meta.fields:
+            fields.append(field.name)
+            d = {}
+            for attr in fields:
+                d[attr] = getattr(model, attr)
+        import json
+        return json.dumps(d, cls=ComplexEncoder)
+
 
 def split_page(request,mylist):
     paginator = Paginator(mylist, 10)
