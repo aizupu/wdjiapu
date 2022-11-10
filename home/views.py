@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from django.utils.encoding import escape_uri_path
 from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
+from django.db.models import Q
 from home.util import split_page,change_info
 from home.models import Genealogy, Docformat, Doctype
 from home.models import UserIP, VisitNumber, DayNumber
 from home.models import Individual
 from home.models import File
 from home.models import Document
+from mana.models import User2Genealogy
 from generate.family_tree import FamilyTree
 from generate.line_biography import LineBiography
 from generate.util import mergeHzAndDxt
@@ -15,6 +17,8 @@ from app.settings import PDF_OUTPUT_PATH
 from django.http import FileResponse
 import time, datetime
 import os
+
+from mana.models import UserInfo
 # Create your views here.
 
 # ------------------------网站首页-----------------------
@@ -37,14 +41,6 @@ def about(request):
     return render(request, 'home/about.html')
 
 
-def login(request):
-    return render(request, 'home/login.html')
-
-
-def logout(request):
-    return render(request, 'home/index.html')
-
-
 def achievement(request):
     return render(request, 'home/achievement.html')
 
@@ -61,15 +57,30 @@ def genealogy(request):
 
 # 家谱详情
 def genealogy_info(request, id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     g = Genealogy.objects.get(id=id)
-    return render(request, 'genealogy/gene_info.html', {'g': g})
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
+    return render(request, 'genealogy/gene_info.html', {'g': g, 'can_operate':can_operate})
 
 
 # 我的家谱
 def gene_list(request):
-    g = Genealogy.objects.all().values()
-    cnt = Genealogy.objects.filter(is_del='0').count()
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
+    user2gene = User2Genealogy.objects.filter(user=uid).values()
+    gene_ids = []
+    for ge in user2gene:
+        gene_ids.append(ge['gene_id'])
+    g = Genealogy.objects.filter(Q(is_del='0')&(Q(is_public='2')|Q(id__in=gene_ids))).distinct().values()
+    cnt = g.count()
     for i in g:
+        if User2Genealogy.objects.filter(user=uid,gene=i['id'],is_create='1'):
+            i['is_create'] = 1
+        else:
+            i['is_create'] = 0
         i['indi_sum'] = Individual.objects.filter(gene=i['title'],is_del='0').count()
         i['file_sum'] = File.objects.filter(Genealogy=i['title'],is_del='0').count()
         i['doc_sum'] = Document.objects.filter(genealogy=i['title'],is_del='0').count()
@@ -91,6 +102,12 @@ def genealogy_add(request):
     genealogy_item = Genealogy(title=genealogy_name, sername=genealogy_sername, hall_title=hall_name,
                                county_title=county_title, location=genealogy_location)
     genealogy_item.save()
+    username = request.session['name']
+    user = UserInfo.objects.get(username=username)
+    user2genealogy = User2Genealogy(user=user,gene=genealogy_item,is_create='1')
+    user2genealogy.save()
+    admin2genealogy = User2Genealogy(user=UserInfo.objects.get(username='admin'),gene=genealogy_item,is_create='1')
+    admin2genealogy.save()
     return redirect('/genealogy/list')
 
 
@@ -101,31 +118,59 @@ def gene_del(request, id):
 
 
 # 更新家谱：分为get和post，get定位到update的家谱编号；post之后直接返回我的家谱
-def gene_upd(request):
-    return render(request, 'genealogy/gene_upd.html')
+def gene_upd(request,id):
+    g = Genealogy.objects.get(id=id)
+    g.sername = request.GET.get('sername')
+    g.hall_title = request.GET.get('hall_title')
+    g.county_title = request.GET.get('county_title')
+    g.location = request.GET.get('location')
+    g.save()
+    return redirect('/genealogy/list')
 
 
 # 查看详细的家谱：查看某个家谱的详细信息页面，
 def gene_dtl(request, id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     g = Genealogy.objects.get(id=id)
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
     p = Individual.objects.filter(gene=g.title,is_del='0')
     p_cnt = p.count()
     page,paginator,dis_range = split_page(request,p)
-    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "cnt":p_cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "cnt":p_cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 def gene_doc(request, id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     g = Genealogy.objects.get(id=id)
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
     d = Document.objects.filter(genealogy=g.title,is_del='0').order_by("rank")
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
-    return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 def gene_pdf(request,id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
+    g = Genealogy.objects.get(id=id)
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
     g = Genealogy.objects.get(id=id)
     f = File.objects.filter(Genealogy=g.title,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
-    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":f_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "f_cnt":f_cnt, "cnt":f_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 # 生成某个家族的电子谱书
 def gene_grt(request, id):
@@ -367,17 +412,30 @@ def indi_upd(request,id):
 
 # 查看详细的人物：查看某个人物的详细信息页面，
 def indi_dtl(request, id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     p = Individual.objects.get(id=id)
-    return render(request, 'genealogy/indi_dtl.html', {'p': p})
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=p.gene.id):
+        can_operate = 1
+    return render(request, 'genealogy/indi_dtl.html', {'p': p, 'can_operate':can_operate})
 
 def indi_search(request, id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     g = Genealogy.objects.get(id=id)
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
+    p = Individual.objects.filter(gene=g.title,is_del='0')
     name = request.GET.get('name')
     p = Individual.objects.filter(gene = g.title, name__contains=name, is_del='0')
     p_cnt = p.count()
     cnt = Individual.objects.filter(gene=g.title,is_del='0').count()
     page,paginator,dis_range = split_page(request,p)
-    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "name":name, "cnt":cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "name":name, "cnt":cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 # 查看人物树
 def indi_tree(request):
@@ -443,13 +501,20 @@ def doc_dtl(request, id):
 
 #在给定族谱中查找文档
 def doc_search(request,id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     g = Genealogy.objects.get(id=id)
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
     name = request.GET.get('name')
     cnt = Document.objects.filter(genealogy=g.title,is_del='0').count()
     d = Document.objects.filter(genealogy=g.title,title__contains=name,is_del='0')
     d_cnt = d.count()
     page,paginator,dis_range = split_page(request,d)
-    return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "name":name, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "name":name, "d_cnt":d_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 #在所有文档中查找文档
 def search_doc(request):
@@ -504,13 +569,20 @@ def file_dtl(request):
 
 #在给定族谱内查找文件
 def file_search(request,id):
+    username = request.session['name']
+    uid = UserInfo.objects.get(username=username).id
     g = Genealogy.objects.get(id=id)
+    can_operate = 0
+    if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
+        can_operate = 2
+    elif User2Genealogy.objects.filter(user=uid, gene=g.id):
+        can_operate = 1
     name = request.GET.get('name')
     cnt = File.objects.filter(Genealogy=g.title,is_del='0').count()
     f = File.objects.filter(Genealogy=g.title,filename__contains=name,is_del='0')
     f_cnt = f.count()
     page,paginator,dis_range = split_page(request,f)
-    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "name":name, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range})
+    return render(request, 'genealogy/gene_dtl_pdf.html', {"g":g, "gid": id, "file": page, "name":name, "f_cnt":f_cnt, "cnt":cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 #在所有文件中查找文件
 def search_file(request):
@@ -547,6 +619,9 @@ def guide_indi(request):
 
 def guide_doc(request):
     return render(request, 'guide/doc.html')
+
+def guide_permission(request):
+    return render(request, 'guide/permission.html')
 
 # =========================与可视化相关的页面=========================
 # 可视化首页

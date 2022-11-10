@@ -1,5 +1,8 @@
 <div class="panel-body">
-    当前家谱共有人物：{{cnt}}人<a href="/genealogy/indi/add/{{gid}}" class="btn btn-default">添加人物</a>
+    当前家谱共有人物：{{cnt}}人
+    {%if can_operate == 1 or can_operate == 2 %}
+    <a href="/genealogy/indi/add/{{gid}}" class="btn btn-default">添加人物</a>
+    {%endif %}
 </div>
 <div class="row">
     <div class="btn-group col-md-6 text-left">
@@ -73,6 +76,7 @@
                 <td>
                     <div class="btn-group btn-group-sm">
                         <a href="/genealogy/indi/dtl/{{i.id}}" class="btn btn-white">详情</a>
+                        {%if can_operate == 1 or can_operate == 2 %}
                         <!-- <a href="/genealogy/indi/rel" class="btn btn-white">添加关系</a> -->
                         <div class="btn-group btn-group-sm">
                             <button class="btn btn-white" type="button">添加关系</button>
@@ -86,7 +90,10 @@
                                 <li><a href="/genealogy/indi/add_child/{{i.id}}">添加子女</a></li>
                             </ul>
                         </div>
+                        {%endif %}
+                        {%if can_operate == 2 %}
                         <a href="/genealogy/indi/del/{{gid}}/{{i.id}}" class="btn btn-white">删除</a>
+                        {%endif %}
                     </div>
                 </td>
             </tr>

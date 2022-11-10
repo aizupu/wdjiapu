@@ -1,5 +1,8 @@
 <div class="panel-body">
-    当前家谱共有pdf文件：{{cnt}}部 <a class="btn btn-success" data-toggle="modal" href="#myModal">添加文件</a>
+    当前家谱共有pdf文件：{{cnt}}部
+    {%if can_operate == 1 or can_operate == 2 %} 
+    <a class="btn btn-success" data-toggle="modal" href="#myModal">添加文件</a>
+    {%endif %}
     <div class="modal fade modal-dialog-center " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
         <div class="modal-dialog ">
@@ -81,7 +84,9 @@
                     <div class="btn-group btn-group-sm">
                         <a href="/genealogy/file/view/{{i.id}}" class="btn btn-white">预览</a>
                         <a href="/genealogy/file/download/{{i.id}}" class="btn btn-white">下载</a>
+                        {%if can_operate == 2 %}
                         <a href="/genealogy/file/del/{{gid}}/{{i.id}}" class="btn btn-white">删除</a>
+                        {%endif %}
                     </div>
                 </td>
             </tr>

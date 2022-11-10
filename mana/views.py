@@ -1,6 +1,9 @@
 from math import e
 from django.shortcuts import render, redirect
 from home.views import genealogy
+from home.models import Genealogy
+from home.models import UserIP, VisitNumber, DayNumber
+from home.models import Individual
 from mana.models import Role, Permission, UserInfo,Menu
 from django.http import HttpResponse,JsonResponse
 import datetime
@@ -14,10 +17,13 @@ def login(request):
 
 def logout(request):
     request.session['logged_in'] = False # 变成false 就意味着需要重新登录了
-    del request.session[settings.SESSION_PERMISSION_URL_KEY]
-    del request.session['user']
-    del request.session['username']
-    return render(request, 'home/index.html')
+    request.session[settings.SESSION_PERMISSION_URL_KEY]=None
+    gcnt = Genealogy.objects.filter(is_del='0').count()
+    scnt = Genealogy.objects.filter(is_del='0').values('sername').distinct().count()
+    pcnt =  Individual.objects.filter(is_del='0').count()
+    total_visit = VisitNumber.objects.get(id=1)
+    today_visit = DayNumber.objects.get(day=datetime.date.today())
+    return render(request, 'home/index.html',{"gcnt":gcnt,"scnt":scnt,"pcnt":pcnt,"total_visit":total_visit,"today_visit":today_visit})
 
 def login_submit(request):
     password = request.GET.get('password')
