@@ -104,8 +104,7 @@ def genealogy_add(request):
     genealogy_item = Genealogy(title=genealogy_name, sername=genealogy_sername, hall_title=hall_name,
                                county_title=county_title, location=genealogy_location)
     genealogy_item.save()
-    username = request.session['name']
-    user = UserInfo.objects.get(username=username)
+    user = UserInfo.objects.get(id=json.loads(request.session['user'])['id'])
     user2genealogy = User2Genealogy(user=user,gene=genealogy_item,is_create='1')
     user2genealogy.save()
     admin2genealogy = User2Genealogy(user=UserInfo.objects.get(username='admin'),gene=genealogy_item,is_create='1')
