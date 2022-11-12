@@ -28,6 +28,8 @@ class UserInfo(models.Model):
     # genealogys =models.ManyToManyField("Genealogy")
     #删除标记:字符，0表示未删除，1表示删除
     is_del = models.CharField(max_length=1, default='0', verbose_name='删除标记')
+    
+    
     def __str__(self):
         return self.nickname
 
