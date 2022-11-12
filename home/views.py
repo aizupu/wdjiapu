@@ -45,6 +45,9 @@ def about(request):
 def achievement(request):
     return render(request, 'home/achievement.html')
 
+def presentation(request):
+    return render(request, 'home/presentation.html')
+
 
 # =========================与家谱相关的页面=========================
 # 家谱首页
