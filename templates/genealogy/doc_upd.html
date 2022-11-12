@@ -1,0 +1,172 @@
+{% extends 'comm/_baseback.html' %}
+{% block title %} 武大智慧家谱管理平台-添加文档 {% endblock %}
+{% block headmore %}
+<link href="/static/assets/summernote/dist/summernote.css" rel="stylesheet">
+{% endblock %}
+{% block crumb %}
+<div class="row">
+    <div class="col-lg-12">
+        <!--breadcrumbs start -->
+        <ul class="breadcrumb">
+            <li><a href="/genealogy"><i class="fa fa-home"></i> 首页</a></li>
+            <li><a href="/genealogy/list">家谱管理</a></li>
+            <li class="active">添加文档</li>
+        </ul>
+        <!--breadcrumbs end -->
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-primary">上传文档</h3>
+            </header>
+            <div class="panel-body">
+                <form class="form-horizontal" role="form">
+                    <div class="row summary-list">
+                        <div class="col-md-12">
+                            <div class="form-group" >
+                                <label for="id" class="col-sm-3 control-label">id</label>
+                                <div class="col-lg-8">
+                                    <input type="hidden" class="form-control" name="did" id="did" value={{d.id}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gname" class="col-sm-3 control-label">标题</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="gname" id="gname" value={{d.title}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hall_title" class="col-sm-3 control-label">作者</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="hall_title" id="hall_title" value={{d.author}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="col-sm-3 control-label">格式</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="dformat" id="dformat" value={{d.docformat.title}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="location" class="col-sm-3 control-label">类型</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="dtype" id="dtype" value={{d.doctype.title}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="dtime" class="col-sm-3 control-label">时间</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="dtime" id="dtime" value={{d.time}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact_phone" class="col-sm-3 control-label">排序</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" name="drank" id="drank" value={{d.rank}}>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <header class="panel-heading head-border">
+                                    文档内容
+                                </header>
+                                <div class="panel-body">
+                                    <div id="summernote" class="summernote">{{d.content|safe}}</div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-md-12">
+                                    <section class="panel">
+                                        <header class="panel-heading head-border">
+                                            Summernote Editor
+                                        </header>
+                                        <div class="panel-body">
+                                            <div class="summernote">Hello Summernote</div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div> -->
+                        </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-5 col-lg-10">
+                            <a type="button" id="submit" class="btn btn-primary">提交</a>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <div class="col-lg-4">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="text-danger">注意事项</h3>
+            </header>
+            <div class="panel-body">
+                <p>
+                    *本系统严格控制每位用户的修谱权限，权限级别默认如下。您可以点击“权限设置”修改每个用户级别所具有的权限。<br />
+                    家谱创建者<br />
+                    拥有本家谱的所有权限<br />
+                    核心修谱成员<br />
+                    默认拥有查看、修改和审核所有数据的权限；默认可指定用户的权限级别<br />
+                    家谱共建者<br />
+                    指的是上传数据且数据通过核心修谱成员审核的用户，具有查看和修改自己所上传数据的权限<br />
+                    普通家谱成员<br />
+                    默认只具有查看家谱的权限<br />
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}
+{% block scriptmore %}<script src="/static/assets/summernote/dist/summernote.min.js"></script>
+<script>
+    $(function () {
+        $("#submit").on("click",function (){
+            const content = $("#summernote").code();
+            var gname = $("#gname").val();
+            var hall_title = $("#hall_title").val();
+            var dformat = $("#dformat").val();
+            var dtype = $("#dtype").val();
+            var drank = $("#drank").val();
+            var dtime = $("#dtime").val();
+            var did = $('#did').val();
+            $.ajax({
+                method:'get',
+                url:'/genealogy/doc/add/submit/{{d.genealogy.id}}',
+                data:{
+                    "did":did,
+                    "gname":gname,
+                    "hall_title":hall_title,
+                    "dformat":dformat,
+                    "dtype":dtype,
+                    "drank":drank,
+                    "dtime":dtime,
+                    "content":content
+                },success(){
+                    window.location.href='/genealogy/dtl_doc/{{d.genealogy.id}}';
+                },error(){
+                    alert('error')
+                }
+            })
+        })
+        
+    })
+    jQuery(document).ready(function(){
+
+        $('#summernote').summernote({
+            height: 200,                 // set editor height
+
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+
+            focus: true       // set focus to editable area after initializing summernote
+        });
+    });
+
+</script>
+{% endblock %}

@@ -451,6 +451,7 @@ def doc_add(request, id):
 
 
 def doc_submit(request, id):
+    did = request.GET.get('did')
     genealogy = Genealogy.objects.get(id=id)
     title = request.GET.get('gname')
     author = request.GET.get('hall_title')
@@ -471,9 +472,14 @@ def doc_submit(request, id):
         doc_titem = doc_type[0]
     doc_rank = request.GET.get('drank')
     doc_content = request.GET.get('content')
-    doc_item = Document(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
+    print(did)
+    if did:
+        Document.objects.filter(id=did).update(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
                         time=dtime, rank=doc_rank, genealogy=genealogy)
-    doc_item.save()
+    else:
+        doc_item = Document(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
+                        time=dtime, rank=doc_rank, genealogy=genealogy)
+        doc_item.save()
     return redirect('/genealogy/dtl/' + id)
 
 
@@ -484,8 +490,10 @@ def doc_del(request, gid, id):
 
 
 # 更新文档：分为get和post，get定位到update的文档编号；post之后直接返回家谱文档首页
-def doc_upd(request):
-    return render(request, 'genealogy/doc_upd.html')
+def doc_upd(request,id):
+    d = Document.objects.get(id=id)
+    print(d)
+    return render(request, 'genealogy/doc_upd.html',{"d":d})
 
 
 # 查看详细的文档：查看某个文档的详细信息页面，
