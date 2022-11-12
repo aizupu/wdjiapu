@@ -477,7 +477,7 @@ def doc_submit(request, id):
     return redirect('/genealogy/dtl/' + id)
 
 
-# 删除文档：是一个请求，删除之后直接返回当前族谱的文档首页
+# 删除文档：是一个请求，删除之后直接返回当前家谱的文档首页
 def doc_del(request, gid, id):
     Document.objects.filter(id=id).update(is_del='1')
     return redirect('/genealogy/dtl/' + gid)
@@ -493,7 +493,7 @@ def doc_dtl(request, id):
     d = Document.objects.get(id=id)
     return render(request, 'genealogy/doc_view.html', {"d": d})
 
-#在给定族谱中查找文档
+#在给定家谱中查找文档
 def doc_search(request,id):
     uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
@@ -560,7 +560,7 @@ def file_upd(request):
 def file_dtl(request):
     return render(request, 'genealogy/file_dtl.html')
 
-#在给定族谱内查找文件
+#在给定家谱内查找文件
 def file_search(request,id):
     uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
@@ -602,7 +602,7 @@ def file_view(request, id):
     return render(request,'genealogy/file_dtl.html',{"f":f})
 
 #=========================与指导说明相关的页面=========================
-# 创建族谱指导说明页面
+# 创建家谱指导说明页面
 def guide_gene(request):
     return render(request, 'guide/gene.html')
 

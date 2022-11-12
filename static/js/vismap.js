@@ -9,7 +9,7 @@ myChart_map.on('click', async function (params) {
     let provinceName = convertProvinceCN2EN(params.name);
     let provinceMapData = await get(`/static/json/province/${provinceName}.json`)
     echarts.registerMap(provinceName, provinceMapData);
-    //族谱数量统计数据
+    //家谱数量统计数据
     let chinaData = await get("/static/json/data.json");
     let provinceData = chinaData.find(r => r.provinceShortName === params.name)
     let { cities } = provinceData;
@@ -38,7 +38,7 @@ myChart_map.on('click', async function (params) {
             }
         },
         title: {
-            text: params.name + '族谱分布地图',
+            text: params.name + '家谱分布地图',
             //link:"http://baidu.com"   //链接
             textStyle: {
                 color: 'blue',  //颜色
@@ -49,7 +49,7 @@ myChart_map.on('click', async function (params) {
         },
         tooltip: {},
         legend: { //图例
-            data: [params.name + '族谱数量'],
+            data: [params.name + '家谱数量'],
             left: 'left'
         },
         toolbox: {
@@ -65,7 +65,7 @@ myChart_map.on('click', async function (params) {
             }
         },
         series: [{
-            name: params.name + '族谱数量',
+            name: params.name + '家谱数量',
             type: 'map',  //图表类型
             map: provinceName,
             label: {

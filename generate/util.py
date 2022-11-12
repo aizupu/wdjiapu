@@ -130,7 +130,7 @@ class DbConn:
         zps = self.cur.fetchall()
         return zps
 
-    # 根据族谱id得到族谱始祖，认定只有一位始祖
+    # 根据家谱id得到家谱始祖，认定只有一位始祖
     def getAncestor(self, zp_id):
         sql = "select * from person_info where zp_id = {0} and father_id='-1';".format(str(zp_id))
         self.cur.execute(sql)
