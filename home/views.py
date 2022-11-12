@@ -17,6 +17,7 @@ from app.settings import PDF_OUTPUT_PATH
 from django.http import FileResponse
 import time, datetime
 import os
+import json
 
 from mana.models import UserInfo
 # Create your views here.
@@ -57,8 +58,7 @@ def genealogy(request):
 
 # 家谱详情
 def genealogy_info(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id):
@@ -68,8 +68,7 @@ def genealogy_info(request, id):
 
 # 我的家谱
 def gene_list(request):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     user2gene = User2Genealogy.objects.filter(user=uid).values()
     gene_ids = []
     for ge in user2gene:
@@ -130,8 +129,7 @@ def gene_upd(request,id):
 
 # 查看详细的家谱：查看某个家谱的详细信息页面，
 def gene_dtl(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -144,8 +142,7 @@ def gene_dtl(request, id):
     return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "cnt":p_cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 def gene_doc(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -158,8 +155,7 @@ def gene_doc(request, id):
     return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 def gene_pdf(request,id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -412,8 +408,7 @@ def indi_upd(request,id):
 
 # 查看详细的人物：查看某个人物的详细信息页面，
 def indi_dtl(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     p = Individual.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=p.gene.id):
@@ -421,8 +416,7 @@ def indi_dtl(request, id):
     return render(request, 'genealogy/indi_dtl.html', {'p': p, 'can_operate':can_operate})
 
 def indi_search(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -501,8 +495,7 @@ def doc_dtl(request, id):
 
 #在给定族谱中查找文档
 def doc_search(request,id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -569,8 +562,7 @@ def file_dtl(request):
 
 #在给定族谱内查找文件
 def file_search(request,id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
