@@ -14,13 +14,31 @@
    <style>
       body {
          background-color: #500;
-         color: #ff0;
+         color: #fa0;
          font-size: 12px;
       }
 
       .panel {
          background-color: #500;
          /* color: #aa0; */
+      }
+
+      h5 {
+         color: #ccc;
+      }
+
+      .linkitem {
+         padding-top: 10px;
+         padding-bottom: 10px;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         background-color: #663600;
+      }
+
+      .footer {
+         text-align: center;
+         margin-top: 10px;
+         background-color: #000;
       }
    </style>
    <script type="text/javascript">
@@ -58,7 +76,6 @@
    </div>
    <div class="container">
       <div class="row">
-
          <div class="panel-body">
             <h5>
                团队主要成员
@@ -91,38 +108,35 @@
       </div>
    </div>
    <div class="container">
-      <div class="row">
-         <div class="panel-body">
-            <h5>
-               特色功能
-            </h5>
-            <div class="row"
-               style="padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-bottom: 10px; background-color: #900;">
-               <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3" style="margin-top:20px">
-                  <div>
-                     <img src="/static/img/email-img/image4.png" class="img-responsive" />
-                  </div>
+      <div class="panel-body">
+         <h5>
+            特色功能
+         </h5>
+         <div class="row linkitem">
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3" style="margin-top:20px">
+               <div>
+                  <img src="/static/img/email-img/image4.png" class="img-responsive" />
                </div>
-               <div class="col-lg-9 col-xs-9 col-sm-9 col-md-9">
-                  <div>
-                     <h5>
-                        创建家谱
-                     </h5>
-                     <p>在这里可以录入自己家族的成员，生成自己家谱的电子家谱，在家族内传阅...</p>
-                     <div class="btn" style="background-color:#aaa;">
-                        <a href="/genealogy/add" style="color:#500; ">现在开始</a>
-                     </div>
+            </div>
+            <div class="col-lg-9 col-xs-9 col-sm-9 col-md-9">
+               <div>
+                  <h5>
+                     创建家谱
+                  </h5>
+                  <p>在这里可以建立家族成员的联络，保存家族印记。还可以生成自己的电子家谱文档，在家族内传阅...</p>
+                  <div class="btn" style="background-color:#aaa;">
+                     <a href="/genealogy/add" style="color:#500; ">现在开始</a>
                   </div>
                </div>
             </div>
-            <div class="row"
-               style="padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-bottom: 10px; background-color: #900;"">
-               <div class=" col-lg-9 col-xs-9 col-sm-9 col-md-9">
+         </div>
+         <div class="row linkitem">
+            <div class=" col-lg-9 col-xs-9 col-sm-9 col-md-9">
                <div>
                   <h5>
                      探索家谱奥秘
                   </h5>
-                  <p>通过可视化的方法，从多个角度全方位的探索家族的奥秘...</p>
+                  <p>通过可视化的方法，从多个角度、全方位的探索家族的奥秘...</p>
                   <div class="btn" style="background-color: #aaa;">
                      <a href="/vis" style="color:#500;">开始了解</a>
                   </div>
@@ -134,8 +148,7 @@
                </div>
             </div>
          </div>
-         <div class="row"
-            style="padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-bottom: 10px; background-color: #900;">
+         <div class="row linkitem">
             <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3" style="margin-top:20px">
                <div>
                   <img src="/static/img/email-img/image1.png" class="img-responsive" />
@@ -155,21 +168,19 @@
          </div>
       </div>
    </div>
-   </div>
    <div class="container">
-      <div class="row">
-         <div class="panel-body">
-            <h5>
-               联系我们
-            </h5>
-         </div>
-         <a href="#"><img src="/static/img/team/ewm.png" class="img-responsive center-block" style="width: 230px;"
+      <div class="panel-body">
+         <h5>
+            联系我们
+         </h5>
+         <a href="#"><img src="/static/img/team/ewm.png" class="img-responsive center-block" style="width: 100px;"
                alt="" /></a>
       </div>
-      <div class="row" style="text-align: center; margin-top: 10px;">
-         Copyright武汉大学珞珈图腾实验室©2022.Power by武汉大学大数据研究院
-      </div>
    </div>
+   <footer class="footer">
+      Copyright武汉大学大数据研究院.文化遗产智能计算实验室©2022.<br />
+      Power by武汉大学珞珈图腾实验室
+   </footer>
 </body>
 
 </html>
