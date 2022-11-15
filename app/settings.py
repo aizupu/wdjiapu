@@ -87,6 +87,14 @@ DATABASES = {
         "PORT":"9000",
         "OPTIONS":{'charset':'utf8mb4'}
     },
+    "totem":{
+        "ENGINE":"django.db.backends.postgresql_psycopg2",
+        "NAME":"family",
+        "USER":"hjiang",
+        # "PASSWORD":"totem123",
+        "HOST":"39.107.248.28",
+        "PORT":"5433"
+    },
 }
 
 
