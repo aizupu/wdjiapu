@@ -9,6 +9,7 @@ from django.http import HttpResponse,JsonResponse
 import datetime
 from home.util import split_page, toJson
 import re
+import json
 from django.contrib.auth.hashers import make_password, check_password
 from django.conf import settings
 # Create your views here.
@@ -96,8 +97,7 @@ def upd_passwd(request):
     return render(request, 'home/upd_passwd.html')
 
 def upd_passwd_submit(request):
-    username = request.session['name']
-    user = UserInfo.objects.filter(username=username)
+    user = json.loads(request.session['user'])
     password = request.GET.get('password')
     if not check_password(password, user[0].password):
         return render(request,'home/upd_passwd.html',{"message":"密码错误","code":401})
@@ -109,13 +109,11 @@ def upd_passwd_submit(request):
     return redirect('/genealogy')
 
 def upd_userinfo(request):
-    username = request.session['name']
-    user = UserInfo.objects.get(username=username)
+    user = json.loads(request.session['user'])
     return render(request, 'home/upd_userinfo.html',{'user':user})
 
 def upd_userinfo_submit(request):
-    username = request.session['name']
-    user = UserInfo.objects.filter(username=username)
+    user = json.loads(request.session['user'])
     nickname = request.GET.get('nickname')
     email = request.GET.get('email')
     phone = request.GET.get('phone')
