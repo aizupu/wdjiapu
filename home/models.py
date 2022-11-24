@@ -36,7 +36,7 @@ class Genealogy(AttachedUser):
     #备注
     note = models.CharField(max_length=500, blank=True, verbose_name='备注')
 
-    #是否公开：字符，0公开，1私有
+    #是否公开：字符，0私有 1共建 2公开
     is_public = models.CharField(max_length=32, default='0', verbose_name='是否公开')
 
     #访问密码

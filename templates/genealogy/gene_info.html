@@ -63,6 +63,45 @@
                                 </div>
                             </div>
                             <div class="form-group">
+                                <label for="inputPassword1" class="col-lg-3 col-sm-3 control-label">家谱隐私</label>
+                                <div class="col-lg-8">
+                                    <div class="radios">
+                                        {%if g.is_public == '1' %}
+                                        <label class="label_radio" for="radio-01">
+                                            <input name="sample-radio" id="radio-01" value="1" type="radio" checked />共建家谱
+                                        </label>
+                                        <label class="label_radio" for="radio-02">
+                                            <input name="sample-radio" id="radio-02" value="1" type="radio" />公开家谱
+                                        </label>
+                                        <label class="label_radio" for="radio-03">
+                                            <input name="sample-radio" id="radio-03" value="1" type="radio" />私有家谱
+                                        </label>
+                                        {%elif g.is_public == '2' %}
+                                        <label class="label_radio" for="radio-01">
+                                            <input name="sample-radio" id="radio-01" value="1" type="radio" />共建家谱
+                                        </label>
+                                        <label class="label_radio" for="radio-02">
+                                            <input name="sample-radio" id="radio-02" value="1" type="radio" checked/>公开家谱
+                                        </label>
+                                        <label class="label_radio" for="radio-03">
+                                            <input name="sample-radio" id="radio-03" value="1" type="radio" />私有家谱
+                                        </label>
+                                        {%else %}
+                                        <label class="label_radio" for="radio-01">
+                                            <input name="sample-radio" id="radio-01" value="1" type="radio" />共建家谱
+                                        </label>
+                                        <label class="label_radio" for="radio-02">
+                                            <input name="sample-radio" id="radio-02" value="1" type="radio" />公开家谱
+                                        </label>
+                                        <label class="label_radio" for="radio-03">
+                                            <input name="sample-radio" id="radio-03" value="1" type="radio" checked/>私有家谱
+                                        </label>
+                                        {%endif %}
+                                        <p class="help-block">注意：选择之后可以修改</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="note" class="col-sm-3 control-label">备注</label>
                                 <div class="col-lg-8">
                                     <textarea class="form-control" rows="5" name="note" id="note">{{g.note}}</textarea>

@@ -104,8 +104,9 @@ def genealogy_add(request):
     genealogy_location = request.GET.get('location')
     hall_name = request.GET.get('hall_title')
     county_title = request.GET.get('county_title')
+    is_public = request.GET.get('sample-radio') 
     genealogy_item = Genealogy(title=genealogy_name, sername=genealogy_sername, hall_title=hall_name,
-                               county_title=county_title, location=genealogy_location)
+                               county_title=county_title, location=genealogy_location, is_public=is_public)
     genealogy_item.save()
     user = UserInfo.objects.get(id=json.loads(request.session['user'])['id'])
     user2genealogy = User2Genealogy(user=user,gene=genealogy_item,is_create='1')
@@ -128,6 +129,7 @@ def gene_upd(request,id):
     g.hall_title = request.GET.get('hall_title')
     g.county_title = request.GET.get('county_title')
     g.location = request.GET.get('location')
+    g.is_public = request.GET.get('sample-radio')
     g.save()
     return redirect('/genealogy/list')
 
