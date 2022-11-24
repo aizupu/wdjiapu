@@ -48,6 +48,9 @@ def achievement(request):
 def dh(request):
     return render(request, 'home/dh.html')
 
+def next(request):
+    return render(request, 'home/next.html')
+
 
 # =========================与家谱相关的页面=========================
 # 家谱首页

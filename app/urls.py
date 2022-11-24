@@ -28,6 +28,7 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('achievement', views.achievement, name='achievement'),
     path('dh', views.dh, name='dh'),
+    path('next', views.next, name='next'),
     path('login', mana_views.login, name='login'),
     path('login_submit',mana_views.login_submit, name='login_submit'),
     path('logout', mana_views.logout, name='logout'),
