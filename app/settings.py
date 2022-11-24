@@ -232,6 +232,8 @@ COMMON_USER_URL = [
     r'/genealogy/list',
     r'/genealogy/add',
     r'/genealogy/add_genealogy',
+    r'/genealogy/del/\d+',
+    r'/genealogy/upd/\d+'
     r'/genealogy/dtl/\d+',
     r'/genealogy/dtl_doc/\d+',
     r'/genealogy/dtl_pdf/\d+',
@@ -247,6 +249,8 @@ COMMON_USER_URL = [
     r'/genealogy/indi/submit_parent/\d+',
     r'/genealogy/indi/submit_spouse/\d+',
     r'/genealogy/indi/submit_child/\d+',
+    r'/genealogy/indi/del/d+/\d+',
+    r'/genealogy/indi/upd/\d+'
     r'/genealogy/indi/dtl/\d+',
     r'/genealogy/indi/search/\d+',
     r'/genealogy/indi/tree',
@@ -254,13 +258,16 @@ COMMON_USER_URL = [
     r'/genealogy/doc',
     r'/genealogy/doc/add/\d+',
     r'/genealogy/doc/add/submit/\d+',
+    r'/genealogy/doc/del/\d+/\d+',
+    r'/genealogy/doc/upd',
     r'/genealogy/doc/dtl/\d+',
     r'/genealogy/doc/search',
     r'/genealogy/doc/search/\d+'
         #=========================与PDF文件相关的页面=========================
     r'/genealogy/file',
-    r'/genealogy/file/add/<id>', 
-    # r'/genealogy/file/del/<gid>/<id>',
+    r'/genealogy/file/add/\d+', 
+    r'/genealogy/file/del/\d+/\d+',
+    r'/genealogy/file/upd',
     r'/genealogy/file/upd', 
     r'/genealogy/file/dtl', 
     r'/genealogy/file/download/\d+', 
