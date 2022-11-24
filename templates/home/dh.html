@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh_cn">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>珞珈图腾家谱数字化平台-第四届中国数字人文项目年会</title>
+   <meta name="viewport" content="width=device-width">
+   <!-- Bootstrap core CSS -->
+   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+   <link href="/static/css/bootstrap-reset.css" rel="stylesheet">
+   <!--external css-->
+   <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+   <style>
+      body {
+         background-color: #500;
+         color: #fa0;
+         font-size: 12px;
+      }
+
+      .panel {
+         background-color: #500;
+         /* color: #aa0; */
+      }
+
+      h5 {
+         color: #ccc;
+      }
+
+      .linkitem {
+         padding-top: 10px;
+         padding-bottom: 10px;
+         margin-top: 10px;
+         margin-bottom: 10px;
+         background-color: #663600;
+      }
+
+      .footer {
+         text-align: center;
+         margin-top: 10px;
+         background-color: #000;
+      }
+   </style>
+   <script type="text/javascript">
+      var system = {};
+      var p = navigator.platform;
+      system.win = p.indexOf("Win") == 0;
+      system.mac = p.indexOf("Mac") == 0;
+      system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+      if (system.win || system.mac || system.xll) {//如果是电脑跳转到
+         alert("本页面只能在移动端访问！");
+         window.location.href = "/index";
+      }
+      else {
+         window.location.href = "#";
+      }
+   </script>
+</head>
+
+<body>
+   <header class="container">
+      <div class="row"><img src="/static/img/dh/logo.jpg" class="img-responsive" /></div>
+   </header>
+   <div>
+      <div class="panel">
+         <div class="panel-body">
+            <h5>项目简介 </h5>
+            <p class="font-size:12px">
+               珞珈图腾家谱数字化平台是武汉大学大数据研究院、武汉大学文化遗产智能计算实验室、武汉大学计算机学院、武汉大学历史学院联合研发。它是致力于中国传统家谱文化管理与研究的平台，专门用于管理和分析中国家谱。系统基于自主知识产权的对象代理数据库TOTEM，以高效、灵活的方式表示并存储中国家谱大数据。在其上，提供对探索家族祖先事迹、寻亲问祖、家族发展历程、家族事件分析等功能。该系统支持个人编修、制作家谱，同时还用于人文社科相关领域的研究。对于发扬优秀的中国传统家族文化有重要作用。
+            </p>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="row"><img src="/static/img/dh/banner.jpg" class="img-responsive" /></div>
+   </div>
+   <div class="container">
+      <div class="row">
+         <div class="panel-body">
+            <h5>
+               团队主要成员
+            </h5>
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3">
+               <div>
+                  <img src="/static/img/team/peng.jpg" class="img-responsive" />
+                  <p style="font-size:10px; text-align: center;">彭智勇教授</p>
+               </div>
+            </div>
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3">
+               <div>
+                  <img src="/static/img/team/xb.jpg" class="img-responsive" />
+                  <p style="font-size:10px; text-align: center;">徐斌教授</p>
+               </div>
+            </div>
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3">
+               <div>
+                  <img src="/static/img/team/pyy.jpg" class="img-responsive" />
+                  <p style="font-size:10px; text-align: center;">彭煜玮副教授</p>
+               </div>
+            </div>
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3">
+               <div>
+                  <img src="/static/img/team/lrr.jpg" class="img-responsive" />
+                  <p style="font-size:10px; text-align: center;">李蓉蓉老师</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="panel-body">
+         <h5>
+            特色功能
+         </h5>
+         <div class="row linkitem">
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3" style="margin-top:20px">
+               <div>
+                  <img src="/static/img/email-img/image4.png" class="img-responsive" />
+               </div>
+            </div>
+            <div class="col-lg-9 col-xs-9 col-sm-9 col-md-9">
+               <div>
+                  <h5>
+                     创建家谱
+                  </h5>
+                  <p>在这里可以建立家族成员的联络，保存家族印记。还可以生成自己的电子家谱文档，在家族内传阅...</p>
+                  <div class="btn" style="background-color:#aaa;">
+                     <a href="/genealogy/add" style="color:#500; ">现在开始</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row linkitem">
+            <div class=" col-lg-9 col-xs-9 col-sm-9 col-md-9">
+               <div>
+                  <h5>
+                     探索家谱奥秘
+                  </h5>
+                  <p>通过可视化的方法，从多个角度、全方位的探索家族的奥秘...</p>
+                  <div class="btn" style="background-color: #aaa;">
+                     <a href="/vis" style="color:#500;">开始了解</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3" style="margin-top:20px">
+               <div>
+                  <img src="/static/img/email-img/image2.png" class="img-responsive" />
+               </div>
+            </div>
+         </div>
+         <div class="row linkitem">
+            <div class="col-lg-3 col-xs-3 col-sm-3 col-md-3" style="margin-top:20px">
+               <div>
+                  <img src="/static/img/email-img/image1.png" class="img-responsive" />
+               </div>
+            </div>
+            <div class="col-lg-9 col-xs-9 col-sm-9 col-md-9">
+               <div>
+                  <h5>
+                     寻根问祖
+                  </h5>
+                  <p>我从哪里来？寻找家族的起源，追寻祖先的足迹...</p>
+                  <div class="btn" style="background-color: #aaa;">
+                     <a href="/index" style="color:#500;">马上出发</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container">
+      <div class="panel-body">
+         <h5>
+            联系我们
+         </h5>
+         <a href="#"><img src="/static/img/team/ewm.png" class="img-responsive center-block" style="width: 100px;"
+               alt="" /></a>
+      </div>
+   </div>
+   <footer class="footer">
+      Copyright武汉大学大数据研究院.文化遗产智能计算实验室©2022.<br />
+      Power by武汉大学珞珈图腾实验室
+   </footer>
+</body>
+
+</html>

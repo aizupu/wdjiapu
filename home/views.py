@@ -17,6 +17,7 @@ from app.settings import PDF_OUTPUT_PATH
 from django.http import FileResponse
 import time, datetime
 import os
+import json
 
 from mana.models import UserInfo
 # Create your views here.
@@ -44,6 +45,12 @@ def about(request):
 def achievement(request):
     return render(request, 'home/achievement.html')
 
+def dh(request):
+    return render(request, 'home/dh.html')
+
+def next(request):
+    return render(request, 'home/next.html')
+
 
 # =========================与家谱相关的页面=========================
 # 家谱首页
@@ -57,8 +64,7 @@ def genealogy(request):
 
 # 家谱详情
 def genealogy_info(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id):
@@ -68,8 +74,7 @@ def genealogy_info(request, id):
 
 # 我的家谱
 def gene_list(request):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     user2gene = User2Genealogy.objects.filter(user=uid).values()
     gene_ids = []
     for ge in user2gene:
@@ -102,8 +107,7 @@ def genealogy_add(request):
     genealogy_item = Genealogy(title=genealogy_name, sername=genealogy_sername, hall_title=hall_name,
                                county_title=county_title, location=genealogy_location)
     genealogy_item.save()
-    username = request.session['name']
-    user = UserInfo.objects.get(username=username)
+    user = UserInfo.objects.get(id=json.loads(request.session['user'])['id'])
     user2genealogy = User2Genealogy(user=user,gene=genealogy_item,is_create='1')
     user2genealogy.save()
     admin2genealogy = User2Genealogy(user=UserInfo.objects.get(username='admin'),gene=genealogy_item,is_create='1')
@@ -130,8 +134,7 @@ def gene_upd(request,id):
 
 # 查看详细的家谱：查看某个家谱的详细信息页面，
 def gene_dtl(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -144,8 +147,7 @@ def gene_dtl(request, id):
     return render(request, 'genealogy/gene_dtl.html', {"g":g, "gid": id, "person": page, "cnt":p_cnt, "p_cnt":p_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 def gene_doc(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -158,8 +160,7 @@ def gene_doc(request, id):
     return render(request, 'genealogy/gene_dtl_doc.html', {"g":g, "gid": id, "document": page, "d_cnt":d_cnt, "cnt":d_cnt, 'page': page, 'paginator': paginator, 'dis_range': dis_range, 'can_operate':can_operate})
 
 def gene_pdf(request,id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -412,8 +413,7 @@ def indi_upd(request,id):
 
 # 查看详细的人物：查看某个人物的详细信息页面，
 def indi_dtl(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     p = Individual.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=p.gene.id):
@@ -421,8 +421,7 @@ def indi_dtl(request, id):
     return render(request, 'genealogy/indi_dtl.html', {'p': p, 'can_operate':can_operate})
 
 def indi_search(request, id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -457,6 +456,7 @@ def doc_add(request, id):
 
 
 def doc_submit(request, id):
+    did = request.GET.get('did')
     genealogy = Genealogy.objects.get(id=id)
     title = request.GET.get('gname')
     author = request.GET.get('hall_title')
@@ -477,21 +477,28 @@ def doc_submit(request, id):
         doc_titem = doc_type[0]
     doc_rank = request.GET.get('drank')
     doc_content = request.GET.get('content')
-    doc_item = Document(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
+    print(did)
+    if did:
+        Document.objects.filter(id=did).update(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
                         time=dtime, rank=doc_rank, genealogy=genealogy)
-    doc_item.save()
+    else:
+        doc_item = Document(title=title, author=author, docformat=doc_fitem, doctype=doc_titem, content=doc_content,
+                        time=dtime, rank=doc_rank, genealogy=genealogy)
+        doc_item.save()
     return redirect('/genealogy/dtl/' + id)
 
 
-# 删除文档：是一个请求，删除之后直接返回当前族谱的文档首页
+# 删除文档：是一个请求，删除之后直接返回当前家谱的文档首页
 def doc_del(request, gid, id):
     Document.objects.filter(id=id).update(is_del='1')
     return redirect('/genealogy/dtl/' + gid)
 
 
 # 更新文档：分为get和post，get定位到update的文档编号；post之后直接返回家谱文档首页
-def doc_upd(request):
-    return render(request, 'genealogy/doc_upd.html')
+def doc_upd(request,id):
+    d = Document.objects.get(id=id)
+    print(d)
+    return render(request, 'genealogy/doc_upd.html',{"d":d})
 
 
 # 查看详细的文档：查看某个文档的详细信息页面，
@@ -499,10 +506,9 @@ def doc_dtl(request, id):
     d = Document.objects.get(id=id)
     return render(request, 'genealogy/doc_view.html', {"d": d})
 
-#在给定族谱中查找文档
+#在给定家谱中查找文档
 def doc_search(request,id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -567,10 +573,9 @@ def file_upd(request):
 def file_dtl(request):
     return render(request, 'genealogy/file_dtl.html')
 
-#在给定族谱内查找文件
+#在给定家谱内查找文件
 def file_search(request,id):
-    username = request.session['name']
-    uid = UserInfo.objects.get(username=username).id
+    uid = json.loads(request.session['user'])['id']
     g = Genealogy.objects.get(id=id)
     can_operate = 0
     if User2Genealogy.objects.filter(user=uid, gene=g.id, is_create='1'):
@@ -610,7 +615,7 @@ def file_view(request, id):
     return render(request,'genealogy/file_dtl.html',{"f":f})
 
 #=========================与指导说明相关的页面=========================
-# 创建族谱指导说明页面
+# 创建家谱指导说明页面
 def guide_gene(request):
     return render(request, 'guide/gene.html')
 

@@ -79,7 +79,7 @@ def getLocalZpId(gid):
 def web2local(gid):
     server_conn.ping(reconnect=True)
 
-    # 根据gid得到族谱信息插入到本地数据库
+    # 根据gid得到家谱信息插入到本地数据库
     local_zp_id, local_zp_name = getLocalZpId(gid)
 
     # 根据gid得到始祖的id

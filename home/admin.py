@@ -8,7 +8,7 @@ admin.site.register(Docformat)
 admin.site.register(Doctype)
 admin.site.register(Document)
 
-# 族谱内容
+# 家谱内容
 @admin.register(Genealogy)
 class GenealogyAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'sername', 'hall_title', 'county_title', 'location', 'create_time')

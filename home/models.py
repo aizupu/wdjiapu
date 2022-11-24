@@ -53,7 +53,7 @@ class Individual(AttachedUser):
     '''
     人物：
     '''
-    #所属族谱
+    #所属家谱
     gene = models.ForeignKey("Genealogy", related_name='indi_genealogy',  to_field='title',  null=True, blank=True, on_delete=models.SET_NULL)
 
     #姓
@@ -217,7 +217,7 @@ class Document(models.Model):
     #时间
     time = models.CharField(max_length=500, null=True, blank=True, unique=False, verbose_name='')
 
-    #所属族谱
+    #所属家谱
     genealogy = models.ForeignKey('Genealogy', to_field='title', null=True, blank=True, verbose_name='', on_delete=models.DO_NOTHING)
 
     #是否删除

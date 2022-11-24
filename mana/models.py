@@ -24,7 +24,7 @@ class UserInfo(models.Model):
     # 定义用户的额外的权限
     permissions = models.ManyToManyField("Permission", blank=True)
     
-    # 定义用户和族谱的多对多关系
+    # 定义用户和家谱的多对多关系
     # genealogys =models.ManyToManyField("Genealogy")
     #删除标记:字符，0表示未删除，1表示删除
     is_del = models.CharField(max_length=1, default='0', verbose_name='删除标记')

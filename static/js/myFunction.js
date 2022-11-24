@@ -52,7 +52,7 @@ async function initProvinceData() {
 		},
 
 		title: {
-			text: '族谱分布地图',
+			text: '家谱分布地图',
 			textStyle: {
 				color: 'blue',  //颜色
 				fontSize: 30  //字号
@@ -65,13 +65,13 @@ async function initProvinceData() {
 		tooltip: {},
 
 		legend: { //图例
-			data: ['族谱数量'],//series里写了此处可不添加
+			data: ['家谱数量'],//series里写了此处可不添加
 			left: 'left'
 		},
 
 		series: [
 			{
-				name: '族谱数量',
+				name: '家谱数量',
 				type: 'map',  //图表类型
 				mapType: "china",
 				label: {
@@ -235,7 +235,7 @@ function timeLineBar() {
 				},
 			},
 			title: {
-				text: '族谱数量统计',
+				text: '家谱数量统计',
 				textStyle: {
 					color: 'blue',  //颜色
 					fontSize: 20  //字号
@@ -250,7 +250,7 @@ function timeLineBar() {
 				}
 			},
 			legend: {
-				data: ['各省族谱数量']
+				data: ['各省家谱数量']
 			},
 			grid: {
 				left: '3%',
@@ -299,7 +299,7 @@ function timeLineBar() {
 			xAxis: [
 				{
 					type: 'value',
-					name: '族谱数量（部）',
+					name: '家谱数量（部）',
 					// max: 3200
 					max: 3500,
 					axisLine: {
@@ -323,7 +323,7 @@ function timeLineBar() {
 			],
 			series: [
 				{
-					name: '族谱',
+					name: '家谱',
 					type: 'bar',
 					itemStyle: {
 						normal: {
@@ -339,61 +339,61 @@ function timeLineBar() {
 		},
 		options: [
 			{
-				title: { text: '1975年各省族谱数量统计' },
+				title: { text: '1975年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['1975'] }
 				]
 			},
 			{
-				title: { text: '1980年各省族谱数量统计' },
+				title: { text: '1980年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['1980'] }
 				]
 			},
 			{
-				title: { text: '1985年各省族谱数量统计' },
+				title: { text: '1985年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['1985'] }
 				]
 			},
 			{
-				title: { text: '1990年各省族谱数量统计' },
+				title: { text: '1990年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['1990'] }
 				]
 			},
 			{
-				title: { text: '1995年各省族谱数量统计' },
+				title: { text: '1995年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['1995'] }
 				]
 			},
 			{
-				title: { text: '2000年各省族谱数量统计' },
+				title: { text: '2000年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['2000'] }
 				]
 			},
 			{
-				title: { text: '2005年各省族谱数量统计' },
+				title: { text: '2005年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['2005'] }
 				]
 			},
 			{
-				title: { text: '2010年各省族谱数量统计' },
+				title: { text: '2010年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['2010'] }
 				]
 			},
 			{
-				title: { text: '2015年各省族谱数量统计' },
+				title: { text: '2015年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['2015'] }
 				]
 			},
 			{
-				title: { text: '2020年各省族谱数量统计' },
+				title: { text: '2020年各省家谱数量统计' },
 				series: [
 					{ data: allData.dataZP['2020'] }
 				]
@@ -433,7 +433,7 @@ async function drawBar(placeName, barData) {
 	});
 	option_bar = {
 		title: {
-			text: '族谱数量统计',
+			text: '家谱数量统计',
 			textStyle: {
 				color: 'blue',  //颜色
 				fontSize: 20  //字号
@@ -448,7 +448,7 @@ async function drawBar(placeName, barData) {
 			}
 		},
 		legend: {
-			data: ['各省族谱数量']
+			data: ['各省家谱数量']
 		},
 		grid: {
 			left: '3%',
@@ -457,7 +457,7 @@ async function drawBar(placeName, barData) {
 			containLabel: true
 		},
 		xAxis: {
-			name: '族谱数量',
+			name: '家谱数量',
 			type: 'value',
 			boundaryGap: [0, 0.01],
 			axisLabel: {
@@ -549,7 +549,7 @@ async function drawPie(placeName, pieData) {
 	let pieColor = getRandomArrayElements(colorarrays, num);
 	option_pie = {
 		title: {
-			text: placeName + '族谱数量统计-饼图',
+			text: placeName + '家谱数量统计-饼图',
 			//            subtext: '@郭茂',
 			left: 'center',
 			top: 0,

@@ -87,6 +87,14 @@ DATABASES = {
         "PORT":"9000",
         "OPTIONS":{'charset':'utf8mb4'}
     },
+    "totem":{
+        "ENGINE":"django.db.backends.postgresql_psycopg2",
+        "NAME":"family",
+        "USER":"hjiang",
+        "PASSWORD":"totem123",
+        "HOST":"127.0.0.1",
+        "PORT":"5433"
+    },
 }
 
 
@@ -216,6 +224,8 @@ SAFE_URL = [
     # '/static/.*',
     r'/index',
     r'/logout',
+    r'/dh',
+    # r'[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]',
 ]
 
 

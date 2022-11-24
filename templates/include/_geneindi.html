@@ -113,7 +113,9 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-
+            <li>
+                <a href="/genealogy/dtl/{{gid}}?page=1">首页</a>
+            </li>
             <!--页码-->
             <!--这里展示页码使用传递过来的dis_range -->
             {% for num in dis_range %}
@@ -121,6 +123,9 @@
                 <a href="/genealogy/dtl/{{gid}}?page={{ num }}">{{ num }}</a>
             </li>
             {% endfor %}
+            <li>
+                <a href="/genealogy/dtl/{{gid}}?page={{page.paginator.num_pages}}">尾页</a>
+            </li>
 
             <!--下一页-->
             <li class="{% if not page.has_next %}disabled{% endif %}">
@@ -141,6 +146,9 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
+            <li>
+                <a href="/genealogy/dtl/{{gid}}?page=1">首页</a>
+            </li>
 
             <!--页码-->
             <!--这里展示页码使用传递过来的dis_range -->
@@ -149,6 +157,9 @@
                 <a href="/genealogy/indi/search/{{gid}}?name={{name}}&page={{ num }}">{{ num }}</a>
             </li>
             {% endfor %}
+            <li>
+                <a href="/genealogy/dtl/{{gid}}?page={{page.paginator.num_pages}}">尾页</a>
+            </li>
 
             <!--下一页-->
             <li class="{% if not page.has_next %}disabled{% endif %}">
