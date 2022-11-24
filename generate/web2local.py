@@ -114,6 +114,7 @@ def web2local(gid):
             children_ids = server_cur.fetchall()
             for child_id in children_ids:
                 child_info = getPersonInfo(child_id[0], local_pids[i], local_zp_id)
+                child_info[5] = str(cur_generation+1)
                 print(child_info)
                 childID = addPerson(child_info, True)
                 if child_info[4] == '男':
