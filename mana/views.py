@@ -57,7 +57,7 @@ def register_submit(request):
     username = request.GET.get('username')
     user = UserInfo.objects.filter(username=username)
     if len(user)!=0:
-        return render(request, 'home/login.html')
+        return HttpResponse("用户已存在，请登录！")
     password = request.GET.get('password')
     db_password = make_password(password, settings.PASSWORD_SECRET_KEY)
     gender = request.GET.get('gender')
@@ -92,6 +92,27 @@ def register_submit(request):
     user_item.roles.set([role_item])
     user_item.permissions.set([permission_item])
     return HttpResponse("注册成功")
+
+
+def forget_passwd(request):
+    return render(request, 'home/forget_passwd.html')
+
+
+def forget_passwd_submit(request):
+    username = request.GET.get('username')
+    email = request.GET.get('email')
+    user = UserInfo.objects.filter(username=username)
+    if len(user)==0:
+        return HttpResponse("用户名不存在！")
+    if email!=user[0].email:
+        return HttpResponse("邮箱不匹配！")
+    new_password = request.GET.get('new_password')
+    new_password_check = request.GET.get('new_password_check')
+    if new_password_check!=new_password:
+        return HttpResponse("两次输入的密码不一致！")
+    user.update(password=make_password(new_password, settings.PASSWORD_SECRET_KEY))
+    return HttpResponse("success")
+
 def upd_passwd(request):
     return render(request, 'home/upd_passwd.html')
 

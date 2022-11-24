@@ -34,38 +34,39 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading">注册</h2>
+        <h2 class="form-signin-heading">重置密码</h2>
         <div class="login-wrap">
-            <p>请输入您的个人信息</p>
-            <input type="text" id="nickname" class="form-control" placeholder="姓名" autofocus>
-            <input type="text" id="phone" class="form-control" placeholder="电话" autofocus>
+            <p>请输入您的账号信息</p>
+            <!-- <input type="text" id="nickname" class="form-control" placeholder="姓名" autofocus> -->
+            <!-- <input type="text" id="phone" class="form-control" placeholder="电话" autofocus> -->
             <!-- <input type="text" class="form-control" placeholder="Email" autofocus> -->
-            <input type="text" id="email" class="form-control" placeholder="邮件" autofocus>
-            <div class="radios">
+            <!-- <input type="text" id="email" class="form-control" placeholder="邮件" autofocus> -->
+            <!-- <div class="radios">
                 <label class="label_radio col-lg-6 col-sm-6" for="radio-01">
                     <input name="sample-radio" id="radio-01" value="0" type="radio" checked /> 男
                 </label>
                 <label class="label_radio col-lg-6 col-sm-6" for="radio-02">
                     <input name="sample-radio" id="radio-02" value="1" type="radio" /> 女
                 </label>
-            </div>
+            </div> -->
 
-            <p>请在下方输入您的账号详细信息</p>
+            <!-- <p>请在下方输入您的账号详细信息</p> -->
             <input id="username" type="text" class="form-control" placeholder="用户名" autofocus>
-            <input id="password" type="password" class="form-control" placeholder="密码">
-            <input id="password_check" type="password" class="form-control" onblur="check2pwd()" placeholder="再次输入密码">
-            <label class="checkbox">
+            <input type="text" id="email" class="form-control" placeholder="邮件" autofocus>
+            <input id="password" type="password" class="form-control" placeholder="新密码">
+            <input id="password_check" type="password" class="form-control" onblur="check2pwd()" placeholder="再次输入新密码">
+            <!-- <label class="checkbox">
                 <input type="checkbox" id="tos" value="agree this condition"> 
                 <a href="">我同意服务条款和隐私政策</a> 
-            </label>
-            <button id="submit" class="btn btn-lg btn-login btn-block" type="button">提交</button>
+            </label> -->
+            <button id="submit" class="btn btn-lg btn-login btn-block" type="button">重置密码</button>
 
-            <div class="registration">
+            <!-- <div class="registration">
                 已有账号？
                 <a class="" href="/login">
                     登录
                 </a>
-            </div>
+            </div> -->
 
         </div>
 
@@ -86,48 +87,38 @@
         }
     }
     $(function () {
-        $("#submit").on("click",function (){
-            if(!$("#tos").get(0).checked)
-            {
-                alert("请先同意服务条款和隐私条款！")
-            }
+        $("#submit").on("click",function (){  
+            var username = $("#username").val();
+            var new_password = $("#password").val();
+            var new_password_check = $("#password_check").val();
+            var email = $("#email").val();
+            if(username==""){alert("请输入姓名！")}
+            else if(email==""){alert("请输入邮箱！")}
+            else if(new_password==""){alert("请输入密码！")}
+            else if(new_password_check==""){alert("请输入密码！")}
             else{
-                var username = $("#username").val();
-                var nickname = $("#nickname").val();
-                var phone = $("#phone").val();
-                var password = $("#password").val();
-                var password_check = $("#password_check").val();
-                var email = $("#email").val();
-                var gender = $("input[type='radio']:checked").val();
-                if(nickname==""){alert("请输入姓名！")}
-                else if(phone==""){alert("请输入电话！")}
-                else if(email==""){alert("请输入邮箱！")}
-                else if(username==""){alert("请输入用户名！")}
-                else if(password==""){alert("请输入密码！")}
-                else if(password_check==""){alert("请输入密码！")}
-                else{
-                    $.ajax({
+                $.ajax({
                     method:'get',
-                    url:'/register_submit',
+                    url:'/forget_passwd_submit',
                     data:{
                         "username":username,
-                        "nickname":nickname,
-                        "phone":phone,
-                        "password":password,
+                        "new_password":new_password,
+                        "new_password_check":new_password_check,
                         "email":email,
-                        "rtitle":'普通用户',
-                        "rpermission":'普通权限',
-                        "gender":gender
                     },success(data){
+                        if(data=="success"){
+                            alert("密码重置成功")
+                            window.location.href='/login';
+                        }
+                        else{
+                            alert(data)
+                        }
+                    },error(data){
                         alert(data)
-                        window.location.href='/login';
-                    },error(){
-                        alert('注册失败')
                     }
                 })
             }
-        } 
-    }) 
+        }) 
     })
 </script>
 {% endblock %}

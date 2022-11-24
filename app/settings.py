@@ -217,6 +217,8 @@ SAFE_URL = [
     r'/login',
     r'/regist',
     r'',
+    r'/forget_passwd',
+    r'/forget_passwd_submit',
     # '/admin/.*',
     # r'/test/',
     # '/',
