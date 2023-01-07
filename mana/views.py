@@ -118,7 +118,8 @@ def upd_passwd(request):
     return render(request, 'home/upd_passwd.html')
 
 def upd_passwd_submit(request):
-    user = json.loads(request.session['user'])
+    user_id = json.loads(request.session['user'])['id']
+    user=UserInfo.objects.filter(id=user_id)
     password = request.GET.get('password')
     if not check_password(password, user[0].password):
         return render(request,'home/upd_passwd.html',{"message":"密码错误","code":401})
