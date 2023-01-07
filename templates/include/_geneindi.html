@@ -67,7 +67,7 @@
                 {%else %}
                 <td></td>
                 {%endif %}
-                {%if i.spouse != None %}
+                {%if i.spouse != None and i.spouse.is_del == '0'%}
                 <td>{{ i.spouse }}</td>
                 {%else %}
                 <td></td>
